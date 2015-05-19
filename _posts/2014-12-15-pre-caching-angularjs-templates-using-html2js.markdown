@@ -18,7 +18,7 @@ npm install grunt-html2js --save-dev
 npm install --save-dev gulp-html2js
 {% endhighlight %}
 
-Configuration file should look something like this (Grunt){% highlight js fruity%}
+Configuration file should look something like this (Grunt){% highlight js fruity %}
 html2js: {
   options: {
     base: 'app',
