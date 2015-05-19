@@ -20,7 +20,7 @@ npm install grunt-html2js --save-dev
 npm install --save-dev gulp-html2js
 {% endhighlight %}
 
-
+<p></p>
 Configuration file should look something like this (Grunt){% highlight js fruity %}
 html2js: {
   options: {
@@ -62,8 +62,7 @@ This will create a module named "app.templates", which you will be able to add a
     });
 })();
 {% endhighlight %}
-
-
+<p></p>
 An example for a simple auto-generated javascript file: 
 {% highlight js %}
 angular.module('app.templates', []).run(['$templateCache', function($templateCache) {
