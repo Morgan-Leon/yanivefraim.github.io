@@ -41,6 +41,14 @@ html2js: {
     }
 }
 {% endhighlight %}
+
+from pygments import highlight
+from pygments.lexers import PythonLexer
+from pygments.formatters import HtmlFormatter
+
+code = 'print "Hello World"'
+print highlight(code, PythonLexer(), HtmlFormatter())
+
 This will create a module named "app.templates", which you will be able to add as a dependency to your main app. You will also have to pre-compile the cached templates: 
 https://gist.github.com/yanivefraim/3d023cc1388e3fa22ced 
 An example for a simple auto-generated javascript file https://gist.github.com/yanivefraim/5ffdfcd19a29c4de1a0c For a complete demo using html2js you can refer to my angularjs-realworld demo in Github.
