@@ -12,11 +12,11 @@ A cool trick is using Grunt/Gulp plugin called html2js (if you're not using Grun
 
 Installing the plugin: 
 
->Grunt{% highlight js %}
+Grunt{% highlight js %}
 npm install grunt-html2js --save-dev
 {% endhighlight %}
 
->Gulp{% highlight js %}
+Gulp{% highlight js %}
 npm install --save-dev gulp-html2js
 {% endhighlight %}
 
@@ -46,7 +46,21 @@ html2js: {
 {% endhighlight %}
 
 This will create a module named "app.templates", which you will be able to add as a dependency to your main app. You will also have to pre-compile the cached templates: 
-https://gist.github.com/yanivefraim/3d023cc1388e3fa22ced 
+{% highlight js %}
+(function() {
+    'use strict';
+
+    angular.module('app', [
+        ...
+        'app.templates',
+        ...
+    ])
+    .run(function($templateCache, $compile, $rootScope){
+        var templatesHTML = $templateCache.get('app.templates');
+        $compile(templatesHTML)($rootScope); 
+    });
+})();
+{% endhighlight %}
 An example for a simple auto-generated javascript file https://gist.github.com/yanivefraim/5ffdfcd19a29c4de1a0c For a complete demo using html2js you can refer to my angularjs-realworld demo in Github.
 
 
