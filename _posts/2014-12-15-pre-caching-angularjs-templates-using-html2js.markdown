@@ -61,7 +61,21 @@ This will create a module named "app.templates", which you will be able to add a
     });
 })();
 {% endhighlight %}
-An example for a simple auto-generated javascript file https://gist.github.com/yanivefraim/5ffdfcd19a29c4de1a0c For a complete demo using html2js you can refer to my angularjs-realworld demo in Github.
+An example for a simple auto-generated javascript file 
+{% highlight js %}
+angular.module('app.templates', []).run(['$templateCache', function($templateCache) {
+    $templateCache.put("app.templates",
+        "<script type=text/ng-template id=timerTemplate.html><div class=\"timer\">{{timer.time}}</div></script><script type                =text/ng-template id=videoTemplate.html><video id=\"video\" class=\"video-full-screen\" controls=\"true\">\n" +
+        "            <source id=\"mp4\" ng-src=\"{{ videoDataUrlMp4 }}\" type=\"video/mp4\">\n" +
+        "            <p>Your user agent does not support the HTML5 Video element.</p>\n" +
+        "    </video></script><script type=text/ng-template id=videoPageTemplate.html><div>\n" +
+        "  <demo-timer></demo-timer>\n" +
+        "     <demo-video video-data=\"videoPageCtrl.videoData\"><demo-video>\n" +
+        " </div></script>");
+}]);
+{% endhighlight %}
+
+For a complete demo using html2js you can refer to my [angularjs-realworld](https://github.com/yanivefraim/angularjs-realworld) demo in Github.
 
 
 [jekyll]:      http://jekyllrb.com
