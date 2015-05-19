@@ -12,12 +12,10 @@ A cool trick is using Grunt/Gulp plugin called html2js (if you're not using Grun
 
 Installing the plugin: 
 
-Grunt{% highlight js %}
-npm install grunt-html2js --save-dev
+Grunt{% highlight js %}npm install grunt-html2js --save-dev
 {% endhighlight %}
 
-Gulp{% highlight js %}
-npm install --save-dev gulp-html2js
+Gulp{% highlight js %}npm install --save-dev gulp-html2js
 {% endhighlight %}
 
 Configuration file should look something like this (Grunt){% highlight js fruity %}
