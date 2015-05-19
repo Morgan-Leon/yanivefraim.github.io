@@ -12,11 +12,11 @@ A cool trick is using Grunt/Gulp plugin called html2js (if you're not using Grun
 
 Installing the plugin: 
 
->Grunt{% highlight js %}
+Grunt{% highlight js %}
 npm install grunt-html2js --save-dev
 {% endhighlight %}
 
->Gulp{% highlight js %}
+Gulp{% highlight js %}
 npm install --save-dev gulp-html2js
 {% endhighlight %}
 
@@ -61,7 +61,8 @@ This will create a module named "app.templates", which you will be able to add a
     });
 })();
 {% endhighlight %}
-An example for a simple auto-generated javascript file 
+
+An example for a simple auto-generated javascript file: 
 {% highlight js %}
 angular.module('app.templates', []).run(['$templateCache', function($templateCache) {
     $templateCache.put("app.templates",
