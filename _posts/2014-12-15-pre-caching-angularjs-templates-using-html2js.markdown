@@ -7,10 +7,6 @@ tags: Angularjs Javascript
 image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.jpg
 ---
 
-<div class="highlight">
-<pre><span class="k">print</span> <span class="s">&quot;Hello World&quot;</span></pre>
-</div>
-
 Using AngularJS templates / partials is awesome. It gives you the ability to be modular. The problem with that is that it creates an extra http request for each template (assuming you have a different template file for each template, which you should!) A cool trick is using Grunt/Gulp plugin called html2js (if you're not using Grunt.js/Gulp.js, this could be a great time to start to). This plugin will pre compile all of your html templates to javascript, wrapping it as an Angular.js module and putting it into $templateCache. The output javascript could be concatenated into the main js file, minified and gZipped. Cool... Installing the plugin: 
 
 
@@ -22,28 +18,28 @@ npm install grunt-html2js --save-dev
 npm install --save-dev gulp-html2js
 {% endhighlight %}
 
-Configuration file should look something like this (Grunt){% highlight js %}
+Configuration file should look something like this (Grunt){% highlight json %}
 html2js: {
-    options: {
-        base: 'app',
-        module: 'app.templates',
-        singleModule: true,
-        useStrict: true,
-        htmlmin: {
-            collapseBooleanAttributes: true,
-            collapseWhitespace: true,
-            removeAttributeQuotes: true,
-            removeComments: true,
-            removeEmptyAttributes: true,
-            removeRedundantAttributes: true,
-            removeScriptTypeAttributes: true,
-            removeStyleLinkTypeAttributes: true
-        }
-    },
-    main: {
-        src: ['app/scripts/**/*.html'],
-        dest: 'app/scripts/populate_template_cache.js'
+  options: {
+    base: 'app',
+    module: 'app.templates',
+    singleModule: true,
+    useStrict: true,
+    htmlmin: {
+      collapseBooleanAttributes: true,
+      collapseWhitespace: true,
+      removeAttributeQuotes: true,
+      removeComments: true,
+      removeEmptyAttributes: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true
     }
+  },
+  main: {
+    src: ['app/scripts/**/*.html'],
+    dest: 'app/scripts/populate_template_cache.js'
+  }
 }
 {% endhighlight %}
 
