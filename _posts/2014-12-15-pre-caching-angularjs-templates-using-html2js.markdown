@@ -62,6 +62,7 @@ This will create a module named "app.templates", which you will be able to add a
 })();
 {% endhighlight %}
 
+
 An example for a simple auto-generated javascript file: 
 {% highlight js %}
 angular.module('app.templates', []).run(['$templateCache', function($templateCache) {
