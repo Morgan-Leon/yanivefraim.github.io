@@ -7,7 +7,8 @@ tags: Angularjs Javascript
 image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.jpg
 ---
 
-Using AngularJS templates / partials is awesome. It gives you the ability to be modular. The problem with that is that it creates an extra http request for each template (assuming you have a different template file for each template, which you should!) /r/n A cool trick is using Grunt/Gulp plugin called html2js (if you're not using Grunt.js/Gulp.js, this could be a great time to start to). This plugin will pre compile all of your html templates to javascript, wrapping it as an Angular.js module and putting it into $templateCache. The output javascript could be concatenated into the main js file, minified and gZipped. Cool... Installing the plugin: 
+Using AngularJS templates / partials is awesome. It gives you the ability to be modular. The problem with that is that it creates an extra http request for each template (assuming you have a different template file for each template, which you should!). 
+A cool trick is using Grunt/Gulp plugin called html2js (if you're not using Grunt.js/Gulp.js, this could be a great time to start to). This plugin will pre compile all of your html templates to javascript, wrapping it as an Angular.js module and putting it into $templateCache. The output javascript could be concatenated into the main js file, minified and gZipped. Cool... Installing the plugin: 
 
 
 >Grunt{% highlight js %}
