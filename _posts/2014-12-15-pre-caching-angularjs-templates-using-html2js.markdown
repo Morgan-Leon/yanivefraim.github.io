@@ -64,7 +64,7 @@ This will create a module named "app.templates", which you will be able to add a
 
 
 An example for a simple auto-generated javascript file: 
-{% highlight js %}
+{% highlight js linenos %}
 angular.module('app.templates', []).run(['$templateCache', function($templateCache) {
     $templateCache.put("app.templates",
         "<script type=text/ng-template id=timerTemplate.html><div class=\"timer\">{{timer.time}}</div></script><script type                =text/ng-template id=videoTemplate.html><video id=\"video\" class=\"video-full-screen\" controls=\"true\">\n" +
