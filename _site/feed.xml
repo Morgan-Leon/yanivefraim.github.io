@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 20 May 2015 23:04:23 +0300</pubDate>
-    <lastBuildDate>Wed, 20 May 2015 23:04:23 +0300</lastBuildDate>
+    <pubDate>Wed, 20 May 2015 23:06:50 +0300</pubDate>
+    <lastBuildDate>Wed, 20 May 2015 23:06:50 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -19,10 +19,15 @@
 
 &lt;p&gt;Configurations are easy. Just add the files you want to update and the files containing the references to them:&lt;/p&gt;
 
-&lt;p&gt;https://gist.github.com/yanivefraim/d55a2d2aa3959d3bba8f
-This is how my &amp;quot;stage&amp;quot; folder looks like:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/d55a2d2aa3959d3bba8f.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;This is how my &amp;quot;stage&amp;quot; folder looks like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/2015-01-06-handling-static-files-versioning-using-grunt-hashres/image1.png&quot; alt=&quot;Alt text&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;While the references to those static files automatically updated to be&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/02e6a7a6e831c3724b43.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;That&amp;#39;s it. Quick and simple. For a complete flow example, you can refer to my Angular-realworld demo.&lt;/p&gt;
 </description>
