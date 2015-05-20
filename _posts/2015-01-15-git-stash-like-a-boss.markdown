@@ -10,34 +10,34 @@ Git stash is awesome. You work on a feature/bug and suddenly having a context sw
 Git stash FTW!
 A basic stash will be:
 
-####Saving a stash
+Saving a stash
 
 ```javascript
 git stash
 ```
-####Save a stash with a save name:
+Save a stash with a save name:
 
 ```javascript
 git stash save "my temp work"
 ```
-####Fetching back last stash, popping it from stash stack
+Fetching back last stash, popping it from stash stack
 
 ```javascript
 git stash pop
 ```
-####Fetching back last stash, leaving it on stash stack
+Fetching back last stash, leaving it on stash stack
 
 ```javascript
 git stash apply
 ```
 As you can see, stash is a stack of changes. What if you want to fetch an old stash?
 
-####Retrieving list of stashes
+Retrieving list of stashes
 
 ```javascript
 git stash list
 ```
-####This will produce a list of stashes:
+This will produce a list of stashes:
 
 ```javascript
 stash@{0}: On feature/AD-292: controller api mock
@@ -47,17 +47,17 @@ stash@{3}: On feature/AD-350: vast validator
 stash@{4}: On feature/AD-292: controller 11.1.15
 ...
 ```
-####In order to fetch a specific stash:
+In order to fetch a specific stash:
 
 ```javascript
 git stash pop stash@{n}
 ```
-####Or
+Or
 
 ```javascript
 git stash apply stash@{n} 
 ```
-####And a last tip: you can see stash's changes by:
+And a last tip: you can see stash's changes by:
 
 ```javascript
 git stash show -p stash@{n}
