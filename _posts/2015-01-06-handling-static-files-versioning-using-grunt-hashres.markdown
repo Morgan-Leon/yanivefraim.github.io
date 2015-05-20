@@ -1,10 +1,12 @@
 ---
 layout: post
-title:  "Handling static files versioning using grunt-hashres"
-date:   2015-01-06 14:34:25
+title: "Handling static files versioning using grunt-hashres"
+date: {}
 tags: Angularjs Javascript
-image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.jpg
+image: "/assets/article_images/2014-08-29-welcome-to-jekyll/desktop.jpg"
+published: true
 ---
+
 
 While looking for a simple but yet effective way to handle my static file versions, I found the awesome grunt-hashres Grunt plugin. Its job is to give each static file a unique version and also update references to the file with current version. awesome.
 
@@ -45,7 +47,7 @@ Configurations are easy. Just add the files you want to update and the files con
 }
 {% endhighlight %}
 This is how my "stage" folder looks like:
-
+![]({{site.baseurl}}/./assets/article_images/2015-01-06-handling-static-files-versioning-using-grunt-hashres/image1.png)
 
 While the references to those static files automatically updated to be
 {% highlight HTML %}
