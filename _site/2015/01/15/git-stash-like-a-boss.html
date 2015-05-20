@@ -65,24 +65,24 @@
 Git stash FTW!
 A basic stash will be:</p>
 
-<p>Saving a stash</p>
+<h4>Saving a stash</h4>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span>
 </code></pre></div>
-<p>Save a stash with a save name:</p>
+<h4>Save a stash with a save name:</h4>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">save</span> <span class="s2">&quot;my temp work&quot;</span>
 </code></pre></div>
-<p>Fetching back last stash, popping it from stash stack</p>
+<h4>Fetching back last stash, popping it from stash stack</h4>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">pop</span>
 </code></pre></div>
-<p>Fetching back last stash, leaving it on stash stack</p>
+<h4>Fetching back last stash, leaving it on stash stack</h4>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">apply</span>
 </code></pre></div>
 <p>As you can see, stash is a stack of changes. What if you want to fetch an old stash?</p>
 
-<p>Retrieving list of stashes</p>
+<h4>Retrieving list of stashes</h4>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">list</span>
 </code></pre></div>
-<p>This will produce a list of stashes:</p>
+<h4>This will produce a list of stashes:</h4>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="mi">0</span><span class="p">}</span><span class="o">:</span> <span class="nx">On</span> <span class="nx">feature</span><span class="o">/</span><span class="nx">AD</span><span class="o">-</span><span class="mi">292</span><span class="o">:</span> <span class="nx">controller</span> <span class="nx">api</span> <span class="nx">mock</span>
 <span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="o">:</span> <span class="nx">On</span> <span class="nx">feature</span><span class="o">/</span><span class="nx">AD</span><span class="o">-</span><span class="mi">350</span><span class="o">:</span> <span class="nx">vast</span> <span class="nx">fake</span> <span class="nx">json</span>
 <span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">:</span> <span class="nx">On</span> <span class="nx">feature</span><span class="o">/</span><span class="nx">AD</span><span class="o">-</span><span class="mi">315</span><span class="o">:</span> <span class="nx">vast</span> <span class="nx">another</span> <span class="nx">fake</span> <span class="nx">json</span>
@@ -90,13 +90,13 @@ A basic stash will be:</p>
 <span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="mi">4</span><span class="p">}</span><span class="o">:</span> <span class="nx">On</span> <span class="nx">feature</span><span class="o">/</span><span class="nx">AD</span><span class="o">-</span><span class="mi">292</span><span class="o">:</span> <span class="nx">controller</span> <span class="mf">11.1</span><span class="p">.</span><span class="mi">15</span>
 <span class="p">...</span>
 </code></pre></div>
-<p>In order to fetch a specific stash:</p>
+<h4>In order to fetch a specific stash:</h4>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">pop</span> <span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="nx">n</span><span class="p">}</span>
 </code></pre></div>
-<p>Or</p>
+<h4>Or</h4>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">apply</span> <span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="nx">n</span><span class="p">}</span> 
 </code></pre></div>
-<p>And a last tip: you can see stash&#39;s changes by:</p>
+<h4>And a last tip: you can see stash&#39;s changes by:</h4>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">show</span> <span class="o">-</span><span class="nx">p</span> <span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="nx">n</span><span class="p">}</span>
 </code></pre></div>
 <p>Good luck!</p>
