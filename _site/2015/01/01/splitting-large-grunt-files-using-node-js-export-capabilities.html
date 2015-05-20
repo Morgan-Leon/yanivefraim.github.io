@@ -65,54 +65,7 @@
 
 <p>Let&#39;s get straight to the point. Assume we have two (very simple) projects, on the same repository, with the following Gruntfile.js:</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
-
-<span class="c1">// Project configuration.</span>
-  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
-    <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span>
-    <span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">project1</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;../project1/**/*.js&#39;</span><span class="p">,</span> <span class="s1">&#39;../project1/**/*.scss&#39;</span><span class="p">],</span>
-        <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;project1&#39;</span><span class="p">],</span>
-        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-            <span class="nx">nospawn</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nx">livereload</span><span class="o">:</span> <span class="kc">true</span>
-        <span class="p">}</span>
-      <span class="p">},</span>
-      <span class="nx">project2</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;../project2/**/*.js&#39;</span><span class="p">,</span> <span class="s1">&#39;../project2/**/*.scss&#39;</span><span class="p">],</span>
-        <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;project2&#39;</span><span class="p">],</span>
-        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-          <span class="nx">nospawn</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="nx">livereload</span><span class="o">:</span> <span class="kc">true</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nx">concat</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">project1</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">files</span><span class="o">:</span><span class="p">{</span>
-          <span class="s1">&#39;../project1/dist/dev/main.js&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;../project1/**/*.js&#39;</span><span class="p">],</span>
-          <span class="s1">&#39;../project1/dist/dev/index.html&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;../project1/index.html&#39;</span><span class="p">],</span>
-          <span class="s1">&#39;../project1/temp/templates.html&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;../project1/**/*.tpl.html&#39;</span><span class="p">]</span>
-        <span class="p">}</span>
-      <span class="p">},</span>
-      <span class="nx">project2</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">files</span><span class="o">:</span><span class="p">{</span>
-          <span class="s1">&#39;../project2/dist/dev/main.js&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;../project2/**/*.js&#39;</span><span class="p">],</span>
-          <span class="s1">&#39;../project2/dist/dev/index.html&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;../project2/index.html&#39;</span><span class="p">],</span>
-          <span class="s1">&#39;../project2/temp/templates.html&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;../project2/**/*.tpl.html&#39;</span><span class="p">]</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-  <span class="p">})</span>
-  
-  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-concat&#39;</span><span class="p">);</span>
-
-  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-watch&#39;</span><span class="p">);</span>
-
-  <span class="c1">//registerTasks here</span>
-
-<span class="p">}</span></code></pre></div>
+<script src="https://gist.github.com/08351ce4bd270f0b27a0.js"> </script>
 
 <p>While this is a super simple example, it demonstrates how a Gruntfile.js can become a very large file, very fast. Just imagine that you have 4-5 projects using ~10 Grunt plugins each. A real nightmare...</p>
 
@@ -120,58 +73,11 @@
 
 <p>We will now create two files, project1.js and project2.js (I will demonstrate project1.js here. For this simple example project2.js is pretty much the same)</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">gruntProject1</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{};</span>
-
-<span class="nx">gruntProject1</span><span class="p">.</span><span class="nx">watch</span> <span class="o">=</span> <span class="p">{};</span>
-
-<span class="nx">gruntProject1</span><span class="p">.</span><span class="nx">watch</span><span class="p">.</span><span class="nx">project1</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;../project1/**/*.js&#39;</span><span class="p">,</span> <span class="s1">&#39;../project1/**/*.scss&#39;</span><span class="p">],</span>
-  <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;project1&#39;</span><span class="p">],</span>
-  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">nospawn</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nx">livereload</span><span class="o">:</span> <span class="kc">true</span>
-  <span class="p">}</span>
-<span class="p">};</span>
-
-
-<span class="nx">gruntProject1</span><span class="p">.</span><span class="nx">concat</span> <span class="o">=</span> <span class="p">{};</span>
-
-<span class="nx">gruntProject1</span><span class="p">.</span><span class="nx">concat</span><span class="p">.</span><span class="nx">project1</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">files</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s1">&#39;../project1/dist/dev/main.js&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;../project1/**/*.js&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;../project1/dist/dev/index.html&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;../project1/index.html&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;../project1/temp/templates.html&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;../project1/**/*.tpl.html&#39;</span><span class="p">]</span>
-   <span class="p">}</span>
-<span class="p">};</span></code></pre></div>
+<script src="https://gist.github.com/9e11fbb49110dd34e39f.js"> </script>
 
 <p>And now your Gruntfile.js will look something similar to this:</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
-
-  <span class="kd">var</span> <span class="nx">_</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;lodash&#39;</span><span class="p">);</span>
-
-  <span class="kd">var</span> <span class="nx">proj1Config</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;project1&#39;</span><span class="p">);</span>
-
-  <span class="kd">var</span> <span class="nx">proj2Config</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;project2&#39;</span><span class="p">);</span>
-
-  <span class="kd">var</span> <span class="nx">gruntConf</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span>
-
-    <span class="c1">//Any common gonfigs can still fit here!!!</span>
-  <span class="p">}</span>
-
-  <span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">gruntConf</span><span class="p">,</span> <span class="nx">proj1Config</span><span class="p">);</span>
-
-  <span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">gruntConf</span><span class="p">,</span> <span class="nx">proj2Config</span><span class="p">);</span>
-
-  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">(</span><span class="nx">gruntConf</span><span class="p">);</span>
-
-  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-concat&#39;</span><span class="p">);</span>
-
-  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-watch&#39;</span><span class="p">);</span>
-
-  <span class="c1">//registerTasks here</span>
-<span class="p">}</span></code></pre></div>
+<script src="https://gist.github.com/cada77737b1d0a71ddec.js"> </script>
 
 <p>That&#39;s it! Your projects are now handled in different Grunt configuration files, which makes it much simpler to handle.</p>
 
