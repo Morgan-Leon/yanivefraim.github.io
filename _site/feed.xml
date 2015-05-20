@@ -6,19 +6,22 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 21 May 2015 00:19:33 +0300</pubDate>
-    <lastBuildDate>Thu, 21 May 2015 00:19:33 +0300</lastBuildDate>
+    <pubDate>Thu, 21 May 2015 00:35:23 +0300</pubDate>
+    <lastBuildDate>Thu, 21 May 2015 00:35:23 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Real World Angularjs (video)</title>
         <description>&lt;p&gt;This is my video from AngularJS-IL, talking about Real World AngularJS tip (Hebrew...)&lt;/p&gt;
 
-&lt;p&gt;Enjoy![youtube https://www.youtube.com/watch?v=3Wnjx0nKlqE]&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
 
-&lt;p&gt;The slides can be found here:&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3Wnjx0nKlqE&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;http://slides.com/yanivefraim-1/real-world-angularjs&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;The slides:
+&lt;iframe src=&quot;//slides.com/yanivefraim-1/real-world-angularjs/embed&quot; width=&quot;576&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 16 Jan 2015 16:34:25 +0200</pubDate>
         <link>http://yanivefraim.github.io//2015/01/16/real-world-angularjs-video.html</link>
