@@ -505,6 +505,8 @@ body {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto; }
+  .post .post-content .post-p {
+    padding-bottom: 0px; }
   .post .post-content a {
     color: #333;
     text-decoration: underline; }
