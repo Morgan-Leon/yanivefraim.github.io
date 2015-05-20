@@ -11,6 +11,7 @@ Git stash FTW!
 A basic stash will be:
 
 Saving a stash
+
 ```javascript
 git stash
 ```

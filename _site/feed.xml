@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 20 May 2015 23:23:56 +0300</pubDate>
-    <lastBuildDate>Wed, 20 May 2015 23:23:56 +0300</lastBuildDate>
+    <pubDate>Wed, 20 May 2015 23:24:48 +0300</pubDate>
+    <lastBuildDate>Wed, 20 May 2015 23:24:48 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -16,11 +16,10 @@
 Git stash FTW!
 A basic stash will be:&lt;/p&gt;
 
-&lt;p&gt;Saving a stash
-&lt;code&gt;javascript
-git stash
-&lt;/code&gt;
-Save a stash with a save name:&lt;/p&gt;
+&lt;p&gt;Saving a stash&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Save a stash with a save name:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;save&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;my temp work&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Fetching back last stash, popping it from stash stack&lt;/p&gt;
