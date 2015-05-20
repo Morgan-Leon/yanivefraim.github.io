@@ -72,23 +72,23 @@ var gruntProject1 = module.exports = {};
 gruntProject1.watch = {};
 
 gruntProject1.watch.project1 = {
-    files: ['../project1/**/*.js', '../project1/**/*.scss'],
-        tasks: ['project1'],
-        options:{
-            nospawn: true,
-            livereload: true
-        }
+  files: ['../project1/**/*.js', '../project1/**/*.scss'],
+  tasks: ['project1'],
+  options: {
+    nospawn: true,
+    livereload: true
+  }
 };
 
 
 gruntProject1.concat = {};
 
 gruntProject1.concat.project1 = {
-    files:{
-        '../project1/dist/dev/main.js': ['../project1/**/*.js'],
-        '../project1/dist/dev/index.html': ['../project1/index.html'],
-        '../project1/temp/templates.html': ['../project1/**/*.tpl.html']
-     }
+  files: {
+    '../project1/dist/dev/main.js': ['../project1/**/*.js'],
+    '../project1/dist/dev/index.html': ['../project1/index.html'],
+    '../project1/temp/templates.html': ['../project1/**/*.tpl.html']
+   }
 };
 {% endhighlight %}
 
@@ -103,10 +103,9 @@ module.exports = function(grunt) {
   var proj2Config = require('project2');
 
   var gruntConf = {
-        pkg: grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON('package.json'),
 
-        //Any common gonfigs can still fit here!!!
-
+    //Any common gonfigs can still fit here!!!
   }
 
   _.extend(gruntConf, proj1Config);
@@ -120,7 +119,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   //registerTasks here
-
 }
 {% endhighlight %}
 
