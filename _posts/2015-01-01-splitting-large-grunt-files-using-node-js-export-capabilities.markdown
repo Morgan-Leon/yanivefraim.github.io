@@ -1,38 +1,130 @@
 ---
 layout: post
-title:  "Pre caching AngularJS templates using html2js"
-date:   2014-11-15 14:34:25
+title:  "Splitting large Grunt files using node.js export capabilities"
+date:   2015-01-01 14:34:25
 categories: jekyll update
 tags: Angularjs Javascript
 image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.jpg
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
+Grunt is an awesome tool. I use it everyday and I cannot think of working without it. As time passed by, our Gruntfile.js file became really big, and managing this file has become a real bummer. Since Grunt's best practices recommend using one and only one Gruntfile.js per repository, the solution should be using smaller project's files and import it to the main Gruntfile.js using node.js export/require capabilities.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+Let's get straight to the point. Assume we have two (very simple) projects, on the same repository, with the following Gruntfile.js:
 
 {% highlight js %}
+module.exports = function(grunt) {
 
-<footer class="site-footer">
- <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> Subscribe!</span></a>
-  <div class="inner">a
-   <section class="copyright">All content copyright <a href="mailto:{{ site.email}}">{{ site.name }}</a> &copy; {{ site.time | date: '%Y' }} &bull; All rights reserved.</section>
-   <section class="poweredby">Made with <a href="http://jekyllrb.com"> Jekyll</a></section>
-  </div>
-</footer>
+  // Project configuration.
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        watch: {
+            project1:{
+                files: ['../project1/**/*.js', '../project1/**/*.scss'],
+                    tasks: ['project1'],
+                    options:{
+                        nospawn: true,
+                        livereload: true
+                    }
+            },
+            project2:{
+                files: ['../project2/**/*.js', '../project2/**/*.scss'],
+                tasks: ['project2'],
+                options:{
+                    nospawn: true,
+                    livereload: true
+                }
+            }
+        },
+        concat: {
+            project1: {
+                files:{
+                    '../project1/dist/dev/main.js': ['../project1/**/*.js'],
+                    '../project1/dist/dev/index.html': ['../project1/index.html'],
+                    '../project1/temp/templates.html': ['../project1/**/*.tpl.html']
+                }
+            },
+            project2: {
+                files:{
+                    '../project2/dist/dev/main.js': ['../project2/**/*.js'],
+                    '../project2/dist/dev/index.html': ['../project2/index.html'],
+                    '../project2/temp/templates.html': ['../project2/**/*.tpl.html']
+                }
+            }
+        },
+    })
+    
+    grunt.loadNpmTasks('grunt-contrib-concat');
+
+    grunt.loadNpmTasks('grunt-contrib-watch');
+
+    //registerTasks here
+
+}
 {% endhighlight %}
 
+While this is a super simple example, it demonstrates how a Gruntfile.js can become a very large file, very fast. Just imagine that you have 4-5 projects using ~10 Grunt plugins each. A real nightmare...
+
+Node.js export / require to the rescue!
+
+We will now create two files, project1.js and project2.js (I will demonstrate project1.js here. For this simple example project2.js is pretty much the same)
+{% highlight js %}
+var gruntProject1 = module.exports = {};
+
+gruntProject1.watch = {};
+
+gruntProject1.watch.project1 = {
+    files: ['../project1/**/*.js', '../project1/**/*.scss'],
+        tasks: ['project1'],
+        options:{
+            nospawn: true,
+            livereload: true
+        }
+};
+
+
+gruntProject1.concat = {};
+
+gruntProject1.concat.project1 = {
+    files:{
+        '../project1/dist/dev/main.js': ['../project1/**/*.js'],
+        '../project1/dist/dev/index.html': ['../project1/index.html'],
+        '../project1/temp/templates.html': ['../project1/**/*.tpl.html']
+     }
+};
+{% endhighlight %}
+
+And now your Gruntfile.js will look something similar to this:
+{% highlight js %}
+module.exports = function(grunt) {
+
+  var _ = require('lodash');
+
+  var proj1Config = require('project1');
+
+  var proj2Config = require('project2');
+
+  var gruntConf = {
+        pkg: grunt.file.readJSON('package.json'),
+
+        //Any common gonfigs can still fit here!!!
+
+  }
+
+  _.extend(gruntConf, proj1Config);
+
+  _.extend(gruntConf, proj2Config);
+
+  grunt.initConfig(gruntConf);
+
+  grunt.loadNpmTasks('grunt-contrib-concat');
+
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
+  //registerTasks here
+
+}
+{% endhighlight %}
+
+That's it! Your projects are now handled in different Grunt configuration files, which makes it much simpler to handle.
 
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
