@@ -3,7 +3,7 @@ layout: post
 title:  "Real World Angularjs (video)"
 date:   2015-01-16 14:34:25
 tags: Angularjs Javascript
-image: /assets/images/desktop.jpg
+image: /assets/images/desktop.JPG
 ---
 
 This is my video from AngularJS-IL, talking about Real World AngularJS tip (Hebrew...)
