@@ -1,10 +1,12 @@
 ---
 layout: post
-title:  "Splitting large Grunt files using node.js export capabilities"
-date:   2015-01-01 14:34:25
+title: Splitting large Grunt files using node.js export capabilities
+date: {}
 tags: Angularjs Javascript
-image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.jpg
+image: "/assets/article_images/2014-08-29-welcome-to-jekyll/desktop.jpg"
+published: true
 ---
+
 Grunt is an awesome tool. I use it everyday and I cannot think of working without it. As time passed by, our Gruntfile.js file became really big, and managing this file has become a real bummer. Since Grunt's best practices recommend using one and only one Gruntfile.js per repository, the solution should be using smaller project's files and import it to the main Gruntfile.js using node.js export/require capabilities.
 
 Let's get straight to the point. Assume we have two (very simple) projects, on the same repository, with the following Gruntfile.js:
@@ -123,7 +125,3 @@ module.exports = function(grunt) {
 {% endhighlight %}
 
 That's it! Your projects are now handled in different Grunt configuration files, which makes it much simpler to handle.
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
