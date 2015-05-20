@@ -47,7 +47,6 @@ Configurations are easy. Just add the files you want to update and the files con
 }
 {% endhighlight %}
 This is how my "stage" folder looks like:
-![]({{site.baseurl}}/./assets/article_images/2015-01-06-handling-static-files-versioning-using-grunt-hashres/image1.png)
 
 While the references to those static files automatically updated to be
 {% highlight HTML %}
