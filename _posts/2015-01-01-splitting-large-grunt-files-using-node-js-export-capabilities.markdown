@@ -13,50 +13,50 @@ Let's get straight to the point. Assume we have two (very simple) projects, on t
 {% highlight js %}
 module.exports = function(grunt) {
 
-  // Project configuration.
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        watch: {
-            project1:{
-                files: ['../project1/**/*.js', '../project1/**/*.scss'],
-                    tasks: ['project1'],
-                    options:{
-                        nospawn: true,
-                        livereload: true
-                    }
-            },
-            project2:{
-                files: ['../project2/**/*.js', '../project2/**/*.scss'],
-                tasks: ['project2'],
-                options:{
-                    nospawn: true,
-                    livereload: true
-                }
-            }
-        },
-        concat: {
-            project1: {
-                files:{
-                    '../project1/dist/dev/main.js': ['../project1/**/*.js'],
-                    '../project1/dist/dev/index.html': ['../project1/index.html'],
-                    '../project1/temp/templates.html': ['../project1/**/*.tpl.html']
-                }
-            },
-            project2: {
-                files:{
-                    '../project2/dist/dev/main.js': ['../project2/**/*.js'],
-                    '../project2/dist/dev/index.html': ['../project2/index.html'],
-                    '../project2/temp/templates.html': ['../project2/**/*.tpl.html']
-                }
-            }
-        },
-    })
-    
-    grunt.loadNpmTasks('grunt-contrib-concat');
+// Project configuration.
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    watch: {
+      project1: {
+        files: ['../project1/**/*.js', '../project1/**/*.scss'],
+        tasks: ['project1'],
+        options: {
+            nospawn: true,
+            livereload: true
+        }
+      },
+      project2: {
+        files: ['../project2/**/*.js', '../project2/**/*.scss'],
+        tasks: ['project2'],
+        options: {
+          nospawn: true,
+          livereload: true
+        }
+      }
+    },
+    concat: {
+      project1: {
+        files:{
+          '../project1/dist/dev/main.js': ['../project1/**/*.js'],
+          '../project1/dist/dev/index.html': ['../project1/index.html'],
+          '../project1/temp/templates.html': ['../project1/**/*.tpl.html']
+        }
+      },
+      project2: {
+        files:{
+          '../project2/dist/dev/main.js': ['../project2/**/*.js'],
+          '../project2/dist/dev/index.html': ['../project2/index.html'],
+          '../project2/temp/templates.html': ['../project2/**/*.tpl.html']
+        }
+      }
+    },
+  })
+  
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
-    grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
-    //registerTasks here
+  //registerTasks here
 
 }
 {% endhighlight %}
