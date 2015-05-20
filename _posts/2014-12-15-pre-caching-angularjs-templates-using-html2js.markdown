@@ -3,7 +3,7 @@ layout: post
 title:  "Pre caching AngularJS templates using html2js"
 date:   2014-11-15 14:34:25
 tags: Angularjs Javascript
-image: /assets/article_images/14-08-29-welcome-to-jekyll/desktop.jpg
+image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.jpg
 ---
 
 Using AngularJS templates / partials is awesome. It gives you the ability to be modular. The problem with that is that it creates an extra http request for each template (assuming you have a different template file for each template, which you should!). 
