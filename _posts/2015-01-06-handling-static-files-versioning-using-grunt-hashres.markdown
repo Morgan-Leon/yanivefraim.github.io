@@ -48,7 +48,7 @@ This is how my "stage" folder looks like:
 
 
 While the references to those static files automatically updated to be
-{% highlight js %}
+{% highlight HTML %}
 <script src="main.min.55a94a50.js"></script>
 <link rel="stylesheet" href="main.min.6e4ea0cc.css"></head>
 {% endhighlight %}
