@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 20 May 2015 23:22:29 +0300</pubDate>
-    <lastBuildDate>Wed, 20 May 2015 23:22:29 +0300</lastBuildDate>
+    <pubDate>Wed, 20 May 2015 23:23:56 +0300</pubDate>
+    <lastBuildDate>Wed, 20 May 2015 23:23:56 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -16,57 +16,42 @@
 Git stash FTW!
 A basic stash will be:&lt;/p&gt;
 
-&lt;p&gt;Saving a stash&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt;
+&lt;p&gt;Saving a stash
+&lt;code&gt;javascript
+git stash
+&lt;/code&gt;
+Save a stash with a save name:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;save&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;my temp work&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Save a stash with a save name:&lt;/p&gt;
-
-&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
-git stash save &amp;quot;my temp work&amp;quot;
-[/code]
-Fetching back last stash, popping it from stash stack&lt;/p&gt;
-
-&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
-git stash pop
-[/code]
-Fetching back last stash, leaving it on stash stack&lt;/p&gt;
-
-&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
-git stash apply
-[/code]
-As you can see, stash is a stack of changes. What if you want to fetch an old stash?&lt;/p&gt;
+&lt;p&gt;Fetching back last stash, popping it from stash stack&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pop&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Fetching back last stash, leaving it on stash stack&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As you can see, stash is a stack of changes. What if you want to fetch an old stash?&lt;/p&gt;
 
 &lt;p&gt;Retrieving list of stashes&lt;/p&gt;
-
-&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
-git stash list
-[/code]
-This will produce a list of stashes:&lt;/p&gt;
-
-&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
-stash@{0}: On feature/AD-292: controller api mock
-stash@{1}: On feature/AD-350: vast fake json
-stash@{2}: On feature/AD-315: vast another fake json
-stash@{3}: On feature/AD-350: vast validator
-stash@{4}: On feature/AD-292: controller 11.1.15
-...
-[/code]
-In order to fetch a specific stash:&lt;/p&gt;
-
-&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
-git stash pop stash@{n}
-[/code]
-Or&lt;/p&gt;
-
-&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
-git stash apply stash@{n} 
-[/code]
-And a last tip: you can see stash&amp;#39;s changes by:&lt;/p&gt;
-
-&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
-git stash show -p stash@{n}
-[/code]
-Good luck!&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will produce a list of stashes:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;On&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;feature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;AD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;292&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;controller&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;api&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mock&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;On&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;feature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;AD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;350&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;vast&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fake&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;On&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;feature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;AD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;315&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;vast&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;another&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fake&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;On&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;feature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;AD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;350&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;vast&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;validator&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;On&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;feature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;AD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;292&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;controller&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;11.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In order to fetch a specific stash:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pop&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Or&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And a last tip: you can see stash&amp;#39;s changes by:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Good luck!&lt;/p&gt;
 </description>
         <pubDate>Thu, 15 Jan 2015 16:34:25 +0200</pubDate>
         <link>http://yanivefraim.github.io//2015/01/15/git-stash-like-a-boss.html</link>
