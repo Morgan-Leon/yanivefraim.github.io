@@ -2,7 +2,6 @@
 layout: post
 title:  "Splitting large Grunt files using node.js export capabilities"
 date:   2015-01-01 14:34:25
-categories: jekyll update
 tags: Angularjs Javascript
 image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.jpg
 ---
@@ -91,6 +90,7 @@ gruntProject1.concat.project1 = {
    }
 };
 {% endhighlight %}
+
 
 And now your Gruntfile.js will look something similar to this:
 {% highlight js %}
