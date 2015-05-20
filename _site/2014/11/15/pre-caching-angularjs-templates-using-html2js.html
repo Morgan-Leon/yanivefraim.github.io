@@ -67,72 +67,26 @@
 
 <p>Installing the plugin: </p>
 
-<div>Grunt</div>
+<blockquote>
+<p>Grunt
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">grunt</span><span class="o">-</span><span class="nx">html2js</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span></code></pre></div></p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">grunt</span><span class="o">-</span><span class="nx">html2js</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span></code></pre></div>
-
-<div>Gulp</div>
-
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span> <span class="nx">gulp</span><span class="o">-</span><span class="nx">html2js</span></code></pre></div>
+<p>Gulp
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span> <span class="nx">gulp</span><span class="o">-</span><span class="nx">html2js</span></code></pre></div></p>
+</blockquote>
 
 <p></p>
 
 <p>Configuration file should look something like this (Grunt)
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">html2js</span><span class="o">:</span> <span class="p">{</span>
-  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">base</span><span class="o">:</span> <span class="s1">&#39;app&#39;</span><span class="p">,</span>
-    <span class="nx">module</span><span class="o">:</span> <span class="s1">&#39;app.templates&#39;</span><span class="p">,</span>
-    <span class="nx">singleModule</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nx">useStrict</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nx">htmlmin</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">collapseBooleanAttributes</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nx">collapseWhitespace</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nx">removeAttributeQuotes</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nx">removeComments</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nx">removeEmptyAttributes</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nx">removeRedundantAttributes</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nx">removeScriptTypeAttributes</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nx">removeStyleLinkTypeAttributes</span><span class="o">:</span> <span class="kc">true</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nx">main</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;app/scripts/*<em>/</em>.html&#39;</span><span class="p">],</span>
-    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;app/scripts/populate<em>template</em>cache.js&#39;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></div></p>
-
-<p>This will create a module named &quot;app.templates&quot;, which you will be able to add as a dependency to your main app. You will also have to pre-compile the cached templates: </p>
-
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-
-    <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;app&#39;</span><span class="p">,</span> <span class="p">[</span>
-        <span class="p">...</span>
-        <span class="s1">&#39;app.templates&#39;</span><span class="p">,</span>
-        <span class="p">...</span>
-    <span class="p">])</span>
-    <span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$templateCache</span><span class="p">,</span> <span class="nx">$compile</span><span class="p">,</span> <span class="nx">$rootScope</span><span class="p">){</span>
-        <span class="kd">var</span> <span class="nx">templatesHTML</span> <span class="o">=</span> <span class="nx">$templateCache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;app.templates&#39;</span><span class="p">);</span>
-        <span class="nx">$compile</span><span class="p">(</span><span class="nx">templatesHTML</span><span class="p">)(</span><span class="nx">$rootScope</span><span class="p">);</span> 
-    <span class="p">});</span>
-<span class="p">})();</span></code></pre></div>
+<script src="https://gist.github.com/6fa1eab9230fad51ea7a.js"> </script>
+This will create a module named &quot;app.templates&quot;, which you will be able to add as a dependency to your main app. You will also have to pre-compile the cached templates: 
+<script src="https://gist.github.com/3d023cc1388e3fa22ced.js"> </script></p>
 
 <p></p>
 
-<p>An example for a simple auto-generated javascript file: </p>
-
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;app.templates&#39;</span><span class="p">,</span> <span class="p">[]).</span><span class="nx">run</span><span class="p">([</span><span class="s1">&#39;$templateCache&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$templateCache</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">$templateCache</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="s2">&quot;app.templates&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;&lt;script type=text/ng-template id=timerTemplate.html&gt;&lt;div class=\&quot;timer\&quot;&gt;&lt;/div&gt;&lt;/script&gt;&lt;script type                =text/ng-template id=videoTemplate.html&gt;&lt;video id=\&quot;video\&quot; class=\&quot;video-full-screen\&quot; controls=\&quot;true\&quot;&gt;\n&quot;</span> <span class="o">+</span>
-        <span class="s2">&quot;            &lt;source id=\&quot;mp4\&quot; ng-src=\&quot;\&quot; type=\&quot;video/mp4\&quot;&gt;\n&quot;</span> <span class="o">+</span>
-        <span class="s2">&quot;            &lt;p&gt;Your user agent does not support the HTML5 Video element.&lt;/p&gt;\n&quot;</span> <span class="o">+</span>
-        <span class="s2">&quot;    &lt;/video&gt;&lt;/script&gt;&lt;script type=text/ng-template id=videoPageTemplate.html&gt;&lt;div&gt;\n&quot;</span> <span class="o">+</span>
-        <span class="s2">&quot;  &lt;demo-timer&gt;&lt;/demo-timer&gt;\n&quot;</span> <span class="o">+</span>
-        <span class="s2">&quot;     &lt;demo-video video-data=\&quot;videoPageCtrl.videoData\&quot;&gt;&lt;demo-video&gt;\n&quot;</span> <span class="o">+</span>
-        <span class="s2">&quot; &lt;/div&gt;&lt;/script&gt;&quot;</span><span class="p">);</span>
-<span class="p">}]);</span></code></pre></div>
-
-<p>For a complete demo using html2js you can refer to my <a href="https://github.com/yanivefraim/angularjs-realworld">angularjs-realworld</a> demo in Github.</p>
+<p>An example for a simple auto-generated javascript file: 
+<script src="https://gist.github.com/5ffdfcd19a29c4de1a0c.js"> </script>
+For a complete demo using html2js you can refer to my <a href="https://github.com/yanivefraim/angularjs-realworld">angularjs-realworld</a> demo in Github.</p>
 
         </section>
         <footer class="post-footer">

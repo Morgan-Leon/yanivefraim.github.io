@@ -12,71 +12,24 @@ A cool trick is using Grunt/Gulp plugin called html2js (if you're not using Grun
 
 Installing the plugin: 
 
-<div>Grunt</div>{% highlight js %}
+>Grunt{% highlight js %}
 npm install grunt-html2js --save-dev
 {% endhighlight %}
 
-<div>Gulp</div>{% highlight js %}
+>Gulp{% highlight js %}
 npm install --save-dev gulp-html2js
 {% endhighlight %}
 
 <p></p>
-Configuration file should look something like this (Grunt){% highlight js fruity %}
-html2js: {
-  options: {
-    base: 'app',
-    module: 'app.templates',
-    singleModule: true,
-    useStrict: true,
-    htmlmin: {
-      collapseBooleanAttributes: true,
-      collapseWhitespace: true,
-      removeAttributeQuotes: true,
-      removeComments: true,
-      removeEmptyAttributes: true,
-      removeRedundantAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true
-    }
-  },
-  main: {
-    src: ['app/scripts/**/*.html'],
-    dest: 'app/scripts/populate_template_cache.js'
-  }
-}
-{% endhighlight %}
-
+Configuration file should look something like this (Grunt)
+{% gist 6fa1eab9230fad51ea7a %}
 This will create a module named "app.templates", which you will be able to add as a dependency to your main app. You will also have to pre-compile the cached templates: 
-{% highlight js %}
-(function() {
-    'use strict';
+{% gist 3d023cc1388e3fa22ced %}
 
-    angular.module('app', [
-        ...
-        'app.templates',
-        ...
-    ])
-    .run(function($templateCache, $compile, $rootScope){
-        var templatesHTML = $templateCache.get('app.templates');
-        $compile(templatesHTML)($rootScope); 
-    });
-})();
-{% endhighlight %}
+
 <p></p>
 An example for a simple auto-generated javascript file: 
-{% highlight js %}
-angular.module('app.templates', []).run(['$templateCache', function($templateCache) {
-    $templateCache.put("app.templates",
-        "<script type=text/ng-template id=timerTemplate.html><div class=\"timer\">{{timer.time}}</div></script><script type                =text/ng-template id=videoTemplate.html><video id=\"video\" class=\"video-full-screen\" controls=\"true\">\n" +
-        "            <source id=\"mp4\" ng-src=\"{{ videoDataUrlMp4 }}\" type=\"video/mp4\">\n" +
-        "            <p>Your user agent does not support the HTML5 Video element.</p>\n" +
-        "    </video></script><script type=text/ng-template id=videoPageTemplate.html><div>\n" +
-        "  <demo-timer></demo-timer>\n" +
-        "     <demo-video video-data=\"videoPageCtrl.videoData\"><demo-video>\n" +
-        " </div></script>");
-}]);
-{% endhighlight %}
-
+{% gist 5ffdfcd19a29c4de1a0c %}
 For a complete demo using html2js you can refer to my [angularjs-realworld](https://github.com/yanivefraim/angularjs-realworld) demo in Github.
 
 
