@@ -6,9 +6,78 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 20 May 2015 23:18:26 +0300</pubDate>
-    <lastBuildDate>Wed, 20 May 2015 23:18:26 +0300</lastBuildDate>
+    <pubDate>Wed, 20 May 2015 23:22:29 +0300</pubDate>
+    <lastBuildDate>Wed, 20 May 2015 23:22:29 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Git stash like a boss</title>
+        <description>&lt;p&gt;Git stash is awesome. You work on a feature/bug and suddenly having a context switch  (a new urgent hotfix / a team member asking for help in another brunch). Now, you want to save your work aside without committing it.
+Git stash FTW!
+A basic stash will be:&lt;/p&gt;
+
+&lt;p&gt;Saving a stash&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stash&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Save a stash with a save name:&lt;/p&gt;
+
+&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
+git stash save &amp;quot;my temp work&amp;quot;
+[/code]
+Fetching back last stash, popping it from stash stack&lt;/p&gt;
+
+&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
+git stash pop
+[/code]
+Fetching back last stash, leaving it on stash stack&lt;/p&gt;
+
+&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
+git stash apply
+[/code]
+As you can see, stash is a stack of changes. What if you want to fetch an old stash?&lt;/p&gt;
+
+&lt;p&gt;Retrieving list of stashes&lt;/p&gt;
+
+&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
+git stash list
+[/code]
+This will produce a list of stashes:&lt;/p&gt;
+
+&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
+stash@{0}: On feature/AD-292: controller api mock
+stash@{1}: On feature/AD-350: vast fake json
+stash@{2}: On feature/AD-315: vast another fake json
+stash@{3}: On feature/AD-350: vast validator
+stash@{4}: On feature/AD-292: controller 11.1.15
+...
+[/code]
+In order to fetch a specific stash:&lt;/p&gt;
+
+&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
+git stash pop stash@{n}
+[/code]
+Or&lt;/p&gt;
+
+&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
+git stash apply stash@{n} 
+[/code]
+And a last tip: you can see stash&amp;#39;s changes by:&lt;/p&gt;
+
+&lt;p&gt;[code language=&amp;quot;javascript&amp;quot;]
+git stash show -p stash@{n}
+[/code]
+Good luck!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 15 Jan 2015 16:34:25 +0200</pubDate>
+        <link>http://yanivefraim.github.io//2015/01/15/git-stash-like-a-boss.html</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//2015/01/15/git-stash-like-a-boss.html</guid>
+        
+        <category>Angularjs</category>
+        
+        <category>Javascript</category>
+        
+        
+      </item>
     
       <item>
         <title>Handling static files versioning using grunt-hashres</title>
