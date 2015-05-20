@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 21 May 2015 00:13:30 +0300</pubDate>
-    <lastBuildDate>Thu, 21 May 2015 00:13:30 +0300</lastBuildDate>
+    <pubDate>Thu, 21 May 2015 00:14:35 +0300</pubDate>
+    <lastBuildDate>Thu, 21 May 2015 00:14:35 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -94,6 +94,8 @@ Retrieving list of stashes&lt;/p&gt;
 &lt;p&gt;Configurations are easy. Just add the files you want to update and the files containing the references to them:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/d55a2d2aa3959d3bba8f.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;This is how my &amp;quot;stage&amp;quot; folder looks like:&lt;/p&gt;
 

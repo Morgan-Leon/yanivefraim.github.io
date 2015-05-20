@@ -15,7 +15,7 @@ Configurations are easy. Just add the files you want to update and the files con
 
 {% gist d55a2d2aa3959d3bba8f %}
 
-
+<p></p>
 This is how my "stage" folder looks like:
 
 <p style="text-align:center;">
