@@ -128,8 +128,9 @@ pre,
 code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: transparent;
+    border-radius: 5px;
+    background-color: #141c22;
+    color: white;
 }
 
 code {
