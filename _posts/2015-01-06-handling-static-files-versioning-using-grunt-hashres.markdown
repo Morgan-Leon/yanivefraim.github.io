@@ -15,9 +15,12 @@ Configurations are easy. Just add the files you want to update and the files con
 
 {% gist d55a2d2aa3959d3bba8f %}
 
+
 This is how my "stage" folder looks like:
 
-![](/assets/article_images/2015-01-06-handling-static-files-versioning-using-grunt-hashres/image1.png)
+<p style="text-align:center;">
+	<img src="/assets/article_images/2015-01-06-handling-static-files-versioning-using-grunt-hashres/image1.png" alt="">
+</p>
 
 While the references to those static files automatically updated to be:
 
