@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 20 May 2015 22:31:44 +0300</pubDate>
-    <lastBuildDate>Wed, 20 May 2015 22:31:44 +0300</lastBuildDate>
+    <pubDate>Wed, 20 May 2015 22:32:57 +0300</pubDate>
+    <lastBuildDate>Wed, 20 May 2015 22:32:57 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -56,7 +56,7 @@
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;main.min.55a94a50.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;main.min.6e4ea0cc.css&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/head&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;That&amp;#39;s it. Quick and simple. For a complete flow example, you can refer to my Angular-realworld demo.&lt;/p&gt;
+&lt;p&gt;That&amp;#39;s it. Quick and simple. For a complete flow example, you can refer to my &lt;a href=&quot;https://github.com/yanivefraim/angularjs-realworld&quot;&gt;angularjs-realworld&lt;/a&gt; demo in Github.&lt;/p&gt;
 </description>
         <pubDate>Tue, 06 Jan 2015 16:34:25 +0200</pubDate>
         <link>http://yanivefraim.github.io//2015/01/06/handling-static-files-versioning-using-grunt-hashres.html</link>

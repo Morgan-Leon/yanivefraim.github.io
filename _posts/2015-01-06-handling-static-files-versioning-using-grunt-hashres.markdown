@@ -53,7 +53,7 @@ While the references to those static files automatically updated to be
 <link rel="stylesheet" href="main.min.6e4ea0cc.css"></head>
 {% endhighlight %}
 
-That's it. Quick and simple. For a complete flow example, you can refer to my Angular-realworld demo.
+That's it. Quick and simple. For a complete flow example, you can refer to my [angularjs-realworld](https://github.com/yanivefraim/angularjs-realworld) demo in Github.
 
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
