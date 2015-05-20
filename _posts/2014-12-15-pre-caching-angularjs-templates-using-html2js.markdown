@@ -20,7 +20,6 @@ npm install grunt-html2js --save-dev
 npm install --save-dev gulp-html2js
 {% endhighlight %}
 
-<p></p>
 Configuration file should look something like this (Grunt)
 
 {% gist 6fa1eab9230fad51ea7a %}
@@ -29,8 +28,6 @@ This will create a module named "app.templates", which you will be able to add a
 
 {% gist 3d023cc1388e3fa22ced %}
 
-
-<p></p>
 An example for a simple auto-generated javascript file: 
 
 {% gist 5ffdfcd19a29c4de1a0c %}

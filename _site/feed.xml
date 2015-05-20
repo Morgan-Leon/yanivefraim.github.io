@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 20 May 2015 23:13:59 +0300</pubDate>
-    <lastBuildDate>Wed, 20 May 2015 23:13:59 +0300</lastBuildDate>
+    <pubDate>Wed, 20 May 2015 23:15:54 +0300</pubDate>
+    <lastBuildDate>Wed, 20 May 2015 23:15:54 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -185,8 +185,6 @@
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dev&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html2js&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
 &lt;p&gt;Configuration file should look something like this (Grunt)&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/6fa1eab9230fad51ea7a.js&quot;&gt; &lt;/script&gt;
@@ -194,8 +192,6 @@
 &lt;p&gt;This will create a module named &amp;quot;app.templates&amp;quot;, which you will be able to add as a dependency to your main app. You will also have to pre-compile the cached templates: &lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/3d023cc1388e3fa22ced.js&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;An example for a simple auto-generated javascript file: &lt;/p&gt;
 
