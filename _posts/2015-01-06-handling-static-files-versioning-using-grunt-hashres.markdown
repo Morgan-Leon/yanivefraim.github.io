@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Handling static files versioning using grunt-hashres"
-date:   2014-11-15 14:34:25
+date:   2015-01-06 14:34:25
 tags: Angularjs Javascript
 image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.jpg
 ---

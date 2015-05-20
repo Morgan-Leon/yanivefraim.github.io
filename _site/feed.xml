@@ -6,9 +6,65 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 20 May 2015 22:22:54 +0300</pubDate>
-    <lastBuildDate>Wed, 20 May 2015 22:22:54 +0300</lastBuildDate>
+    <pubDate>Wed, 20 May 2015 22:24:06 +0300</pubDate>
+    <lastBuildDate>Wed, 20 May 2015 22:24:06 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Handling static files versioning using grunt-hashres</title>
+        <description>&lt;p&gt;While looking for a simple but yet effective way to handle my static file versions, I found the awesome grunt-hashres Grunt plugin. Its job is to give each static file a unique version and also update references to the file with current version. awesome.&lt;/p&gt;
+
+&lt;p&gt;Installing the plugin:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hashres&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Configurations are easy. Just add the files you want to update and the files containing the references to them:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;hashres&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Optional. Encoding used to read/write files. Default value &amp;#39;utf8&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Optional. Format used to name the files specified in &amp;#39;files&amp;#39; property.&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Default value: &amp;#39;${hash}.${name}.cache.${ext}&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;fileNameFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;${name}.${hash}.${ext}&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Optional. Should files be renamed or only alter the references to the files&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Use it with &amp;#39;${name}.${ext}?${hash} to get perfect caching without renaming your files&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Default value: true&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;renameFiles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// hashres is a multitask. Here &amp;#39;stage&amp;#39; is the name of the subtask. You can have as many as you want.&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Specific options, override the global ones&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// You can override encoding, fileNameFormat or renameFiles&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Files to hash&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// WARNING: These files will be renamed!&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;project_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/dist/stage/main.min.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;project_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/dist/stage/main.min.css&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// File that refers to above files and needs to be updated with the hashed name&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;project_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/dist/stage/index.html&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is how my &amp;quot;stage&amp;quot; folder looks like:&lt;/p&gt;
+
+&lt;p&gt;While the references to those static files automatically updated to be&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s it. Quick and simple. For a complete flow example, you can refer to my Angular-realworld demo.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 06 Jan 2015 16:34:25 +0200</pubDate>
+        <link>http://yanivefraim.github.io//2015/01/06/handling-static-files-versioning-using-grunt-hashres.html</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//2015/01/06/handling-static-files-versioning-using-grunt-hashres.html</guid>
+        
+        <category>Angularjs</category>
+        
+        <category>Javascript</category>
+        
+        
+      </item>
     
       <item>
         <title>Splitting large Grunt files using node.js export capabilities</title>
@@ -215,62 +271,6 @@
         <pubDate>Sat, 15 Nov 2014 16:34:25 +0200</pubDate>
         <link>http://yanivefraim.github.io//2014/11/15/pre-caching-angularjs-templates-using-html2js.html</link>
         <guid isPermaLink="true">http://yanivefraim.github.io//2014/11/15/pre-caching-angularjs-templates-using-html2js.html</guid>
-        
-        <category>Angularjs</category>
-        
-        <category>Javascript</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Handling static files versioning using grunt-hashres</title>
-        <description>&lt;p&gt;While looking for a simple but yet effective way to handle my static file versions, I found the awesome grunt-hashres Grunt plugin. Its job is to give each static file a unique version and also update references to the file with current version. awesome.&lt;/p&gt;
-
-&lt;p&gt;Installing the plugin:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hashres&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Configurations are easy. Just add the files you want to update and the files containing the references to them:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;hashres&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// Optional. Encoding used to read/write files. Default value &amp;#39;utf8&amp;#39;&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// Optional. Format used to name the files specified in &amp;#39;files&amp;#39; property.&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// Default value: &amp;#39;${hash}.${name}.cache.${ext}&amp;#39;&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;fileNameFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;${name}.${hash}.${ext}&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// Optional. Should files be renamed or only alter the references to the files&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// Use it with &amp;#39;${name}.${ext}?${hash} to get perfect caching without renaming your files&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// Default value: true&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;renameFiles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// hashres is a multitask. Here &amp;#39;stage&amp;#39; is the name of the subtask. You can have as many as you want.&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// Specific options, override the global ones&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// You can override encoding, fileNameFormat or renameFiles&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// Files to hash&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// WARNING: These files will be renamed!&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;project_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/dist/stage/main.min.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;project_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/dist/stage/main.min.css&amp;#39;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// File that refers to above files and needs to be updated with the hashed name&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;project_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/dist/stage/index.html&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This is how my &amp;quot;stage&amp;quot; folder looks like:&lt;/p&gt;
-
-&lt;p&gt;While the references to those static files automatically updated to be&lt;/p&gt;
-
-&lt;p&gt;That&amp;#39;s it. Quick and simple. For a complete flow example, you can refer to my Angular-realworld demo.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 15 Nov 2014 16:34:25 +0200</pubDate>
-        <link>http://yanivefraim.github.io//2014/11/15/handling-static-files-versioning-using-grunt-hashres.html</link>
-        <guid isPermaLink="true">http://yanivefraim.github.io//2014/11/15/handling-static-files-versioning-using-grunt-hashres.html</guid>
         
         <category>Angularjs</category>
         
