@@ -6,9 +6,60 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 21 May 2015 08:31:11 +0300</pubDate>
-    <lastBuildDate>Thu, 21 May 2015 08:31:11 +0300</lastBuildDate>
+    <pubDate>Thu, 21 May 2015 08:38:27 +0300</pubDate>
+    <lastBuildDate>Thu, 21 May 2015 08:38:27 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Chain your Promises: no more Promise soup!</title>
+        <description>&lt;p&gt;I love Promises. We use it in all our projects. It can be used with AngularJS, jQuery or even Vanilla Javascript. I will not explain about Promises basics here, if you are not familiar with Promises, take a look here, here and here.&lt;/p&gt;
+
+&lt;p&gt;The interesting stuff starts when there are several serial actions (sometimes with different operations between them).&lt;/p&gt;
+
+&lt;p&gt;Without chaining, you will quickly find yourself writing a &amp;quot;Promise Soup&amp;quot; (all examples are in jQuery. It is pretty much the same for all other options, with slight syntax differences):&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/6299f93a14ec72676294.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Wow. This is exactly what Promises intended to prevent in the first place!&lt;/p&gt;
+
+&lt;h3&gt;chaining promises&lt;/h3&gt;
+
+&lt;p&gt;For this simple example, chaining should be pretty straightforward:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/275da91ed13edb214068.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Cool. This is much cleaner and easier to read.&lt;/p&gt;
+
+&lt;p&gt;Now, for a complete example (&lt;a href=&quot;&amp;#x27;http://jsbin.com/bupice/4/edit?js,console&amp;#x27;&quot;&gt;jsBin&lt;/a&gt;):&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/e890f080feec2161dafc.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;The really cool things here are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You can listen to fail/error events in one place. An error will stop the chaining and get to the closest fail statement. (&lt;a href=&quot;&amp;#x27;http://jsbin.com/bupice/5/edit?js,console&amp;#x27;&quot;&gt;jsBin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Resolved data will be passed to chained function.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Disadvantages:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Passing data between &amp;quot;getA&amp;quot; to &amp;quot;getC&amp;quot; must go via &amp;quot;getB&amp;quot; (or a global object)&lt;/li&gt;
+&lt;li&gt;Harder to implement when there are conditional calls to serial methods (&amp;quot;getB&amp;quot; is called only if some condition applies in &amp;quot;aData&amp;quot;, for example)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That&amp;#39;s it. Keep on chaining! &lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 Feb 2015 16:34:25 +0200</pubDate>
+        <link>http://yanivefraim.github.io//2015/02/08/chain-your-promises-no-more-promise-soup.html</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//2015/02/08/chain-your-promises-no-more-promise-soup.html</guid>
+        
+        <category>Angularjs</category>
+        
+        <category>Javascript</category>
+        
+        
+      </item>
     
       <item>
         <title>Debug mobile apps like a pro (part 1)</title>
