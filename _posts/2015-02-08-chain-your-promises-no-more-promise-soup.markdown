@@ -27,7 +27,7 @@ Now, for a complete example ([jsBin]('http://jsbin.com/bupice/4/edit?js,console'
 
 {% gist e890f080feec2161dafc %}
 
-
+<p></p>
 The really cool things here are:
 
 * You can listen to fail/error events in one place. An error will stop the chaining and get to the closest fail statement. ([jsBin]('http://jsbin.com/bupice/5/edit?js,console'))
