@@ -7,7 +7,7 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Chain your Promises: no more Promise soup!</title>
+  <title>Be ready for Angular 2 Today</title>
   <meta name="description" content="Advanced Front End topics
 " />
 
@@ -16,7 +16,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="canonical" href="http://yanivefraim.github.io//2015/02/08/chain-your-promises-no-more-promise-soup.html">
+  <link rel="canonical" href="http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
 <!--  <link rel="stylesheet" href=""> -->
@@ -42,12 +42,12 @@
             Article Image
           </div>
           <div class="post-meta">
-            <h1 class="post-title">Chain your Promises: no more Promise soup!</h1>
+            <h1 class="post-title">Be ready for Angular 2 Today</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Yaniv Efraim</h4>
               on
-              <time datetime="2015-02-08 16:34">08 Feb 2015</time>
+              <time datetime="2015-05-21 17:34">21 May 2015</time>
               <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
             </div>
             <div style="text-align:center">
@@ -61,45 +61,78 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>I love Promises. We use it in all our projects. It can be used with AngularJS, jQuery or even Vanilla Javascript. I will not explain about Promises basics here, if you are not familiar with Promises, take a look here, here and here.</p>
+          <p>Angular 2 is not here. It will take pretty long time until we&#39;ll start using it. But, as you probably heard, the changes are <a href="todo:%20add%20changes%20list%20blog%20link%20here">HUGE</a>.</p>
 
-<p>The interesting stuff starts when there are several serial actions (sometimes with different operations between them).</p>
+<p>This is a good enough reason to start preparing for Angular 2 today (otherwise the migration path will be paintfull). </p>
 
-<p>Without chaining, you will quickly find yourself writing a &quot;Promise Soup&quot; (all examples are in jQuery. It is pretty much the same for all other options, with slight syntax differences):</p>
+<blockquote>
+<p>Another important point: a lot of new projects do not use Angular because of the fear of the new Angular 2 (or, &quot;why should I start a new project using Angular 1.x when soon I&#39;ll have to go through a paintfull migration path?&quot;)</p>
+</blockquote>
 
-<script src="https://gist.github.com/6299f93a14ec72676294.js"> </script>
+<p>So, I&#39;ll get streight to the point: what do we need to do today in order to make the migration to Angular 2 easier? 
+I summed it up to there steps, from the most important and complicated to the easiest:</p>
 
-<p>Wow. This is exactly what Promises intended to prevent in the first place!</p>
+<ol>
+<li>Use Component based Architecture</li>
+<li>Write Angular 1.x in ES6/Typescript</li>
+<li>Use the &quot;new router&quot;</li>
+</ol>
 
-<h3>chaining promises</h3>
+<h3>Use Component based Architecture</h3>
 
-<p>For this simple example, chaining should be pretty straightforward:</p>
+<p>This is the most important part, and the hardest one. 
+Angular 2.x, similar to React, is based on components. It uses component structure hierarchy (TODO: add link here). Angular 1.x does not work that way. The easiest way to understand this is through an example. I will use the phonecat demo as an example. Take a look at this code:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-2&quot;</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--Sidebar content--&gt;</span>
 
-<script src="https://gist.github.com/275da91ed13edb214068.js"> </script>
+      Search: <span class="nt">&lt;input</span> <span class="na">ng-model=</span><span class="s">&quot;query&quot;</span><span class="nt">&gt;</span>
+      Sort by:
+      <span class="nt">&lt;select</span> <span class="na">ng-model=</span><span class="s">&quot;orderProp&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Alphabetical<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;age&quot;</span><span class="nt">&gt;</span>Newest<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;/select&gt;</span>
 
-<p>Cool. This is much cleaner and easier to read.</p>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-10&quot;</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--Body content--&gt;</span>
 
-<p>Now, for a complete example (<a href="&#x27;http://jsbin.com/bupice/4/edit?js,console&#x27;">jsBin</a>):</p>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;phones&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">ng-repeat=</span><span class="s">&quot;phone in phones | filter:query | orderBy:orderProp&quot;</span>
+            <span class="na">class=</span><span class="s">&quot;thumbnail phone-listing&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#/phones/&quot;</span> <span class="na">class=</span><span class="s">&quot;thumb&quot;</span><span class="nt">&gt;&lt;img</span> <span class="na">ng-src=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#/phones/&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
 
-<script src="https://gist.github.com/e890f080feec2161dafc.js"> </script>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>This is how it will look like:
+--image here--</p>
 
-<p></p>
+<p>We would like to achieve two things:</p>
 
-<p>The really cool things here are:</p>
+<ol>
+<li>Break this html into components.</li>
+<li>Build the components as a hierarchy tree. Something like this:</li>
+</ol>
 
-<ul>
-<li>You can listen to fail/error events in one place. An error will stop the chaining and get to the closest fail statement. (<a href="&#x27;http://jsbin.com/bupice/5/edit?js,console&#x27;">jsBin</a>)</li>
-<li>Resolved data will be passed to chained function.</li>
-</ul>
+<p style="text-align:center;">
+    <img src="/assets/article_images/2015-05-21-be-ready-for-angular2-today/app_structure.png" alt="">
+</p>
 
-<p>Disadvantages:</p>
+<h4>Breaking the code into components</h4>
 
-<ul>
-<li>Passing data between &quot;getA&quot; to &quot;getC&quot; must go via &quot;getB&quot; (or a global object)</li>
-<li>Harder to implement when there are conditional calls to serial methods (&quot;getB&quot; is called only if some condition applies in &quot;aData&quot;, for example)</li>
-</ul>
-
-<p>That&#39;s it. Keep on chaining! </p>
+<p>We will want to build several components:
+- Application main component (this will be used for the parent component in the hierarchy)
+- Search component
+- List component
+- List item component
+- Catalog details component</p>
 
           <div id="disqus_thread"></div>
         </section>
@@ -107,14 +140,14 @@
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=Chain+your+Promises%3A+no+more+Promise+soup%21&amp;url=http://yanivefraim.github.io//2015/02/08/chain-your-promises-no-more-promise-soup"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Be+ready+for+Angular+2+Today&amp;url=http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
               
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Chain+your+Promises%3A+no+more+Promise+soup%21&amp;u=http://yanivefraim.github.io//2015/02/08/chain-your-promises-no-more-promise-soup"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Be+ready+for+Angular+2+Today&amp;u=http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
@@ -132,7 +165,7 @@
               <h4>Yaniv Efraim</h4>
               <p class="bio"></p>
               <hr>
-              <p class="published">Published <time datetime="2015-02-08 16:34">08 Feb 2015</time></p>
+              <p class="published">Published <time datetime="2015-05-21 17:34">21 May 2015</time></p>
             </section>
           </div>
           

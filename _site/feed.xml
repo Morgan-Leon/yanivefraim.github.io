@@ -6,9 +6,95 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 21 May 2015 08:38:27 +0300</pubDate>
-    <lastBuildDate>Thu, 21 May 2015 08:38:27 +0300</lastBuildDate>
+    <pubDate>Thu, 21 May 2015 22:35:58 +0300</pubDate>
+    <lastBuildDate>Thu, 21 May 2015 22:35:58 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Be ready for Angular 2 Today</title>
+        <description>&lt;p&gt;Angular 2 is not here. It will take pretty long time until we&amp;#39;ll start using it. But, as you probably heard, the changes are &lt;a href=&quot;todo:%20add%20changes%20list%20blog%20link%20here&quot;&gt;HUGE&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is a good enough reason to start preparing for Angular 2 today (otherwise the migration path will be paintfull). &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Another important point: a lot of new projects do not use Angular because of the fear of the new Angular 2 (or, &amp;quot;why should I start a new project using Angular 1.x when soon I&amp;#39;ll have to go through a paintfull migration path?&amp;quot;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, I&amp;#39;ll get streight to the point: what do we need to do today in order to make the migration to Angular 2 easier? 
+I summed it up to there steps, from the most important and complicated to the easiest:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Use Component based Architecture&lt;/li&gt;
+&lt;li&gt;Write Angular 1.x in ES6/Typescript&lt;/li&gt;
+&lt;li&gt;Use the &amp;quot;new router&amp;quot;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Use Component based Architecture&lt;/h3&gt;
+
+&lt;p&gt;This is the most important part, and the hardest one. 
+Angular 2.x, similar to React, is based on components. It uses component structure hierarchy (TODO: add link here). Angular 1.x does not work that way. The easiest way to understand this is through an example. I will use the phonecat demo as an example. Take a look at this code:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;container-fluid&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;row&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-md-2&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;&amp;lt;!--Sidebar content--&amp;gt;&lt;/span&gt;
+
+      Search: &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-model=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;query&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      Sort by:
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;select&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-model=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;orderProp&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Alphabetical&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;age&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Newest&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/select&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-md-10&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;&amp;lt;!--Body content--&amp;gt;&lt;/span&gt;
+
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;phones&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-repeat=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;phone in phones | filter:query | orderBy:orderProp&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;thumbnail phone-listing&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#/phones/&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;thumb&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#/phones/&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This is how it will look like:
+--image here--&lt;/p&gt;
+
+&lt;p&gt;We would like to achieve two things:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Break this html into components.&lt;/li&gt;
+&lt;li&gt;Build the components as a hierarchy tree. Something like this:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p style=&quot;text-align:center;&quot;&gt;
+    &lt;img src=&quot;/assets/article_images/2015-05-21-be-ready-for-angular2-today/app_structure.png&quot; alt=&quot;&quot;&gt;
+&lt;/p&gt;
+
+&lt;h4&gt;Breaking the code into components&lt;/h4&gt;
+
+&lt;p&gt;We will want to build several components:
+- Application main component (this will be used for the parent component in the hierarchy)
+- Search component
+- List component
+- List item component
+- Catalog details component&lt;/p&gt;
+</description>
+        <pubDate>Thu, 21 May 2015 17:34:25 +0300</pubDate>
+        <link>http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today.html</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today.html</guid>
+        
+        <category>Angularjs</category>
+        
+        <category>Javascript</category>
+        
+        
+      </item>
     
       <item>
         <title>Chain your Promises: no more Promise soup!</title>
@@ -33,6 +119,8 @@
 &lt;p&gt;Now, for a complete example (&lt;a href=&quot;&amp;#x27;http://jsbin.com/bupice/4/edit?js,console&amp;#x27;&quot;&gt;jsBin&lt;/a&gt;):&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/e890f080feec2161dafc.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;The really cool things here are:&lt;/p&gt;
 
