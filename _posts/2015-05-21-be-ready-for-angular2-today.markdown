@@ -21,7 +21,7 @@ I summed it up to there steps, from the most important and complicated to the ea
 
 ##1. Use Component based Architecture
 This is the most important part, and the hardest one. 
-Angular 2.x, similar to React, is based on components. It uses component structure hierarchy (TODO: add link here). Angular 1.x does not work that way. The easiest way to understand this is through an example. I will use the phonecat demo as an example. Take a look at this code:
+Angular 2.x, similar to React, is based on components. It uses component structure hierarchy (TODO: add link here). Angular 1.x does not work that way. The easiest way to understand this is through an example. I will use the [phonecat demo](https://docs.angularjs.org/tutorial) as an example. Take a look at this code:
 
 ```html
 <div class="container-fluid">
