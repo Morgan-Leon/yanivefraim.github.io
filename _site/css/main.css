@@ -532,13 +532,13 @@ body {
   .post .post-content blockquote {
     margin: 0 0 30px;
     margin-left: -26px;
-    border-left: 3px solid #57ad68;
+    border-left: 3px solid #D8C081;
     padding-left: 20px; }
     .post .post-content blockquote p {
       letter-spacing: 0.01rem;
       font-weight: 400;
       font-style: italic;
-      mborder-left: 3px solid #57ad68;
+      mborder-left: 3px solid #D8C081;
       mpadding-left: 20px;
       mmargin-left: -26px;
       padding-bottom: 3px; }
@@ -708,7 +708,7 @@ body {
       text-decoration: none;
       cursor: pointer;
       height: 44px;
-      background: #57ad68;
+      background: #D8C081;
       color: #fff;
       vertical-align: middle;
       box-sizing: border-box;
