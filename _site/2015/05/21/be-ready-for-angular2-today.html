@@ -7,7 +7,7 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Be ready for Angular 2 Today</title>
+  <title>Be ready for Angular 2 Today - !!Draft - a work in progress!!</title>
   <meta name="description" content="Advanced Front End topics
 " />
 
@@ -42,7 +42,7 @@
             Article Image
           </div>
           <div class="post-meta">
-            <h1 class="post-title">Be ready for Angular 2 Today</h1>
+            <h1 class="post-title">Be ready for Angular 2 Today - !!Draft - a work in progress!!</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Yaniv Efraim</h4>
@@ -78,7 +78,7 @@ I summed it up to there steps, from the most important and complicated to the ea
 <li>Use the &quot;new router&quot;</li>
 </ol>
 
-<h3>Use Component based Architecture</h3>
+<h2>1. Use Component based Architecture</h2>
 
 <p>This is the most important part, and the hardest one. 
 Angular 2.x, similar to React, is based on components. It uses component structure hierarchy (TODO: add link here). Angular 1.x does not work that way. The easiest way to understand this is through an example. I will use the phonecat demo as an example. Take a look at this code:</p>
@@ -125,29 +125,55 @@ Angular 2.x, similar to React, is based on components. It uses component structu
     <img src="/assets/article_images/2015-05-21-be-ready-for-angular2-today/app_structure.png" alt="">
 </p>
 
-<h4>Breaking the code into components</h4>
+<h6>Breaking the code into components</h6>
 
-<p>We will want to build several components:
-- Application main component (this will be used for the parent component in the hierarchy)
-- Search component
-- List component
-- List item component
-- Catalog details component</p>
+<p>We will want to build several components:</p>
 
+<ul>
+<li>Application main component (this will be used for the parent component in the hierarchy)</li>
+<li>Search component</li>
+<li>List component</li>
+<li>List item component</li>
+<li>Catalog details component</li>
+</ul>
+
+<h6>Creating a hierarchy tree</h6>
+
+<p>This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers. There are several great posts showing how to do it using directive&#39;s transclude property (see <a href="https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives">here</a> and <a href="https://www.airpair.com/angularjs/posts/component-based-angularjs-directives">here</a>). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to do it using the &#39;React way&#39;. </p>
+
+<blockquote>
+<p>React uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials <a href="https://facebook.github.io/react/docs/thinking-in-react.html">here</a> and <a href="https://facebook.github.io/react/docs/tutorial.html">here</a></p>
+</blockquote>
+
+<p>The main disadvantages of this method are:</p>
+
+<ul>
+<li>When trying to pass a lot of properties to a component. This can become ugly, but I guess that there are ways to overcome this. If this is the case (a lot of complex properties to a component), using tranclude can be a better choice. </li>
+<li>Trancluding html code into components gives <u></u>s extra flexibility and control over the content of our components. </li>
+</ul>
+
+<p>Our code should now look something like that:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">phonecat-site
+=&gt; phonecat-search
+    =&gt;search
+    =&gt;select
+=&gt; phonecat-list
+    =&gt;phonecat-item
+</code></pre></div>
           <div id="disqus_thread"></div>
         </section>
         <footer class="post-footer">
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=Be+ready+for+Angular+2+Today&amp;url=http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Be+ready+for+Angular+2+Today+-+%21%21Draft+-+a+work+in+progress%21%21&amp;url=http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
               
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Be+ready+for+Angular+2+Today&amp;u=http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Be+ready+for+Angular+2+Today+-+%21%21Draft+-+a+work+in+progress%21%21&amp;u=http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>

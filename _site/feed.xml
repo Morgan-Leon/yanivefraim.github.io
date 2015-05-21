@@ -6,12 +6,12 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 21 May 2015 22:35:58 +0300</pubDate>
-    <lastBuildDate>Thu, 21 May 2015 22:35:58 +0300</lastBuildDate>
+    <pubDate>Thu, 21 May 2015 23:52:41 +0300</pubDate>
+    <lastBuildDate>Thu, 21 May 2015 23:52:41 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>Be ready for Angular 2 Today</title>
+        <title>Be ready for Angular 2 Today - !!Draft - a work in progress!!</title>
         <description>&lt;p&gt;Angular 2 is not here. It will take pretty long time until we&amp;#39;ll start using it. But, as you probably heard, the changes are &lt;a href=&quot;todo:%20add%20changes%20list%20blog%20link%20here&quot;&gt;HUGE&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;This is a good enough reason to start preparing for Angular 2 today (otherwise the migration path will be paintfull). &lt;/p&gt;
@@ -29,7 +29,7 @@ I summed it up to there steps, from the most important and complicated to the ea
 &lt;li&gt;Use the &amp;quot;new router&amp;quot;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3&gt;Use Component based Architecture&lt;/h3&gt;
+&lt;h2&gt;1. Use Component based Architecture&lt;/h2&gt;
 
 &lt;p&gt;This is the most important part, and the hardest one. 
 Angular 2.x, similar to React, is based on components. It uses component structure hierarchy (TODO: add link here). Angular 1.x does not work that way. The easiest way to understand this is through an example. I will use the phonecat demo as an example. Take a look at this code:&lt;/p&gt;
@@ -76,15 +76,41 @@ Angular 2.x, similar to React, is based on components. It uses component structu
     &lt;img src=&quot;/assets/article_images/2015-05-21-be-ready-for-angular2-today/app_structure.png&quot; alt=&quot;&quot;&gt;
 &lt;/p&gt;
 
-&lt;h4&gt;Breaking the code into components&lt;/h4&gt;
+&lt;h6&gt;Breaking the code into components&lt;/h6&gt;
 
-&lt;p&gt;We will want to build several components:
-- Application main component (this will be used for the parent component in the hierarchy)
-- Search component
-- List component
-- List item component
-- Catalog details component&lt;/p&gt;
-</description>
+&lt;p&gt;We will want to build several components:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Application main component (this will be used for the parent component in the hierarchy)&lt;/li&gt;
+&lt;li&gt;Search component&lt;/li&gt;
+&lt;li&gt;List component&lt;/li&gt;
+&lt;li&gt;List item component&lt;/li&gt;
+&lt;li&gt;Catalog details component&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6&gt;Creating a hierarchy tree&lt;/h6&gt;
+
+&lt;p&gt;This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers. There are several great posts showing how to do it using directive&amp;#39;s transclude property (see &lt;a href=&quot;https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://www.airpair.com/angularjs/posts/component-based-angularjs-directives&quot;&gt;here&lt;/a&gt;). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to do it using the &amp;#39;React way&amp;#39;. &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;React uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials &lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://facebook.github.io/react/docs/tutorial.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The main disadvantages of this method are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;When trying to pass a lot of properties to a component. This can become ugly, but I guess that there are ways to overcome this. If this is the case (a lot of complex properties to a component), using tranclude can be a better choice. &lt;/li&gt;
+&lt;li&gt;Trancluding html code into components gives &lt;u&gt;&lt;/u&gt;s extra flexibility and control over the content of our components. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Our code should now look something like that:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;phonecat-site
+=&amp;gt; phonecat-search
+    =&amp;gt;search
+    =&amp;gt;select
+=&amp;gt; phonecat-list
+    =&amp;gt;phonecat-item
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Thu, 21 May 2015 17:34:25 +0300</pubDate>
         <link>http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today.html</link>
         <guid isPermaLink="true">http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today.html</guid>

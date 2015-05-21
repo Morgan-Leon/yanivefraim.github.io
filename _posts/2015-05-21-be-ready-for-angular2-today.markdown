@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Be ready for Angular 2 Today"
+title:  "Be ready for Angular 2 Today - !!Draft - a work in progress!!"
 date:   2015-05-21 14:34:25
 tags: Angularjs Javascript
 image: /assets/images/desktop.JPG
@@ -19,7 +19,7 @@ I summed it up to there steps, from the most important and complicated to the ea
 2. Write Angular 1.x in ES6/Typescript
 3. Use the "new router"
 
-###Use Component based Architecture
+##1. Use Component based Architecture
 This is the most important part, and the hardest one. 
 Angular 2.x, similar to React, is based on components. It uses component structure hierarchy (TODO: add link here). Angular 1.x does not work that way. The easiest way to understand this is through an example. I will use the phonecat demo as an example. Take a look at this code:
 
@@ -66,15 +66,37 @@ We would like to achieve two things:
 	<img src="/assets/article_images/2015-05-21-be-ready-for-angular2-today/app_structure.png" alt="">
 </p>
 
-####Breaking the code into components
+######Breaking the code into components
 We will want to build several components:
+
 - Application main component (this will be used for the parent component in the hierarchy)
 - Search component
 - List component
 - List item component
 - Catalog details component
 
+######Creating a hierarchy tree
 
+This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers. There are several great posts showing how to do it using directive's transclude property (see [here](https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives) and [here](https://www.airpair.com/angularjs/posts/component-based-angularjs-directives)). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to do it using the 'React way'. 
+
+>React uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials [here](https://facebook.github.io/react/docs/thinking-in-react.html) and [here](https://facebook.github.io/react/docs/tutorial.html)
+
+The main disadvantages of this method are:
+
+- When trying to pass a lot of properties to a component. This can become ugly, but I guess that there are ways to overcome this. If this is the case (a lot of complex properties to a component), using tranclude can be a better choice. 
+- Trancluding html code into components gives <u></u>s extra flexibility and control over the content of our components. 
+
+Our code should now look something like that:
+
+```html
+phonecat-site
+=> phonecat-search
+	=>search
+	=>select
+=> phonecat-list
+	=>phonecat-item
+
+```
 
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
