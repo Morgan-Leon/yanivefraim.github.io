@@ -6,9 +6,58 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 21 May 2015 08:12:35 +0300</pubDate>
-    <lastBuildDate>Thu, 21 May 2015 08:12:35 +0300</lastBuildDate>
+    <pubDate>Thu, 21 May 2015 08:31:11 +0300</pubDate>
+    <lastBuildDate>Thu, 21 May 2015 08:31:11 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Debug mobile apps like a pro (part 1)</title>
+        <description>&lt;p&gt;Debugging mobile apps can be tricky. Especially when debugging production apps. One of our team&amp;#39;s most powerful tools is Charles Proxy. It is used by QA, Developers and even by other non R&amp;amp;D teams.&lt;/p&gt;
+
+&lt;p&gt;Here I will demonstrate some super easy and super powerful techniques used to debug/monitor our mobile app. (By the way - most of the stuff here are true for regular desktop/mobile web apps as well)&lt;/p&gt;
+
+&lt;h3&gt;Connect your mobile device to your Mac/PC&lt;/h3&gt;
+
+&lt;p&gt;So - lets get started. First you will have to connect your device to your PC/Mac. This is SUPER easy when using Charles (both mobile device and computer should be on the same network):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Check your network&amp;#39;s local IP address. The simplest way is using Charles&amp;#39; help menu:&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Connect your mobile device to this address:&lt;/p&gt;
+
+&lt;p&gt;2.1. Android (OS 4.X and above. For Android 2.X look here)
+Go to settings-&amp;gt;network-&amp;gt;wifi and long press your selected network. Then choose the following settings (the IP is the IP you located in previous section)&lt;/p&gt;
+
+&lt;p&gt;2.2. iOS
+Go to wifi settings and choose your internal network&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Charles will ask for your approval (only first time you connect your device):&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And... That&amp;#39;s it. You are connected and are ready to get started!&lt;/p&gt;
+
+&lt;h3&gt;Monitor mobile traffic&lt;/h3&gt;
+
+&lt;p&gt;The first thing to do is monitor your mobile app&amp;#39;s traffic. Lets choose IMDB as a &amp;quot;victim&amp;quot; app and monitor its traffic. I&amp;#39;ll choose &amp;quot;record&amp;quot; button and open IMDB. This is what we&amp;#39;ll see:&lt;/p&gt;
+
+&lt;p&gt;What we sees here is filter I created with imdbws.com as a domain. You can set focussed domains on &amp;quot;view-&amp;gt;FocussedHosts&amp;quot;. From here we can monitor all request/response data, including timing charts!&lt;/p&gt;
+
+&lt;p&gt;Request data&lt;/p&gt;
+
+&lt;p&gt;Response Data&lt;/p&gt;
+
+&lt;p&gt;Time Charts&lt;/p&gt;
+
+&lt;p&gt;In the next part of this post I will show some advanced, super powerful use cases, like setting Rewrite rules (for changing request response on the fly), Throttling (for testing different network speeds), Using VPN, routing the traffic to staging servers and more...&lt;/p&gt;
+</description>
+        <pubDate>Mon, 19 Jan 2015 16:34:25 +0200</pubDate>
+        <link>http://yanivefraim.github.io//2015/01/19/debug-mobile-apps-like-a-pro-part-1.html</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//2015/01/19/debug-mobile-apps-like-a-pro-part-1.html</guid>
+        
+        <category>Angularjs</category>
+        
+        <category>Javascript</category>
+        
+        
+      </item>
     
       <item>
         <title>Real World Angularjs (video)</title>
