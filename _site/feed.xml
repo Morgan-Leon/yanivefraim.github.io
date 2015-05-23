@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 22 May 2015 00:17:13 +0300</pubDate>
-    <lastBuildDate>Fri, 22 May 2015 00:17:13 +0300</lastBuildDate>
+    <pubDate>Sat, 23 May 2015 08:19:45 +0300</pubDate>
+    <lastBuildDate>Sat, 23 May 2015 08:19:45 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -90,11 +90,18 @@ Angular 2.x, similar to React, is based on components. It uses component structu
 
 &lt;h6&gt;Creating a hierarchy tree&lt;/h6&gt;
 
-&lt;p&gt;This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers. There are several great posts showing how to do it using directive&amp;#39;s transclude property (see &lt;a href=&quot;https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://www.airpair.com/angularjs/posts/component-based-angularjs-directives&quot;&gt;here&lt;/a&gt;). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to do it using the &amp;#39;React way&amp;#39;. &lt;/p&gt;
+&lt;p&gt;This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers. There are several great posts showing how to do it using directive&amp;#39;s transclude property (see &lt;a href=&quot;https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://www.airpair.com/angularjs/posts/component-based-angularjs-directives&quot;&gt;here&lt;/a&gt;). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Use the &amp;#39;transclude&amp;#39; method without using scope or controllers.&lt;/li&gt;
+&lt;li&gt;Try to do it using the &amp;#39;React way&amp;#39;.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;React uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials &lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://facebook.github.io/react/docs/tutorial.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;h5&gt;The &amp;#39;React way&amp;#39;&lt;/h5&gt;
 
 &lt;p&gt;The main disadvantages of this method are:&lt;/p&gt;
 
