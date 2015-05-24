@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 23 May 2015 08:19:45 +0300</pubDate>
-    <lastBuildDate>Sat, 23 May 2015 08:19:45 +0300</lastBuildDate>
+    <pubDate>Sun, 24 May 2015 13:36:36 +0300</pubDate>
+    <lastBuildDate>Sun, 24 May 2015 13:36:36 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -100,6 +100,10 @@ Angular 2.x, similar to React, is based on components. It uses component structu
 &lt;blockquote&gt;
 &lt;p&gt;React uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials &lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://facebook.github.io/react/docs/tutorial.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;h5&gt;Trunsclude components&lt;/h5&gt;
+
+&lt;p&gt;Using directive&amp;#39;s transclude let you define an isolated component, and let the parrent define its child inner content/template.&lt;/p&gt;
 
 &lt;h5&gt;The &amp;#39;React way&amp;#39;&lt;/h5&gt;
 

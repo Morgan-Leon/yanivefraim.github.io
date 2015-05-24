@@ -84,6 +84,9 @@ This is the tricky part. The main issue here is to correctly pass data/state bet
 
 >React uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials [here](https://facebook.github.io/react/docs/thinking-in-react.html) and [here](https://facebook.github.io/react/docs/tutorial.html)
 
+#####Trunsclude components
+Using directive's transclude let you define an isolated component, and let the parrent define its child inner content/template.
+
 #####The 'React way'
 The main disadvantages of this method are:
 
