@@ -84,13 +84,13 @@ We will now have a main 'phonecat-component' which will hold the 'phonecat-searc
 
 It should look somehting like this:
 
-```javascript
+```html
 <body>
   <phonecat-component></phonecat-component>
 </body>
 ```
 
-```javascript
+```html
 //phonecat-component
 <div class="container-fluid">
   <div class="row">
