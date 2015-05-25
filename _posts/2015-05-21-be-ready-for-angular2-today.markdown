@@ -83,7 +83,6 @@ I will try to do it using a simpler approach, similar to what is done in Faceboo
 React.js uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials [here](https://facebook.github.io/react/docs/thinking-in-react.html) and [here](https://facebook.github.io/react/docs/tutorial.html)
 
 We will now have a main 'phonecat-component' which will hold the 'phonecat-search' component and the 'phonecat-list' component.
-
 It should look somehting like this:
 
 ```html
