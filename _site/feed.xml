@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 25 May 2015 22:16:59 +0300</pubDate>
-    <lastBuildDate>Mon, 25 May 2015 22:16:59 +0300</lastBuildDate>
+    <pubDate>Mon, 25 May 2015 22:23:23 +0300</pubDate>
+    <lastBuildDate>Mon, 25 May 2015 22:23:23 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -86,14 +86,17 @@ Angular 2.x, similar to React, is based on components. It uses component structu
 
 &lt;h6&gt;Creating a hierarchy tree&lt;/h6&gt;
 
-&lt;p&gt;This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). 
-There are several great posts showing how to do it using directive&amp;#39;s transclude property (see &lt;a href=&quot;https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://www.airpair.com/angularjs/posts/component-based-angularjs-directives&quot;&gt;here&lt;/a&gt;). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to do it using a simpler approach, using the &amp;#39;React way&amp;#39; (later I will try to implement the same thing with the &amp;#39;transclude&amp;#39; approach).&lt;/p&gt;
+&lt;p&gt;This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). &lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;React uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials &lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://facebook.github.io/react/docs/tutorial.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There are several great posts showing how to do it using directive&amp;#39;s transclude property (see &lt;a href=&quot;https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://www.airpair.com/angularjs/posts/component-based-angularjs-directives&quot;&gt;here&lt;/a&gt;). While this is possible, it has several disadvantages: It uses scope and controllers and I think that it is too complicated. &lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;I will try to do it using a simpler approach, similar to what is done in Facebook&amp;#39;s &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;.&lt;/p&gt;
+
 &lt;h5&gt;The &amp;#39;React way&amp;#39;&lt;/h5&gt;
+
+&lt;p&gt;React.js uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials &lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://facebook.github.io/react/docs/tutorial.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;We will now have a main &amp;#39;phonecat-component&amp;#39; which will hold the &amp;#39;phonecat-search&amp;#39; component and the &amp;#39;phonecat-list&amp;#39; component.&lt;/p&gt;
 

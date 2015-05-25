@@ -135,14 +135,17 @@ Angular 2.x, similar to React, is based on components. It uses component structu
 
 <h6>Creating a hierarchy tree</h6>
 
-<p>This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). 
-There are several great posts showing how to do it using directive&#39;s transclude property (see <a href="https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives">here</a> and <a href="https://www.airpair.com/angularjs/posts/component-based-angularjs-directives">here</a>). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to do it using a simpler approach, using the &#39;React way&#39; (later I will try to implement the same thing with the &#39;transclude&#39; approach).</p>
+<p>This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). </p>
 
 <blockquote>
-<p>React uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials <a href="https://facebook.github.io/react/docs/thinking-in-react.html">here</a> and <a href="https://facebook.github.io/react/docs/tutorial.html">here</a></p>
+<p>There are several great posts showing how to do it using directive&#39;s transclude property (see <a href="https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives">here</a> and <a href="https://www.airpair.com/angularjs/posts/component-based-angularjs-directives">here</a>). While this is possible, it has several disadvantages: It uses scope and controllers and I think that it is too complicated. </p>
 </blockquote>
 
+<p>I will try to do it using a simpler approach, similar to what is done in Facebook&#39;s <a href="https://facebook.github.io/react/">React</a>.</p>
+
 <h5>The &#39;React way&#39;</h5>
+
+<p>React.js uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials <a href="https://facebook.github.io/react/docs/thinking-in-react.html">here</a> and <a href="https://facebook.github.io/react/docs/tutorial.html">here</a></p>
 
 <p>We will now have a main &#39;phonecat-component&#39; which will hold the &#39;phonecat-search&#39; component and the &#39;phonecat-list&#39; component.</p>
 
