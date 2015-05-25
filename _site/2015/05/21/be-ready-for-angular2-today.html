@@ -86,18 +86,15 @@ Angular 2.x, similar to React, is based on components. It uses component structu
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-2&quot;</span><span class="nt">&gt;</span>
       <span class="c">&lt;!--Sidebar content--&gt;</span>
-
       Search: <span class="nt">&lt;input</span> <span class="na">ng-model=</span><span class="s">&quot;query&quot;</span><span class="nt">&gt;</span>
       Sort by:
       <span class="nt">&lt;select</span> <span class="na">ng-model=</span><span class="s">&quot;orderProp&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Alphabetical<span class="nt">&lt;/option&gt;</span>
         <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;age&quot;</span><span class="nt">&gt;</span>Newest<span class="nt">&lt;/option&gt;</span>
       <span class="nt">&lt;/select&gt;</span>
-
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-10&quot;</span><span class="nt">&gt;</span>
       <span class="c">&lt;!--Body content--&gt;</span>
-
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;phones&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">ng-repeat=</span><span class="s">&quot;phone in phones | filter:query | orderBy:orderProp&quot;</span>
             <span class="na">class=</span><span class="s">&quot;thumbnail phone-listing&quot;</span><span class="nt">&gt;</span>
@@ -106,7 +103,6 @@ Angular 2.x, similar to React, is based on components. It uses component structu
           <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
-
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>

@@ -28,18 +28,15 @@ Angular 2.x, similar to React, is based on components. It uses component structu
   <div class="row">
     <div class="col-md-2">
       <!--Sidebar content-->
-
       Search: <input ng-model="query">
       Sort by:
       <select ng-model="orderProp">
         <option value="name">Alphabetical</option>
         <option value="age">Newest</option>
       </select>
-
     </div>
     <div class="col-md-10">
       <!--Body content-->
-
       <ul class="phones">
         <li ng-repeat="phone in phones | filter:query | orderBy:orderProp"
             class="thumbnail phone-listing">
@@ -48,7 +45,6 @@ Angular 2.x, similar to React, is based on components. It uses component structu
           <p>{{phone.snippet}}</p>
         </li>
       </ul>
-
     </div>
   </div>
 </div>
