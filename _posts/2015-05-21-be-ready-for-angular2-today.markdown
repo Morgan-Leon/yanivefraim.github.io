@@ -77,32 +77,35 @@ We will want to build several components:
 
 ######Creating a hierarchy tree
 
-This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). There are several great posts showing how to do it using directive's transclude property (see [here](https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives) and [here](https://www.airpair.com/angularjs/posts/component-based-angularjs-directives)). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to:
-
-1. Use the 'transclude' method without using scope or controllers.
-2. Try to do it using the 'React way'.
+This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). 
+There are several great posts showing how to do it using directive's transclude property (see [here](https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives) and [here](https://www.airpair.com/angularjs/posts/component-based-angularjs-directives)). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to do it using a simpler approach, using the 'React way', and later I will try to implement the same thing with the 'transclude' approach.
 
 >React uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials [here](https://facebook.github.io/react/docs/thinking-in-react.html) and [here](https://facebook.github.io/react/docs/tutorial.html)
 
-#####Trunsclude components
-Using directive's transclude let you define an isolated component, and let the parrent define its child inner content/template.
-
 #####The 'React way'
-The main disadvantages of this method are:
 
-- When trying to pass a lot of properties to a component. This can become ugly, but I guess that there are ways to overcome this. If this is the case (a lot of complex properties to a component), using tranclude can be a better choice. 
-- Trancluding html code into components gives <u></u>s extra flexibility and control over the content of our components. 
+We will now have a main 'phonecat-component' which will hold the 'phonecat-search' component and the 'phonecat-list' component.
 
-Our code should now look something like that:
+It should look somehting like this:
 
-```html
-phonecat-site
-=> phonecat-search
-	=>search
-	=>select
-=> phonecat-list
-	=>phonecat-item
+```javascript
+<body>
+  <phonecat-component></phonecat-component>
+</body>
+```
 
+```javascript
+//phonecat-component
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <phonecat-search></phonecat-search>
+    </div>
+    <div class="col-md-10">
+      <phonecat-list></phonecat-list>    
+    </div>
+  </div>
+</div>
 ```
 
 [jekyll]:      http://jekyllrb.com

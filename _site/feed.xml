@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 24 May 2015 13:36:36 +0300</pubDate>
-    <lastBuildDate>Sun, 24 May 2015 13:36:36 +0300</lastBuildDate>
+    <pubDate>Mon, 25 May 2015 22:12:57 +0300</pubDate>
+    <lastBuildDate>Mon, 25 May 2015 22:12:57 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -90,37 +90,32 @@ Angular 2.x, similar to React, is based on components. It uses component structu
 
 &lt;h6&gt;Creating a hierarchy tree&lt;/h6&gt;
 
-&lt;p&gt;This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers. There are several great posts showing how to do it using directive&amp;#39;s transclude property (see &lt;a href=&quot;https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://www.airpair.com/angularjs/posts/component-based-angularjs-directives&quot;&gt;here&lt;/a&gt;). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Use the &amp;#39;transclude&amp;#39; method without using scope or controllers.&lt;/li&gt;
-&lt;li&gt;Try to do it using the &amp;#39;React way&amp;#39;.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). 
+There are several great posts showing how to do it using directive&amp;#39;s transclude property (see &lt;a href=&quot;https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://www.airpair.com/angularjs/posts/component-based-angularjs-directives&quot;&gt;here&lt;/a&gt;). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to do it using a simpler approach, using the &amp;#39;React way&amp;#39;, and later I will try to implement the same thing with the &amp;#39;transclude&amp;#39; approach.&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;React uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials &lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://facebook.github.io/react/docs/tutorial.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h5&gt;Trunsclude components&lt;/h5&gt;
-
-&lt;p&gt;Using directive&amp;#39;s transclude let you define an isolated component, and let the parrent define its child inner content/template.&lt;/p&gt;
-
 &lt;h5&gt;The &amp;#39;React way&amp;#39;&lt;/h5&gt;
 
-&lt;p&gt;The main disadvantages of this method are:&lt;/p&gt;
+&lt;p&gt;We will now have a main &amp;#39;phonecat-component&amp;#39; which will hold the &amp;#39;phonecat-search&amp;#39; component and the &amp;#39;phonecat-list&amp;#39; component.&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;When trying to pass a lot of properties to a component. This can become ugly, but I guess that there are ways to overcome this. If this is the case (a lot of complex properties to a component), using tranclude can be a better choice. &lt;/li&gt;
-&lt;li&gt;Trancluding html code into components gives &lt;u&gt;&lt;/u&gt;s extra flexibility and control over the content of our components. &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Our code should now look something like that:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;phonecat-site
-=&amp;gt; phonecat-search
-    =&amp;gt;search
-    =&amp;gt;select
-=&amp;gt; phonecat-list
-    =&amp;gt;phonecat-item
+&lt;p&gt;It should look somehting like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;phonecat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/phonecat-component&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/body&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//phonecat-component&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;container-fluid&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;row&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;col-md-2&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;phonecat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/phonecat-search&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;col-md-10&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;phonecat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/phonecat-list&amp;gt;    &lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/div&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Thu, 21 May 2015 17:34:25 +0300</pubDate>
         <link>http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today.html</link>

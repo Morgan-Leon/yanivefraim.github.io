@@ -139,37 +139,32 @@ Angular 2.x, similar to React, is based on components. It uses component structu
 
 <h6>Creating a hierarchy tree</h6>
 
-<p>This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers. There are several great posts showing how to do it using directive&#39;s transclude property (see <a href="https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives">here</a> and <a href="https://www.airpair.com/angularjs/posts/component-based-angularjs-directives">here</a>). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to:</p>
-
-<ol>
-<li>Use the &#39;transclude&#39; method without using scope or controllers.</li>
-<li>Try to do it using the &#39;React way&#39;.</li>
-</ol>
+<p>This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). 
+There are several great posts showing how to do it using directive&#39;s transclude property (see <a href="https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives">here</a> and <a href="https://www.airpair.com/angularjs/posts/component-based-angularjs-directives">here</a>). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to do it using a simpler approach, using the &#39;React way&#39;, and later I will try to implement the same thing with the &#39;transclude&#39; approach.</p>
 
 <blockquote>
 <p>React uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials <a href="https://facebook.github.io/react/docs/thinking-in-react.html">here</a> and <a href="https://facebook.github.io/react/docs/tutorial.html">here</a></p>
 </blockquote>
 
-<h5>Trunsclude components</h5>
-
-<p>Using directive&#39;s transclude let you define an isolated component, and let the parrent define its child inner content/template.</p>
-
 <h5>The &#39;React way&#39;</h5>
 
-<p>The main disadvantages of this method are:</p>
+<p>We will now have a main &#39;phonecat-component&#39; which will hold the &#39;phonecat-search&#39; component and the &#39;phonecat-list&#39; component.</p>
 
-<ul>
-<li>When trying to pass a lot of properties to a component. This can become ugly, but I guess that there are ways to overcome this. If this is the case (a lot of complex properties to a component), using tranclude can be a better choice. </li>
-<li>Trancluding html code into components gives <u></u>s extra flexibility and control over the content of our components. </li>
-</ul>
-
-<p>Our code should now look something like that:</p>
-<div class="highlight"><pre><code class="language-html" data-lang="html">phonecat-site
-=&gt; phonecat-search
-    =&gt;search
-    =&gt;select
-=&gt; phonecat-list
-    =&gt;phonecat-item
+<p>It should look somehting like this:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">phonecat</span><span class="o">-</span><span class="nx">component</span><span class="o">&gt;&lt;</span><span class="err">/phonecat-component&gt;</span>
+<span class="o">&lt;</span><span class="err">/body&gt;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//phonecat-component</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;container-fluid&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;row&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;col-md-2&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">phonecat</span><span class="o">-</span><span class="nx">search</span><span class="o">&gt;&lt;</span><span class="err">/phonecat-search&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;col-md-10&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">phonecat</span><span class="o">-</span><span class="nx">list</span><span class="o">&gt;&lt;</span><span class="err">/phonecat-list&gt;    </span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="o">&lt;</span><span class="err">/div&gt;</span>
 </code></pre></div>
           <div id="disqus_thread"></div>
         </section>
