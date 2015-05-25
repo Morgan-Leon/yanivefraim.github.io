@@ -147,20 +147,20 @@ There are several great posts showing how to do it using directive&#39;s transcl
 <p>We will now have a main &#39;phonecat-component&#39; which will hold the &#39;phonecat-search&#39; component and the &#39;phonecat-list&#39; component.</p>
 
 <p>It should look somehting like this:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="nx">phonecat</span><span class="o">-</span><span class="nx">component</span><span class="o">&gt;&lt;</span><span class="err">/phonecat-component&gt;</span>
-<span class="o">&lt;</span><span class="err">/body&gt;</span>
-</code></pre></div><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//phonecat-component</span>
-<span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;container-fluid&quot;</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;row&quot;</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;col-md-2&quot;</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="nx">phonecat</span><span class="o">-</span><span class="nx">search</span><span class="o">&gt;&lt;</span><span class="err">/phonecat-search&gt;</span>
-    <span class="o">&lt;</span><span class="err">/div&gt;</span>
-    <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;col-md-10&quot;</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="nx">phonecat</span><span class="o">-</span><span class="nx">list</span><span class="o">&gt;&lt;</span><span class="err">/phonecat-list&gt;    </span>
-    <span class="o">&lt;</span><span class="err">/div&gt;</span>
-  <span class="o">&lt;</span><span class="err">/div&gt;</span>
-<span class="o">&lt;</span><span class="err">/div&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;phonecat-component&gt;&lt;/phonecat-component&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-html" data-lang="html">//phonecat-component
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-2&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;phonecat-search&gt;&lt;/phonecat-search&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-10&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;phonecat-list&gt;&lt;/phonecat-list&gt;</span>    
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
           <div id="disqus_thread"></div>
         </section>
