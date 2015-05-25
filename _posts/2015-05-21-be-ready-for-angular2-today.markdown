@@ -87,13 +87,14 @@ We will now have a main 'phonecat-component' which will hold the 'phonecat-searc
 It should look somehting like this:
 
 ```html
+<!-- body -->
 <body>
   <phonecat-component></phonecat-component>
 </body>
 ```
 
 ```html
-//phonecat-component
+<!--phonecat-component-->
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2">
@@ -104,6 +105,32 @@ It should look somehting like this:
     </div>
   </div>
 </div>
+```
+
+```html
+<!--phonecat-search-->
+<div>
+  Search:
+  <input ng-model="query" />
+  Sort by:
+  <select ng-model="orderProp">
+    <option value="name">Alphabetical</option>
+    <option value="age">Newest</option>
+  </select>
+</div>
+```
+
+```html
+<!--phonecat-list-->
+<ul class="phones">
+  <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
+    <a href="#/phones/{{phone.id}}" class="thumb">
+      <img ng-src="{{phone.imageUrl}}" />
+    </a>
+    <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+    <p>{{phone.snippet}}</p>
+  </li>
+</ul>
 ```
 
 [jekyll]:      http://jekyllrb.com
