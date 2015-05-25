@@ -77,7 +77,7 @@ We will want to build several components:
 
 ######Creating a hierarchy tree
 
-This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers. There are several great posts showing how to do it using directive's transclude property (see [here](https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives) and [here](https://www.airpair.com/angularjs/posts/component-based-angularjs-directives)). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to:
+This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). There are several great posts showing how to do it using directive's transclude property (see [here](https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives) and [here](https://www.airpair.com/angularjs/posts/component-based-angularjs-directives)). While this is possible, it has several disadvantages (it uses scope and controllers and I think that it is too complicated). I will try to:
 
 1. Use the 'transclude' method without using scope or controllers.
 2. Try to do it using the 'React way'.
