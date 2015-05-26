@@ -68,7 +68,7 @@ We will want to build several components:
 - Application main component (this will be used for the parent component in the hierarchy)
 - Search component
 - List component
-- List item component
+- List item component (I will emit this component from my example, just in order to keep things simple)
 - Catalog details component
 
 ######Creating a hierarchy tree
