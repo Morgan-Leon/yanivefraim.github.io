@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 May 2015 02:10:04 +0300</pubDate>
-    <lastBuildDate>Wed, 27 May 2015 02:10:04 +0300</lastBuildDate>
+    <pubDate>Wed, 27 May 2015 02:14:40 +0300</pubDate>
+    <lastBuildDate>Wed, 27 May 2015 02:14:40 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -135,7 +135,9 @@ It should look somehting like this:&lt;/p&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The complete example can be found in the following &lt;a href=&quot;http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview&quot;&gt;plunker&lt;/a&gt;&lt;/p&gt;
+</description>
         <pubDate>Thu, 21 May 2015 17:34:25 +0300</pubDate>
         <link>http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today.html</link>
         <guid isPermaLink="true">http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today.html</guid>

@@ -132,6 +132,8 @@ It should look somehting like this:
 </ul>
 ```
 
+The complete example can be found in the following [plunker](http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview)
+
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-help]: https://github.com/jekyll/jekyll-help
