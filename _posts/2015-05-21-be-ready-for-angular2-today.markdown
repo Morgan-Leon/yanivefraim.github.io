@@ -93,11 +93,11 @@ It should look somehting like this:
 ```
 
 ```html
-<!--phonecat-component-->
+<!--phonecat-component template-->
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2">
-      <phonecat-search></phonecat-search>
+      <phonecat-search search="vm.search(data)"></phonecat-search>
     </div>
     <div class="col-md-10">
       <phonecat-list></phonecat-list>    
@@ -107,7 +107,7 @@ It should look somehting like this:
 ```
 
 ```html
-<!--phonecat-search-->
+<!--phonecat-search template-->
 <div>
   Search:
   <input ng-model="query" />
@@ -120,7 +120,7 @@ It should look somehting like this:
 ```
 
 ```html
-<!--phonecat-list-->
+<!--phonecat-list template-->
 <ul class="phones">
   <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
     <a href="#/phones/{{phone.id}}" class="thumb">
