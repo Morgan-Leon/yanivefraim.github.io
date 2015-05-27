@@ -218,8 +218,8 @@ To sum it up - we are now much closer to Angular 2's component structure, as see
 
 Stay tuned to the other two parts:
 
-2. Write Angular 1.x in ES6/Typescript
-3. Use the "new router"
+- Write Angular 1.x in ES6/Typescript
+- Use the "new router"
 
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
