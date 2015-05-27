@@ -3,7 +3,7 @@ layout: post
 title:  "Be ready for Angular 2 Today - part 1"
 date:   2015-05-27 14:34:25
 tags: Angularjs Javascript
-image: /assets/images/desktop.JPG
+image: /assets/images/board_2.jpg
 ---
 
 Angular 2 is not here. It will take pretty long time until we'll start using it. But, as you probably heard, the changes are [HUGE](http://shmck.com/comparing-angular-1-x-2-0/).
