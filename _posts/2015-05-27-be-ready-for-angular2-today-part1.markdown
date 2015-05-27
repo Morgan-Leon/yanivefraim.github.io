@@ -89,7 +89,7 @@ React.js uses state and props to manage its data. Props are immutable and are pa
 >For more reference see those tow awesome tutorials: [thinking in react](https://facebook.github.io/react/docs/thinking-in-react.html) and [React's officail tuturial](https://facebook.github.io/react/docs/tutorial.html)
 
 We will now have a main ```phonecat-component``` which will hold a ```phonecat-search``` and a ```phonecat-list``` child components. Those two child components will get all the data they need from their parent, via attributes.
-It should look somehting like this (The complete example can be found in the following [plunker](http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview)):
+It should look somehting like this (The complete example can be found in the following [plunker](http://plnkr.co/edit/wL1yMlMTgxiuwyDIA3a5?p=preview)):
 
 ```html
 <!-- body -->
@@ -214,7 +214,7 @@ function phonecatList() {
 <p></p>
 As you can see, same pattern applies here: data passed to child component using attributes, ```phones``` and ```filterData```.
 
-To sum it up - we are now much closer to Angular 2's component structure, as seen [here](http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2). You can see the whole thing in action in this [plunker](http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview).
+To sum it up - we are now much closer to Angular 2's component structure, as seen [here](http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2). You can see the whole thing in action in this [plunker](http://plnkr.co/edit/wL1yMlMTgxiuwyDIA3a5?p=preview).
 
 Stay tuned to the other two parts:
 

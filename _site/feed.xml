@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 May 2015 22:19:22 +0300</pubDate>
-    <lastBuildDate>Wed, 27 May 2015 22:19:22 +0300</lastBuildDate>
+    <pubDate>Wed, 27 May 2015 22:40:42 +0300</pubDate>
+    <lastBuildDate>Wed, 27 May 2015 22:40:42 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -107,7 +107,7 @@ I will try to do it using a simpler approach, similar to what is done in Faceboo
 &lt;/blockquote&gt;
 
 &lt;p&gt;We will now have a main &lt;code&gt;phonecat-component&lt;/code&gt; which will hold a &lt;code&gt;phonecat-search&lt;/code&gt; and a &lt;code&gt;phonecat-list&lt;/code&gt; child components. Those two child components will get all the data they need from their parent, via attributes.
-It should look somehting like this (The complete example can be found in the following &lt;a href=&quot;http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview&quot;&gt;plunker&lt;/a&gt;):&lt;/p&gt;
+It should look somehting like this (The complete example can be found in the following &lt;a href=&quot;http://plnkr.co/edit/wL1yMlMTgxiuwyDIA3a5?p=preview&quot;&gt;plunker&lt;/a&gt;):&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- body --&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-controller=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;PhoneListCtrl as phoneCtrl&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;phonecat-component&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;phones=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;phoneCtrl.phones&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/phonecat-component&amp;gt;&lt;/span&gt;
@@ -230,7 +230,7 @@ TL;DR: you can replace this with regular isolated scope, if you want to use olde
 
 &lt;p&gt;As you can see, same pattern applies here: data passed to child component using attributes, &lt;code&gt;phones&lt;/code&gt; and &lt;code&gt;filterData&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;To sum it up - we are now much closer to Angular 2&amp;#39;s component structure, as seen &lt;a href=&quot;http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2&quot;&gt;here&lt;/a&gt;. You can see the whole thing in action in this &lt;a href=&quot;http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview&quot;&gt;plunker&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To sum it up - we are now much closer to Angular 2&amp;#39;s component structure, as seen &lt;a href=&quot;http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2&quot;&gt;here&lt;/a&gt;. You can see the whole thing in action in this &lt;a href=&quot;http://plnkr.co/edit/wL1yMlMTgxiuwyDIA3a5?p=preview&quot;&gt;plunker&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Stay tuned to the other two parts:&lt;/p&gt;
 

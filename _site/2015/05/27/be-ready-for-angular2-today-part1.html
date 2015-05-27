@@ -156,7 +156,7 @@ I will try to do it using a simpler approach, similar to what is done in Faceboo
 </blockquote>
 
 <p>We will now have a main <code>phonecat-component</code> which will hold a <code>phonecat-search</code> and a <code>phonecat-list</code> child components. Those two child components will get all the data they need from their parent, via attributes.
-It should look somehting like this (The complete example can be found in the following <a href="http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview">plunker</a>):</p>
+It should look somehting like this (The complete example can be found in the following <a href="http://plnkr.co/edit/wL1yMlMTgxiuwyDIA3a5?p=preview">plunker</a>):</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- body --&gt;</span>
 <span class="nt">&lt;body</span> <span class="na">ng-controller=</span><span class="s">&quot;PhoneListCtrl as phoneCtrl&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;phonecat-component</span> <span class="na">phones=</span><span class="s">phoneCtrl.phones</span><span class="nt">&gt;&lt;/phonecat-component&gt;</span>
@@ -279,7 +279,7 @@ TL;DR: you can replace this with regular isolated scope, if you want to use olde
 
 <p>As you can see, same pattern applies here: data passed to child component using attributes, <code>phones</code> and <code>filterData</code>.</p>
 
-<p>To sum it up - we are now much closer to Angular 2&#39;s component structure, as seen <a href="http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2">here</a>. You can see the whole thing in action in this <a href="http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview">plunker</a>.</p>
+<p>To sum it up - we are now much closer to Angular 2&#39;s component structure, as seen <a href="http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2">here</a>. You can see the whole thing in action in this <a href="http://plnkr.co/edit/wL1yMlMTgxiuwyDIA3a5?p=preview">plunker</a>.</p>
 
 <p>Stay tuned to the other two parts:</p>
 
