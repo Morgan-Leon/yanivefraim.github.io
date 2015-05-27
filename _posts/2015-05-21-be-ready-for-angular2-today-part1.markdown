@@ -51,13 +51,9 @@ Angular 2.x, similar to React, is based on components. It uses component structu
 </div>
 ```
 
-This is how it will look like:
+In order to make this code Angular 2.x ready (and more reusable), we will have to:
 
---image here--
-
-We would like to achieve two things:
-
-1. Break this html into components.
+1. Break the html into components.
 2. Build the components as a hierarchy tree. Something like this:
 
 <p style="text-align:center;">
@@ -70,8 +66,10 @@ We will want to build several components:
 - Application main component (this will be used for the parent component in the hierarchy)
 - Search component
 - List component
-- List item component (I will emit this component from my example, just in order to keep things simple)
-- Catalog details component
+- List item component 
+- Catalog details component 
+
+I will emit the last two components from my example, just in order to keep things simple.
 
 ######Creating a hierarchy tree
 
@@ -80,7 +78,7 @@ We will want to build several components:
 I will try to do it using a simpler approach, similar to what is done in Facebook's [React](https://facebook.github.io/react/).
 -->
 
-Angular 2.0 uses an approach similar to Facebook's [React.js's](https://facebook.github.io/react/) approach, and this is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). 
+Angular 2.0 uses an approach similar to Facebook's [React's](https://facebook.github.io/react/) approach, and this is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). 
 
 Let's call it 'The React way'...
 
@@ -186,9 +184,32 @@ function phonecatSearch() {
   };
 }
 ```
-
+<p></p>
 The interesting point here is that instead of using ```ng-model```, I am using a ```search``` method (with ```search: "&"```), in order to communicate search events to the parent component.
 
+And for ```phonecat-list``` component's directive:
+
+```javascript
+'use strict';
+
+angular.module('phonecatApp')
+  .directive('phonecatList', phonecatList);
+
+function phonecatList() {
+  return {
+    scope: {},
+    bindToController: {
+      phones: "=",
+      filterData: "="
+    },
+    controller: function() {},
+    controllerAs: 'vm',
+    templateUrl: 'partials/phonecatList.tpl.html'
+  };
+}
+```
+<p></p>
+As you can see, same pattern applies here: data passed to child component using attributes, ```phones``` and ```filterData```.
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-help]: https://github.com/jekyll/jekyll-help

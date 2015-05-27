@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 May 2015 09:05:36 +0300</pubDate>
-    <lastBuildDate>Wed, 27 May 2015 09:05:36 +0300</lastBuildDate>
+    <pubDate>Wed, 27 May 2015 09:17:53 +0300</pubDate>
+    <lastBuildDate>Wed, 27 May 2015 09:17:53 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -60,14 +60,10 @@ Angular 2.x, similar to React, is based on components. It uses component structu
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is how it will look like:&lt;/p&gt;
-
-&lt;p&gt;--image here--&lt;/p&gt;
-
-&lt;p&gt;We would like to achieve two things:&lt;/p&gt;
+&lt;p&gt;In order to make this code Angular 2.x ready (and more reusable), we will have to:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Break this html into components.&lt;/li&gt;
+&lt;li&gt;Break the html into components.&lt;/li&gt;
 &lt;li&gt;Build the components as a hierarchy tree. Something like this:&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -83,9 +79,11 @@ Angular 2.x, similar to React, is based on components. It uses component structu
 &lt;li&gt;Application main component (this will be used for the parent component in the hierarchy)&lt;/li&gt;
 &lt;li&gt;Search component&lt;/li&gt;
 &lt;li&gt;List component&lt;/li&gt;
-&lt;li&gt;List item component (I will emit this component from my example, just in order to keep things simple)&lt;/li&gt;
-&lt;li&gt;Catalog details component&lt;/li&gt;
+&lt;li&gt;List item component &lt;/li&gt;
+&lt;li&gt;Catalog details component &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;I will emit the last two components from my example, just in order to keep things simple.&lt;/p&gt;
 
 &lt;h6&gt;Creating a hierarchy tree&lt;/h6&gt;
 
@@ -94,7 +92,7 @@ Angular 2.x, similar to React, is based on components. It uses component structu
 I will try to do it using a simpler approach, similar to what is done in Facebook&#39;s [React](https://facebook.github.io/react/).
 --&gt;
 
-&lt;p&gt;Angular 2.0 uses an approach similar to Facebook&amp;#39;s &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React.js&amp;#39;s&lt;/a&gt; approach, and this is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). &lt;/p&gt;
+&lt;p&gt;Angular 2.0 uses an approach similar to Facebook&amp;#39;s &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React&amp;#39;s&lt;/a&gt; approach, and this is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). &lt;/p&gt;
 
 &lt;p&gt;Let&amp;#39;s call it &amp;#39;The React way&amp;#39;...&lt;/p&gt;
 
@@ -200,7 +198,32 @@ It should look somehting like this (The complete example can be found in the fol
   &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
 &lt;p&gt;The interesting point here is that instead of using &lt;code&gt;ng-model&lt;/code&gt;, I am using a &lt;code&gt;search&lt;/code&gt; method (with &lt;code&gt;search: &amp;quot;&amp;amp;&amp;quot;&lt;/code&gt;), in order to communicate search events to the parent component.&lt;/p&gt;
+
+&lt;p&gt;And for &lt;code&gt;phonecat-list&lt;/code&gt; component&amp;#39;s directive:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;use strict&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;phonecatApp&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;directive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;phonecatList&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;phonecatList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;phonecatList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;scope&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;bindToController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;phones&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;=&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;filterData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;=&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;controllerAs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;vm&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;templateUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;partials/phonecatList.tpl.html&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, same pattern applies here: data passed to child component using attributes, &lt;code&gt;phones&lt;/code&gt; and &lt;code&gt;filterData&lt;/code&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 May 2015 17:34:25 +0300</pubDate>
         <link>http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today-part1.html</link>
