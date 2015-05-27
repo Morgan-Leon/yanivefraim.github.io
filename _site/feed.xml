@@ -6,12 +6,12 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 May 2015 09:04:17 +0300</pubDate>
-    <lastBuildDate>Wed, 27 May 2015 09:04:17 +0300</lastBuildDate>
+    <pubDate>Wed, 27 May 2015 09:05:36 +0300</pubDate>
+    <lastBuildDate>Wed, 27 May 2015 09:05:36 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>Be ready for Angular 2 Today (part 1)</title>
+        <title> -draft- Be ready for Angular 2 Today (part 1)</title>
         <description>&lt;p&gt;Angular 2 is not here. It will take pretty long time until we&amp;#39;ll start using it. But, as you probably heard, the changes are &lt;a href=&quot;todo:%20add%20changes%20list%20blog%20link%20here&quot;&gt;HUGE&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;This is a good enough reason to start preparing for Angular 2 today (otherwise the migration path will be paintfull). &lt;/p&gt;
