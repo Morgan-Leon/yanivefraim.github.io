@@ -143,6 +143,7 @@ function phonecatComponent() {
 ```
 
 There are several points to stop and discuss here:
+
 - We use 'bindToController' to pass 'phones', via attribute, to the  'phonecat-component' (see snippet below for more details).
 
 
