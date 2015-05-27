@@ -8,4 +8,4 @@ I am a frontend geek.
 
 I love Javascript.
 
-Github: http://github.com/yanivefraim
+Github: [yanivefraim](http://github.com/yanivefraim)
