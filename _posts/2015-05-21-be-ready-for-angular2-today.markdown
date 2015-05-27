@@ -148,6 +148,44 @@ There are several points to stop and discuss here:
 - 'phonecat-list' child componenet receives its data using 'phones' and 'filter-data' attributes.  
 - 'Search' method is used to receive events from child 'phonecat-search' component.
 
+>'bindToController'
+
+Now, let's take a look at ```phonecat-search``` component's directive:
+
+```javascript
+'use strict';
+
+angular.module('phonecatApp')
+  .directive('phonecatSearch', phonecatSearch);
+
+function phonecatSearch() {
+  return {
+    scope: {},
+    bindToController: {
+      search: "&"
+    },
+    controller: function() {},
+    controllerAs: 'vm',
+    link: function(scope, elm, attrs, ctrl) {
+      var inputText = elm.find('input')[0];
+      var selectedFilter = elm.find('select')[0];
+
+      elm.bind('keyup change', function() {
+        var searchData = {
+          text: inputText.value,
+          orderBy: selectedFilter[selectedFilter.selectedIndex].value
+        };
+        ctrl.search({
+          searchData: searchData
+        });
+      });
+    },
+    templateUrl: 'partials/phonecatSearch.tpl.html'
+  };
+}
+```
+
+The interesting point here is that instead of using ```ng-model```, I am using a ```search``` method (with ```search: "&"```), in order to communicate search events to the parent component.
 
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
