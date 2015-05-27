@@ -152,6 +152,7 @@ There are several points to stop and discuss here:
 >For more information about ```bindToController``` you can read this great [post](http://blog.thoughtram.io/angularjs/2015/01/02/exploring-angular-1.3-bindToController.html). 
 TL;DR: you can replace this with regular isolated scope, if you want to use older Angular versions.
 
+<p></p>
 Now, let's take a look at ```phonecat-search``` component's directive:
 
 ```javascript

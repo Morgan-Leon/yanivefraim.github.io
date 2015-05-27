@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 May 2015 12:13:51 +0300</pubDate>
-    <lastBuildDate>Wed, 27 May 2015 12:13:51 +0300</lastBuildDate>
+    <pubDate>Wed, 27 May 2015 12:15:47 +0300</pubDate>
+    <lastBuildDate>Wed, 27 May 2015 12:15:47 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -168,6 +168,8 @@ It should look somehting like this (The complete example can be found in the fol
 &lt;p&gt;For more information about &lt;code&gt;bindToController&lt;/code&gt; you can read this great &lt;a href=&quot;http://blog.thoughtram.io/angularjs/2015/01/02/exploring-angular-1.3-bindToController.html&quot;&gt;post&lt;/a&gt;. 
 TL;DR: you can replace this with regular isolated scope, if you want to use older Angular versions.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, let&amp;#39;s take a look at &lt;code&gt;phonecat-search&lt;/code&gt; component&amp;#39;s directive:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;use strict&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
