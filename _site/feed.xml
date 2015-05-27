@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 May 2015 11:07:31 +0300</pubDate>
-    <lastBuildDate>Wed, 27 May 2015 11:07:31 +0300</lastBuildDate>
+    <pubDate>Wed, 27 May 2015 11:12:24 +0300</pubDate>
+    <lastBuildDate>Wed, 27 May 2015 11:12:24 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -225,7 +225,7 @@ It should look somehting like this (The complete example can be found in the fol
 
 &lt;p&gt;As you can see, same pattern applies here: data passed to child component using attributes, &lt;code&gt;phones&lt;/code&gt; and &lt;code&gt;filterData&lt;/code&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 27 May 2015 11:07:31 +0300</pubDate>
+        <pubDate>Wed, 27 May 2015 17:34:25 +0300</pubDate>
         <link>http://yanivefraim.github.io//2015/05/27/be-ready-for-angular2-today-part1.html</link>
         <guid isPermaLink="true">http://yanivefraim.github.io//2015/05/27/be-ready-for-angular2-today-part1.html</guid>
         
