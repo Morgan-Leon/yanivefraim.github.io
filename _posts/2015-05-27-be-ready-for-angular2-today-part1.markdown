@@ -6,7 +6,7 @@ tags: Angularjs Javascript
 image: /assets/images/desktop.JPG
 ---
 
-Angular 2 is not here. It will take pretty long time until we'll start using it. But, as you probably heard, the changes are [HUGE](todo: add changes list blog link here).
+Angular 2 is not here. It will take pretty long time until we'll start using it. But, as you probably heard, the changes are [HUGE](http://shmck.com/comparing-angular-1-x-2-0/).
 
 This is a good enough reason to start preparing for Angular 2 today (otherwise the migration path will be paintfull). 
 
@@ -19,10 +19,10 @@ I summed it up to three steps, from the most important and complicated to the ea
 2. Write Angular 1.x in ES6/Typescript
 3. Use the "new router"
 
-In this post I will be focusing on the first bullet, "Use Component based Architecture".
-# Using Component based Architecture
+In this post (part 1) I will be focusing on the first bullet, "Use Component based Architecture".
+## Using Component based Architecture
 This is the most important part, and the hardest one. 
-Angular 2.x, similar to React, is based on components. It uses component structure hierarchy (TODO: add link here). Angular 1.x does not work that way. The easiest way to understand this is through an example. I will use the [phonecat demo](https://docs.angularjs.org/tutorial) as an example. Take a look at this code:
+Angular 2.x, similar to React, is based on components. It uses [component structure hierarchy](http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2). Angular 1.x does not work that way. The easiest way to understand this is through an example. I will use the [phonecat demo](https://docs.angularjs.org/tutorial) as an example. Take a look at this code:
 
 ```html
 <div class="container-fluid">
@@ -60,7 +60,8 @@ In order to make this code Angular 2.x ready (and more reusable), we will have t
 	<img src="/assets/article_images/2015-05-21-be-ready-for-angular2-today/app_structure.png" alt="">
 </p>
 
-######Breaking the code into components
+<p></p>
+###Step 1 - breaking the code into components
 We will want to build several components:
 
 - Application main component (this will be used for the parent component in the hierarchy)
@@ -71,7 +72,7 @@ We will want to build several components:
 
 I will emit the last two components from my example, just in order to keep things simple.
 
-######Creating a hierarchy tree
+###Step 2 - Creating a hierarchy tree
 
 <!--- >There are several great posts showing how to do it using directive's transclude property (see [here](https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives) and [here](https://www.airpair.com/angularjs/posts/component-based-angularjs-directives)). While this is possible, it has several disadvantages: It uses scope and controllers and I think that it is too complicated.  
 
@@ -148,7 +149,8 @@ There are several points to stop and discuss here:
 - 'phonecat-list' child componenet receives its data using 'phones' and 'filter-data' attributes.  
 - 'Search' method is used to receive events from child 'phonecat-search' component.
 
->'bindToController'
+>For more information about ```bindToController``` you can read this great [post](http://blog.thoughtram.io/angularjs/2015/01/02/exploring-angular-1.3-bindToController.html). 
+TL;DR: you can replace this with regular isolated scope, if you want to use older Angular versions.
 
 Now, let's take a look at ```phonecat-search``` component's directive:
 

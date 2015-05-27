@@ -482,6 +482,8 @@ body {
     margin: 0;
     font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
     margin-bottom: 4px; }
+  .post .post-content h4, .post .post-content h5 {
+    font-size: 18px; }
   .post .post-content h2, .post .post-content h1 {
     letter-spacing: -0.02em;
     font-weight: 700;
