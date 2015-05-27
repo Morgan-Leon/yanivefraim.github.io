@@ -213,6 +213,14 @@ function phonecatList() {
 ```
 <p></p>
 As you can see, same pattern applies here: data passed to child component using attributes, ```phones``` and ```filterData```.
+
+To sum it up - we are now much closer to Angular 2's component structure, as seen [here](http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2). You can see the whole thing in action in this [plunker](http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview).
+
+Stay tuned to the other two parts:
+
+2. Write Angular 1.x in ES6/Typescript
+3. Use the "new router"
+
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-help]: https://github.com/jekyll/jekyll-help

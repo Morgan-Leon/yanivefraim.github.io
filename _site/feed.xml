@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 May 2015 12:15:47 +0300</pubDate>
-    <lastBuildDate>Wed, 27 May 2015 12:15:47 +0300</lastBuildDate>
+    <pubDate>Wed, 27 May 2015 12:24:22 +0300</pubDate>
+    <lastBuildDate>Wed, 27 May 2015 12:24:22 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -229,6 +229,15 @@ TL;DR: you can replace this with regular isolated scope, if you want to use olde
 &lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;As you can see, same pattern applies here: data passed to child component using attributes, &lt;code&gt;phones&lt;/code&gt; and &lt;code&gt;filterData&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To sum it up - we are now much closer to Angular 2&amp;#39;s component structure, as seen &lt;a href=&quot;http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2&quot;&gt;here&lt;/a&gt;. You can see the whole thing in action in this &lt;a href=&quot;http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview&quot;&gt;plunker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned to the other two parts:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Write Angular 1.x in ES6/Typescript&lt;/li&gt;
+&lt;li&gt;Use the &amp;quot;new router&amp;quot;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         <pubDate>Wed, 27 May 2015 17:34:25 +0300</pubDate>
         <link>http://yanivefraim.github.io//2015/05/27/be-ready-for-angular2-today-part1.html</link>
