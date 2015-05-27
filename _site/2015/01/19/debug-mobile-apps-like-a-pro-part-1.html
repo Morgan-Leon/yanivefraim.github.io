@@ -70,16 +70,36 @@
 <p>So - lets get started. First you will have to connect your device to your PC/Mac. This is SUPER easy when using Charles (both mobile device and computer should be on the same network):</p>
 
 <ol>
-<li><p>Check your network&#39;s local IP address. The simplest way is using Charles&#39; help menu:</p></li>
+<li>Check your network&#39;s local IP address. The simplest way is using Charles&#39; help menu:</li>
+</ol>
+
+<p style="text-align:center;">
+    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/4f0fe-screenshot2bat2bjan2b192b19-48-00.png" alt="">
+</p>
+ 
+
+<ol>
 <li><p>Connect your mobile device to this address:</p>
 
 <p>2.1. Android (OS 4.X and above. For Android 2.X look here)
 Go to settings-&gt;network-&gt;wifi and long press your selected network. Then choose the following settings (the IP is the IP you located in previous section)</p>
 
+<p style="text-align:center;">
+    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/f60b6-screenshot_2015-01-19-20-19-19.png" alt="">
+</p>
+
 <p>2.2. iOS
-Go to wifi settings and choose your internal network</p></li>
+Go to wifi settings and choose your internal network</p>
+
+<p style="text-align:center;">
+    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/3880f-http-proxy.png" alt="">
+</p></li>
 <li><p>Charles will ask for your approval (only first time you connect your device):</p></li>
 </ol>
+
+<p style="text-align:center;">
+    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/9a795-screenshot2bat2bjan2b192b21-09-13.png" alt="">
+</p>
 
 <p>And... That&#39;s it. You are connected and are ready to get started!</p>
 
@@ -87,13 +107,33 @@ Go to wifi settings and choose your internal network</p></li>
 
 <p>The first thing to do is monitor your mobile app&#39;s traffic. Lets choose IMDB as a &quot;victim&quot; app and monitor its traffic. I&#39;ll choose &quot;record&quot; button and open IMDB. This is what we&#39;ll see:</p>
 
+<p><p style="text-align:center;">
+    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/5580d-screenshot2bat2bjan2b192b21-33-19.png" alt="">
+</p></p>
+
 <p>What we sees here is filter I created with imdbws.com as a domain. You can set focussed domains on &quot;view-&gt;FocussedHosts&quot;. From here we can monitor all request/response data, including timing charts!</p>
 
 <p>Request data</p>
 
+<p style="text-align:center;">
+    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/b68d8-screenshot2bat2bjan2b192b21-29-55.png" alt="">
+</p>
+
+<p style="text-align:center;">
+    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/a37ce-screenshot2bat2bjan2b192b21-30-23.png" alt="">
+</p>
+
 <p>Response Data</p>
 
+<p style="text-align:center;">
+    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/1554c-screenshot2bat2bjan2b192b21-30-31.png" alt="">
+</p>
+
 <p>Time Charts</p>
+
+<p style="text-align:center;">
+    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/591b0-screenshot2bat2bjan2b192b21-29-38.png" alt="">
+</p>
 
 <p>In the next part of this post I will show some advanced, super powerful use cases, like setting Rewrite rules (for changing request response on the fly), Throttling (for testing different network speeds), Using VPN, routing the traffic to staging servers and more...</p>
 
