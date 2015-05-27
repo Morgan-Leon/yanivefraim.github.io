@@ -6,12 +6,12 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 May 2015 08:45:29 +0300</pubDate>
-    <lastBuildDate>Wed, 27 May 2015 08:45:29 +0300</lastBuildDate>
+    <pubDate>Wed, 27 May 2015 09:04:17 +0300</pubDate>
+    <lastBuildDate>Wed, 27 May 2015 09:04:17 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>Be ready for Angular 2 Today - !!Draft - a work in progress!!</title>
+        <title>Be ready for Angular 2 Today (part 1)</title>
         <description>&lt;p&gt;Angular 2 is not here. It will take pretty long time until we&amp;#39;ll start using it. But, as you probably heard, the changes are &lt;a href=&quot;todo:%20add%20changes%20list%20blog%20link%20here&quot;&gt;HUGE&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;This is a good enough reason to start preparing for Angular 2 today (otherwise the migration path will be paintfull). &lt;/p&gt;
@@ -20,8 +20,8 @@
 &lt;p&gt;Another important point: a lot of new projects do not use Angular because of the fear of the new Angular 2 (or, &amp;quot;why should I start a new project using Angular 1.x when soon I&amp;#39;ll have to go through a paintfull migration path?&amp;quot;)&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;So, I&amp;#39;ll get streight to the point: what do we need to do today in order to make the migration to Angular 2 easier? 
-I summed it up to there steps, from the most important and complicated to the easiest:&lt;/p&gt;
+&lt;p&gt;So, what do we need to do today in order to make the migration to Angular 2 easier? 
+I summed it up to three steps, from the most important and complicated to the easiest:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Use Component based Architecture&lt;/li&gt;
@@ -29,7 +29,9 @@ I summed it up to there steps, from the most important and complicated to the ea
 &lt;li&gt;Use the &amp;quot;new router&amp;quot;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2&gt;1. Use Component based Architecture&lt;/h2&gt;
+&lt;p&gt;In this post I will be focusing on the first bullet, &amp;quot;Use Component based Architecture&amp;quot;.&lt;/p&gt;
+
+&lt;h1&gt;Using Component based Architecture&lt;/h1&gt;
 
 &lt;p&gt;This is the most important part, and the hardest one. 
 Angular 2.x, similar to React, is based on components. It uses component structure hierarchy (TODO: add link here). Angular 1.x does not work that way. The easiest way to understand this is through an example. I will use the &lt;a href=&quot;https://docs.angularjs.org/tutorial&quot;&gt;phonecat demo&lt;/a&gt; as an example. Take a look at this code:&lt;/p&gt;
@@ -58,8 +60,9 @@ Angular 2.x, similar to React, is based on components. It uses component structu
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is how it will look like:
---image here--&lt;/p&gt;
+&lt;p&gt;This is how it will look like:&lt;/p&gt;
+
+&lt;p&gt;--image here--&lt;/p&gt;
 
 &lt;p&gt;We would like to achieve two things:&lt;/p&gt;
 
@@ -100,10 +103,10 @@ I will try to do it using a simpler approach, similar to what is done in Faceboo
 &lt;p&gt;React.js uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other hand, is private and mutable (it can be changed by the component). For child-parent communication it uses simple events, in order to invoke methods on the parent.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;For more reference see those awesome tutorials &lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://facebook.github.io/react/docs/tutorial.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For more reference see those tow awesome tutorials: &lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;thinking in react&lt;/a&gt; and &lt;a href=&quot;https://facebook.github.io/react/docs/tutorial.html&quot;&gt;React&amp;#39;s officail tuturial&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;We will now have a main &amp;#39;phonecat-component&amp;#39; which will hold a &amp;#39;phonecat-search&amp;#39; and a &amp;#39;phonecat-list&amp;#39; child components. Those two child components will get all the data they need from their parent, via attributes.
+&lt;p&gt;We will now have a main &lt;code&gt;phonecat-component&lt;/code&gt; which will hold a &lt;code&gt;phonecat-search&lt;/code&gt; and a &lt;code&gt;phonecat-list&lt;/code&gt; child components. Those two child components will get all the data they need from their parent, via attributes.
 It should look somehting like this (The complete example can be found in the following &lt;a href=&quot;http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview&quot;&gt;plunker&lt;/a&gt;):&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- body --&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-controller=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;PhoneListCtrl as phoneCtrl&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -200,8 +203,8 @@ It should look somehting like this (The complete example can be found in the fol
 &lt;p&gt;The interesting point here is that instead of using &lt;code&gt;ng-model&lt;/code&gt;, I am using a &lt;code&gt;search&lt;/code&gt; method (with &lt;code&gt;search: &amp;quot;&amp;amp;&amp;quot;&lt;/code&gt;), in order to communicate search events to the parent component.&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 May 2015 17:34:25 +0300</pubDate>
-        <link>http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today.html</link>
-        <guid isPermaLink="true">http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today.html</guid>
+        <link>http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today-part1.html</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today-part1.html</guid>
         
         <category>Angularjs</category>
         

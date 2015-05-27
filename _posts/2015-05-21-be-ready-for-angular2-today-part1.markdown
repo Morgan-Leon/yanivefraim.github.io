@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Be ready for Angular 2 Today - !!Draft - a work in progress!!"
+title:  "Be ready for Angular 2 Today (part 1)"
 date:   2015-05-21 14:34:25
 tags: Angularjs Javascript
 image: /assets/images/desktop.JPG
@@ -12,14 +12,15 @@ This is a good enough reason to start preparing for Angular 2 today (otherwise t
 
 >Another important point: a lot of new projects do not use Angular because of the fear of the new Angular 2 (or, "why should I start a new project using Angular 1.x when soon I'll have to go through a paintfull migration path?")
 
-So, I'll get streight to the point: what do we need to do today in order to make the migration to Angular 2 easier? 
-I summed it up to there steps, from the most important and complicated to the easiest:
+So, what do we need to do today in order to make the migration to Angular 2 easier? 
+I summed it up to three steps, from the most important and complicated to the easiest:
 
 1. Use Component based Architecture
 2. Write Angular 1.x in ES6/Typescript
 3. Use the "new router"
 
-##1. Use Component based Architecture
+In this post I will be focusing on the first bullet, "Use Component based Architecture".
+# Using Component based Architecture
 This is the most important part, and the hardest one. 
 Angular 2.x, similar to React, is based on components. It uses component structure hierarchy (TODO: add link here). Angular 1.x does not work that way. The easiest way to understand this is through an example. I will use the [phonecat demo](https://docs.angularjs.org/tutorial) as an example. Take a look at this code:
 
@@ -51,6 +52,7 @@ Angular 2.x, similar to React, is based on components. It uses component structu
 ```
 
 This is how it will look like:
+
 --image here--
 
 We would like to achieve two things:
@@ -85,9 +87,9 @@ Let's call it 'The React way'...
 #####The 'React way'
 
 React.js uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other hand, is private and mutable (it can be changed by the component). For child-parent communication it uses simple events, in order to invoke methods on the parent.
->For more reference see those awesome tutorials [here](https://facebook.github.io/react/docs/thinking-in-react.html) and [here](https://facebook.github.io/react/docs/tutorial.html)
+>For more reference see those tow awesome tutorials: [thinking in react](https://facebook.github.io/react/docs/thinking-in-react.html) and [React's officail tuturial](https://facebook.github.io/react/docs/tutorial.html)
 
-We will now have a main 'phonecat-component' which will hold a 'phonecat-search' and a 'phonecat-list' child components. Those two child components will get all the data they need from their parent, via attributes.
+We will now have a main ```phonecat-component``` which will hold a ```phonecat-search``` and a ```phonecat-list``` child components. Those two child components will get all the data they need from their parent, via attributes.
 It should look somehting like this (The complete example can be found in the following [plunker](http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview)):
 
 ```html

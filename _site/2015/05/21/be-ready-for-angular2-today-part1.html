@@ -7,7 +7,7 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Be ready for Angular 2 Today - !!Draft - a work in progress!!</title>
+  <title>Be ready for Angular 2 Today (part 1)</title>
   <meta name="description" content="Advanced Front End topics
 " />
 
@@ -16,7 +16,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="canonical" href="http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today.html">
+  <link rel="canonical" href="http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today-part1.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
 <!--  <link rel="stylesheet" href=""> -->
@@ -42,7 +42,7 @@
             Article Image
           </div>
           <div class="post-meta">
-            <h1 class="post-title">Be ready for Angular 2 Today - !!Draft - a work in progress!!</h1>
+            <h1 class="post-title">Be ready for Angular 2 Today (part 1)</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Yaniv Efraim</h4>
@@ -69,8 +69,8 @@
 <p>Another important point: a lot of new projects do not use Angular because of the fear of the new Angular 2 (or, &quot;why should I start a new project using Angular 1.x when soon I&#39;ll have to go through a paintfull migration path?&quot;)</p>
 </blockquote>
 
-<p>So, I&#39;ll get streight to the point: what do we need to do today in order to make the migration to Angular 2 easier? 
-I summed it up to there steps, from the most important and complicated to the easiest:</p>
+<p>So, what do we need to do today in order to make the migration to Angular 2 easier? 
+I summed it up to three steps, from the most important and complicated to the easiest:</p>
 
 <ol>
 <li>Use Component based Architecture</li>
@@ -78,7 +78,9 @@ I summed it up to there steps, from the most important and complicated to the ea
 <li>Use the &quot;new router&quot;</li>
 </ol>
 
-<h2>1. Use Component based Architecture</h2>
+<p>In this post I will be focusing on the first bullet, &quot;Use Component based Architecture&quot;.</p>
+
+<h1>Using Component based Architecture</h1>
 
 <p>This is the most important part, and the hardest one. 
 Angular 2.x, similar to React, is based on components. It uses component structure hierarchy (TODO: add link here). Angular 1.x does not work that way. The easiest way to understand this is through an example. I will use the <a href="https://docs.angularjs.org/tutorial">phonecat demo</a> as an example. Take a look at this code:</p>
@@ -107,8 +109,9 @@ Angular 2.x, similar to React, is based on components. It uses component structu
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
-<p>This is how it will look like:
---image here--</p>
+<p>This is how it will look like:</p>
+
+<p>--image here--</p>
 
 <p>We would like to achieve two things:</p>
 
@@ -149,10 +152,10 @@ I will try to do it using a simpler approach, similar to what is done in Faceboo
 <p>React.js uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other hand, is private and mutable (it can be changed by the component). For child-parent communication it uses simple events, in order to invoke methods on the parent.</p>
 
 <blockquote>
-<p>For more reference see those awesome tutorials <a href="https://facebook.github.io/react/docs/thinking-in-react.html">here</a> and <a href="https://facebook.github.io/react/docs/tutorial.html">here</a></p>
+<p>For more reference see those tow awesome tutorials: <a href="https://facebook.github.io/react/docs/thinking-in-react.html">thinking in react</a> and <a href="https://facebook.github.io/react/docs/tutorial.html">React&#39;s officail tuturial</a></p>
 </blockquote>
 
-<p>We will now have a main &#39;phonecat-component&#39; which will hold a &#39;phonecat-search&#39; and a &#39;phonecat-list&#39; child components. Those two child components will get all the data they need from their parent, via attributes.
+<p>We will now have a main <code>phonecat-component</code> which will hold a <code>phonecat-search</code> and a <code>phonecat-list</code> child components. Those two child components will get all the data they need from their parent, via attributes.
 It should look somehting like this (The complete example can be found in the following <a href="http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview">plunker</a>):</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- body --&gt;</span>
 <span class="nt">&lt;body</span> <span class="na">ng-controller=</span><span class="s">&quot;PhoneListCtrl as phoneCtrl&quot;</span><span class="nt">&gt;</span>
@@ -254,14 +257,14 @@ It should look somehting like this (The complete example can be found in the fol
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=Be+ready+for+Angular+2+Today+-+%21%21Draft+-+a+work+in+progress%21%21&amp;url=http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Be+ready+for+Angular+2+Today+%28part+1%29&amp;url=http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today-part1"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
               
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Be+ready+for+Angular+2+Today+-+%21%21Draft+-+a+work+in+progress%21%21&amp;u=http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Be+ready+for+Angular+2+Today+%28part+1%29&amp;u=http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today-part1"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
