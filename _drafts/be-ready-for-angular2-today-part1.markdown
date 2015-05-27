@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  " -draft- Be ready for Angular 2 Today (part 1)"
-date:   2015-05-21 14:34:25
+title:  "Be ready for Angular 2 Today (part 1)"
 tags: Angularjs Javascript
 image: /assets/images/desktop.JPG
 ---
