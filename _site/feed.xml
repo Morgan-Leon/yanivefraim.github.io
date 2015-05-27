@@ -6,8 +6,8 @@
 </description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 May 2015 08:29:27 +0300</pubDate>
-    <lastBuildDate>Wed, 27 May 2015 08:29:27 +0300</lastBuildDate>
+    <pubDate>Wed, 27 May 2015 08:30:25 +0300</pubDate>
+    <lastBuildDate>Wed, 27 May 2015 08:30:25 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -151,8 +151,11 @@ It should look somehting like this (The complete example can be found in the fol
   &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;There are several points to stop and discuss here:
-- We use &amp;#39;bindToController&amp;#39; to pass &amp;#39;phones&amp;#39;, via attribute, to the  &amp;#39;phonecat-component&amp;#39; (see snippet below for more details).&lt;/p&gt;
+&lt;p&gt;There are several points to stop and discuss here:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;We use &amp;#39;bindToController&amp;#39; to pass &amp;#39;phones&amp;#39;, via attribute, to the  &amp;#39;phonecat-component&amp;#39; (see snippet below for more details).&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Thu, 21 May 2015 17:34:25 +0300</pubDate>
         <link>http://yanivefraim.github.io//2015/05/21/be-ready-for-angular2-today.html</link>
