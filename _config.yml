@@ -5,9 +5,9 @@ gems:
   - jemoji
   
 # Site settings
-title: "Memoirs of a Front End Developer"
+title: "Advanced Front End topics"
 description: > # this means to ignore newlines until "email:"
-   Advanced Front End topics
+   
 
 email: yaniv.efraim@gmail.com
 #blog logo
