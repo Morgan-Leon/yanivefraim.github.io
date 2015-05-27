@@ -135,7 +135,7 @@ function phonecatComponent() {
         scope.$apply();
       }
     },
-    controller: function($scope, $attrs) {},
+    controller: function() {},
     controllerAs: 'vm',
     templateUrl: 'partials/phonecatComponent.tpl.html'
   };
