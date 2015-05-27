@@ -26,7 +26,7 @@ While the references to those static files automatically updated to be:
 
 {% gist 02e6a7a6e831c3724b43 %}
 
-That's it. Quick and simple. For a complete flow example, you can refer to my Angular-realworld demo.
+That's it. Quick and simple. For a complete flow example, you can refer to my [Angular-realworld demo](https://github.com/yanivefraim/angularjs-realworld).
 
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
