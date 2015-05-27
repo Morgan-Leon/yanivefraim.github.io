@@ -141,10 +141,12 @@ function phonecatComponent() {
   };
 }
 ```
-
+<p></p>
 There are several points to stop and discuss here:
 
-- We use 'bindToController' to pass 'phones', via attribute, to the  'phonecat-component' (see snippet below for more details).
+- We use 'bindToController' to pass 'phones', via attribute, to the 'phonecat-component'. This feature was introduced in Angular 1.4, but no worry, you can acheive the same results with older Angular versions as well (see snippet below for more details). I will use this technique with other components, as well. 
+- 'phonecat-list' child componenet receives its data using 'phones' and 'filter-data' attributes.  
+- 'Search' method is used to receive events from child 'phonecat-search' component.
 
 
 [jekyll]:      http://jekyllrb.com
