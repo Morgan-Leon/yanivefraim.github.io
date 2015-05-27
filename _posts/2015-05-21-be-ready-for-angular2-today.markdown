@@ -73,22 +73,27 @@ We will want to build several components:
 
 ######Creating a hierarchy tree
 
-This is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). 
->There are several great posts showing how to do it using directive's transclude property (see [here](https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives) and [here](https://www.airpair.com/angularjs/posts/component-based-angularjs-directives)). While this is possible, it has several disadvantages: It uses scope and controllers and I think that it is too complicated. 
+<!--- >There are several great posts showing how to do it using directive's transclude property (see [here](https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives) and [here](https://www.airpair.com/angularjs/posts/component-based-angularjs-directives)). While this is possible, it has several disadvantages: It uses scope and controllers and I think that it is too complicated.  
 
 I will try to do it using a simpler approach, similar to what is done in Facebook's [React](https://facebook.github.io/react/).
+-->
+
+Angular 2.0 uses an approach similar to Facebook's [React.js's](https://facebook.github.io/react/) approach, and this is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). 
+
+Let's call it 'The React way'...
 
 #####The 'React way'
 
-React.js uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other way, is private by the component and it is mutable, which means it can be changed by the component. For more reference see those awesome tutorials [here](https://facebook.github.io/react/docs/thinking-in-react.html) and [here](https://facebook.github.io/react/docs/tutorial.html)
+React.js uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other hand, is private and mutable (it can be changed by the component). For child-parent communication it uses simple events, in order to invoke methods on the parent.
+>For more reference see those awesome tutorials [here](https://facebook.github.io/react/docs/thinking-in-react.html) and [here](https://facebook.github.io/react/docs/tutorial.html)
 
-We will now have a main 'phonecat-component' which will hold the 'phonecat-search' component and the 'phonecat-list' component.
-It should look somehting like this:
+We will now have a main 'phonecat-component' which will hold a 'phonecat-search' and a 'phonecat-list' child components. Those two child components will get all the data they need from their parent, via attributes.
+It should look somehting like this (The complete example can be found in the following [plunker](http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview)):
 
 ```html
 <!-- body -->
-<body>
-  <phonecat-component></phonecat-component>
+<body ng-controller="PhoneListCtrl as phoneCtrl">
+  <phonecat-component phones=phoneCtrl.phones></phonecat-component>
 </body>
 ```
 
@@ -97,42 +102,49 @@ It should look somehting like this:
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2">
-      <phonecat-search search="vm.search(data)"></phonecat-search>
+      <phonecat-search search="vm.search(searchData)"></phonecat-search>
     </div>
     <div class="col-md-10">
-      <phonecat-list></phonecat-list>    
+      '<phonecat-list phones="vm.phones" filter-data="vm.filterData"></phonecat-list>',    
     </div>
   </div>
 </div>
 ```
+<p></p>
+As you can see, our body contains only one main component 'phonecat-component'. Its directive is:
 
-```html
-<!--phonecat-search template-->
-<div>
-  Search:
-  <input ng-model="query" />
-  Sort by:
-  <select ng-model="orderProp">
-    <option value="name">Alphabetical</option>
-    <option value="age">Newest</option>
-  </select>
-</div>
+```javascript
+'use strict';
+
+angular.module('phonecatApp')
+  .directive('phonecatComponent', phonecatComponent);
+
+function phonecatComponent() {
+  return {
+    scope: {},
+    bindToController: {
+      phones: "="
+    },
+    link: function(scope, elm, attrs, ctrl) {
+      ctrl.filterData = {
+        text: '',
+        orderBy: 'name'
+      }; //default search filter
+      ctrl.search = function(searchData) {
+        ctrl.filterData = searchData;
+        scope.$apply();
+      }
+    },
+    controller: function($scope, $attrs) {},
+    controllerAs: 'vm',
+    templateUrl: 'partials/phonecatComponent.tpl.html'
+  };
+}
 ```
 
-```html
-<!--phonecat-list template-->
-<ul class="phones">
-  <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
-    <a href="#/phones/{{phone.id}}" class="thumb">
-      <img ng-src="{{phone.imageUrl}}" />
-    </a>
-    <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
-    <p>{{phone.snippet}}</p>
-  </li>
-</ul>
-```
+There are several points to stop and discuss here:
+- We use 'bindToController' to pass 'phones', via attribute, to the  'phonecat-component' (see snippet below for more details).
 
-The complete example can be found in the following [plunker](http://plnkr.co/edit/ApnNBZL3O4TyVMToTcZi?p=preview)
 
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
