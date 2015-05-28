@@ -12,7 +12,8 @@ $rs: 16px
 
 $font-serif: Linux Libertine
 $font-sans: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif
-
+$break-small: 420px
+$break-large: 1200px
 
 @mixin respond-to($breakpoint)
   @media only screen and (max-width: $breakpoint + px)
@@ -58,7 +59,10 @@ body
     background-repeat: no-repeat
 
 .teaserimage
-  height: 450px
+  @media screen and (max-width: $break-small)
+    height: 150px 
+  @media screen and (min-width: $break-small)  
+    height: 450px
   position: relative
   overflow: hidden
   background-color: #000
@@ -83,12 +87,20 @@ body
   @include respond-to(800)
     padding: 0 $rs
   .blog-logo
-    width: $rs*7.5
-    height: $rs*7.5
+    @media screen and (min-width: $break-small)
+      width: $rs*7.5
+      height: $rs*7.5
+      top: -$rs*3.75
+      margin-right: -$rs*3.75
+    @media screen and (max-width: $break-small)
+      width: $rs*7.5/2  
+      height: $rs*7.5/2
+      top: -$rs*3.75/2
+      margin-right: -$rs*3.75/2
     position: absolute
-    top: -$rs*3.75
+    
     right: 50%
-    margin-right: -$rs*3.75
+    
     background-size: cover
     border-radius: 50%
     z-index: 99
