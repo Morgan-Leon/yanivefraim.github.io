@@ -5,8 +5,8 @@
     <description></description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 28 May 2015 01:01:21 +0300</pubDate>
-    <lastBuildDate>Thu, 28 May 2015 01:01:21 +0300</lastBuildDate>
+    <pubDate>Thu, 28 May 2015 23:45:42 +0300</pubDate>
+    <lastBuildDate>Thu, 28 May 2015 23:45:42 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -84,7 +84,7 @@ Angular 2.x, similar to React, is based on components. It uses &lt;a href=&quot;
 &lt;li&gt;Catalog details component &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I will emit the last two components from my example, just in order to keep things simple.&lt;/p&gt;
+&lt;p&gt;I will omit the last two components from my example, just in order to keep things simple.&lt;/p&gt;
 
 &lt;h3&gt;Step 2 - Creating a hierarchy tree&lt;/h3&gt;
 
@@ -102,7 +102,7 @@ I will try to do it using a simpler approach, similar to what is done in Faceboo
 &lt;p&gt;React.js uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other hand, is private and mutable (it can be changed by the component). For child-parent communication it uses simple events, in order to invoke methods on the parent.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;For more reference see those tow awesome tutorials: &lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;thinking in react&lt;/a&gt; and &lt;a href=&quot;https://facebook.github.io/react/docs/tutorial.html&quot;&gt;React&amp;#39;s officail tuturial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For more reference see those two awesome tutorials: &lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;thinking in react&lt;/a&gt; and &lt;a href=&quot;https://facebook.github.io/react/docs/tutorial.html&quot;&gt;React&amp;#39;s officail tuturial&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;We will now have a main &lt;code&gt;phonecat-component&lt;/code&gt; which will hold a &lt;code&gt;phonecat-search&lt;/code&gt; and a &lt;code&gt;phonecat-list&lt;/code&gt; child components. Those two child components will get all the data they need from their parent, via attributes.
