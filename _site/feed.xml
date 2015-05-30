@@ -5,8 +5,8 @@
     <description></description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 30 May 2015 22:10:09 +0300</pubDate>
-    <lastBuildDate>Sat, 30 May 2015 22:10:09 +0300</lastBuildDate>
+    <pubDate>Sat, 30 May 2015 22:17:55 +0300</pubDate>
+    <lastBuildDate>Sat, 30 May 2015 22:17:55 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -158,9 +158,9 @@ It should look somehting like this (The complete example can be found in the fol
 &lt;p&gt;There are several points to stop and discuss here:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;We use &amp;#39;bindToController&amp;#39; to pass &amp;#39;phones&amp;#39;, via attribute, to the &amp;#39;phonecat-component&amp;#39;. This feature was introduced in Angular 1.4, but no worry, you can acheive the same results with older Angular versions as well (see snippet below for more details). I will use this technique with other components, as well. &lt;/li&gt;
 &lt;li&gt;&amp;#39;phonecat-list&amp;#39; child componenet receives its data using &amp;#39;phones&amp;#39; and &amp;#39;filter-data&amp;#39; attributes.&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;&amp;#39;Search&amp;#39; method is used to receive events from child &amp;#39;phonecat-search&amp;#39; component.&lt;/li&gt;
+&lt;li&gt;We use &amp;#39;bindToController&amp;#39; to pass &amp;#39;phones&amp;#39;, via attribute, to the &amp;#39;phonecat-component&amp;#39;. This feature was introduced in Angular 1.4, but no worry, you can acheive the same results with older Angular versions as well (see snippet below for more details). I will use this technique with other components, as well. &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
