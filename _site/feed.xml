@@ -5,8 +5,8 @@
     <description></description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 30 May 2015 23:36:27 +0300</pubDate>
-    <lastBuildDate>Sat, 30 May 2015 23:36:27 +0300</lastBuildDate>
+    <pubDate>Sat, 30 May 2015 23:39:06 +0300</pubDate>
+    <lastBuildDate>Sat, 30 May 2015 23:39:06 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -568,8 +568,8 @@ Retrieving list of stashes&lt;/p&gt;
 &lt;p&gt;For a complete demo using html2js you can refer to my &lt;a href=&quot;https://github.com/yanivefraim/angularjs-realworld&quot;&gt;angularjs-realworld&lt;/a&gt; demo in Github.&lt;/p&gt;
 </description>
         <pubDate>Sat, 15 Nov 2014 16:34:25 +0200</pubDate>
-        <link>http://yanivefraim.github.io//2014/11/15/pre-caching-angularjs-templates-using-html2js.html</link>
-        <guid isPermaLink="true">http://yanivefraim.github.io//2014/11/15/pre-caching-angularjs-templates-using-html2js.html</guid>
+        <link>http://yanivefraim.github.io//pre-caching-angularjs-templates-using-html2js/</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//pre-caching-angularjs-templates-using-html2js/</guid>
         
         <category>Angularjs</category>
         
