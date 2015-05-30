@@ -13,7 +13,9 @@ $rs: 16px
 $font-serif: Linux Libertine
 $font-sans: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif
 $break-small: 420px
-$break-large: 1200px
+$break-small-landscape: 700px
+$break-medium: 701px
+$break-medium-landscape: 1024px
 
 @mixin respond-to($breakpoint)
   @media only screen and (max-width: $breakpoint + px)
@@ -41,6 +43,10 @@ body
   font-feature-settings: "liga", "dlig"
 
 .logo-readium
+  @media screen and (max-width: $break-small) and (orientation : portrait)
+    display: none
+  @media screen and (max-width: $break-small-landscape) and (orientation : landscape)
+    display: none
   position: fixed
   left: 10px
   top: 10px
@@ -59,10 +65,14 @@ body
     background-repeat: no-repeat
 
 .teaserimage
-  @media screen and (max-width: $break-small)
+  @media screen and (max-width: $break-small) and (orientation : portrait)
     height: 150px 
-  @media screen and (min-width: $break-small)  
+  @media screen and (min-width: $break-small)  and (orientation : portrait)
     height: 450px
+  @media screen and (max-width: $break-small-landscape) and (orientation : landscape)
+    height: 200px 
+  @media screen and (min-width: $break-small-landscape)  and (orientation : landscape)
+    height: 450px  
   position: relative
   overflow: hidden
   background-color: #000
@@ -87,20 +97,29 @@ body
   @include respond-to(800)
     padding: 0 $rs
   .blog-logo
-    @media screen and (min-width: $break-small)
+    @media screen and (min-width: $break-small) and (orientation : portrait)
       width: $rs*7.5
       height: $rs*7.5
       top: -$rs*3.75
       margin-right: -$rs*3.75
-    @media screen and (max-width: $break-small)
+    @media screen and (min-width: $break-small-landscape) and (orientation : landscape)
+      width: $rs*7.5
+      height: $rs*7.5
+      top: -$rs*3.75
+      margin-right: -$rs*3.75  
+    @media screen and (max-width: $break-small) and (orientation : portrait)
       width: $rs*7.5/2  
       height: $rs*7.5/2
       top: -$rs*3.75/2
       margin-right: -$rs*3.75/2
+    @media screen and (max-width: $break-small-landscape) and (orientation : landscape)
+      width: $rs*7.5/2
+      height: $rs*7.5/2
+      top: -$rs*3.75/2
+      margin-right: -$rs*3.75/2
+    
     position: absolute
-    
     right: 50%
-    
     background-size: cover
     border-radius: 50%
     z-index: 99
@@ -248,6 +267,10 @@ body
     right: 0
     bottom: 0
     overflow: hidden
+    @media screen and (max-width: $break-small) and (orientation : portrait)
+      height: 200px
+    @media screen and (max-width: $break-small-landscape) and (orientation : landscape)
+      height: 180px
     .post-image-image
       background-size: cover
       position: absolute
@@ -259,8 +282,13 @@ body
       padding-top: 33%
       z-index: 1
     .post-meta
-      position: absolute
-      bottom: $rs*5
+      position: absolute      
+      
+      @media screen and (min-width: $break-small) and (orientation : portrait)
+        bottom: $rs*5
+      @media screen and (min-width: $break-small-landscape) and (orientation : landscape)
+        bottom: $rs*5
+
       left: 30%
       right: 30%
       z-index: 9
@@ -274,6 +302,12 @@ body
       font-style: normal
       letter-spacing: -0.04em
       font-size: 50px
+      @media screen and (max-width: $break-small) and (orientation : portrait)
+        font-size: 26px
+        padding-top: 50px
+      @media screen and (max-width: $break-small-landscape) and (orientation : landscape)
+        font-size: 26px
+        padding-top: 50px
       line-height: 1.1
       color: #fff
       margin-bottom: 16px
@@ -350,6 +384,11 @@ body
       white-space: nowrap
       text-overflow: ellipsis
   .post-content
+    @media screen and (max-width: $break-small) and (orientation : portrait)
+      padding-top: 200px
+    @media screen and (max-width: $break-small-landscape) and (orientation : landscape)
+      padding-top: 180px
+    
     width: 100%
     font-family: $font-serif
     color: #333
@@ -534,6 +573,14 @@ body
   width: 100%
   position: relative
   overflow: hidden
+  @media screen and (max-width: $break-small) and (orientation : portrait)
+    height: 150px 
+  @media screen and (min-width: $break-small)  and (orientation : portrait)
+    height: 450px
+  @media screen and (max-width: $break-small-landscape) and (orientation : landscape)
+    height: 200px 
+  @media screen and (min-width: $break-small-landscape)  and (orientation : landscape)
+    height: 450px  
   .background-closer-image
     position: absolute
     top: 0
@@ -552,10 +599,16 @@ body
     padding: 120px 0 90px
     text-align: center
     margin: 0 auto
+    @media screen and (max-width: $break-small) and (orientation : portrait)
+      padding-top: 60px
     .blog-title
       margin: 0
       padding: 0 0 10px
       font-size: 50px
+      @media screen and (max-width: $break-small) and (orientation : portrait)
+        display: none
+      @media screen and (max-width: $break-small-landscape) and (orientation : landscape)
+        display: none
       text-align: center
       font-weight: 700
       letter-spacing: -2px
@@ -565,6 +618,10 @@ body
       color: #fff
       text-shadow: 0px 1px 16px rgba(0,0,0,0.5), 0px 0px 1px rgba(0,0,0,0.5)
     .blog-description
+      @media screen and (max-width: $break-small) and (orientation : portrait)
+        display: none
+      @media screen and (max-width: $break-small-landscape) and (orientation : landscape)
+        display: none
       margin: 0 0 50px
       padding: 0 $rs*2
       font-size: $rs/8*9
@@ -592,7 +649,6 @@ body
       border-radius: 999em
       line-height: 44px
       padding: 0 18px
-
 #disqus_thread
   margin-top: 50px
 .post-tag-articleimage

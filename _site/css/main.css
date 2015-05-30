@@ -168,6 +168,12 @@ body {
   height: 48px;
   overflow: hidden;
   z-index: 99; }
+  @media screen and (max-width: 420px) and (orientation: portrait) {
+    .logo-readium {
+      display: none; } }
+  @media screen and (max-width: 700px) and (orientation: landscape) {
+    .logo-readium {
+      display: none; } }
   .logo-readium .logo {
     display: block;
     position: absolute;
@@ -182,10 +188,16 @@ body {
   position: relative;
   overflow: hidden;
   background-color: #000; }
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 420px) and (orientation: portrait) {
     .teaserimage {
       height: 150px; } }
-  @media screen and (min-width: 420px) {
+  @media screen and (min-width: 420px) and (orientation: portrait) {
+    .teaserimage {
+      height: 450px; } }
+  @media screen and (max-width: 700px) and (orientation: landscape) {
+    .teaserimage {
+      height: 200px; } }
+  @media screen and (min-width: 700px) and (orientation: landscape) {
     .teaserimage {
       height: 450px; } }
   .teaserimage .teaserimage-image {
@@ -220,13 +232,25 @@ body {
     text-indent: -9999px;
     border: 3px solid #fff;
     background-color: #fff; }
-    @media screen and (min-width: 420px) {
+    @media screen and (min-width: 420px) and (orientation: portrait) {
       .blog-header .blog-logo {
         width: 120px;
         height: 120px;
         top: -60px;
         margin-right: -60px; } }
-    @media screen and (max-width: 420px) {
+    @media screen and (min-width: 700px) and (orientation: landscape) {
+      .blog-header .blog-logo {
+        width: 120px;
+        height: 120px;
+        top: -60px;
+        margin-right: -60px; } }
+    @media screen and (max-width: 420px) and (orientation: portrait) {
+      .blog-header .blog-logo {
+        width: 60px;
+        height: 60px;
+        top: -30px;
+        margin-right: -30px; } }
+    @media screen and (max-width: 700px) and (orientation: landscape) {
       .blog-header .blog-logo {
         width: 60px;
         height: 60px;
@@ -377,6 +401,12 @@ body {
   right: 0;
   bottom: 0;
   overflow: hidden; }
+  @media screen and (max-width: 420px) and (orientation: portrait) {
+    .post .article-image {
+      height: 200px; } }
+  @media screen and (max-width: 700px) and (orientation: landscape) {
+    .post .article-image {
+      height: 180px; } }
   .post .article-image .post-image-image {
     background-size: cover;
     position: absolute;
@@ -389,7 +419,6 @@ body {
     z-index: 1; }
   .post .article-image .post-meta {
     position: absolute;
-    bottom: 80px;
     left: 30%;
     right: 30%;
     z-index: 9;
@@ -397,6 +426,12 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
+    @media screen and (min-width: 420px) and (orientation: portrait) {
+      .post .article-image .post-meta {
+        bottom: 80px; } }
+    @media screen and (min-width: 700px) and (orientation: landscape) {
+      .post .article-image .post-meta {
+        bottom: 80px; } }
     @media only screen and (max-width: 800px) {
       .post .article-image .post-meta {
         left: 16px;
@@ -410,6 +445,14 @@ body {
     color: #fff;
     margin-bottom: 16px;
     text-shadow: 0px 1px 16px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5); }
+    @media screen and (max-width: 420px) and (orientation: portrait) {
+      .post .article-image .post-title {
+        font-size: 26px;
+        padding-top: 50px; } }
+    @media screen and (max-width: 700px) and (orientation: landscape) {
+      .post .article-image .post-title {
+        font-size: 26px;
+        padding-top: 50px; } }
   .post .article-image .author-image {
     display: inline-block;
     width: 30px;
@@ -484,6 +527,12 @@ body {
   width: 100%;
   font-family: Linux Libertine;
   color: #333; }
+  @media screen and (max-width: 420px) and (orientation: portrait) {
+    .post .post-content {
+      padding-top: 200px; } }
+  @media screen and (max-width: 700px) and (orientation: landscape) {
+    .post .post-content {
+      padding-top: 180px; } }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
     font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif; }
   .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
@@ -672,6 +721,18 @@ body {
   width: 100%;
   position: relative;
   overflow: hidden; }
+  @media screen and (max-width: 420px) and (orientation: portrait) {
+    .bottom-closer {
+      height: 150px; } }
+  @media screen and (min-width: 420px) and (orientation: portrait) {
+    .bottom-closer {
+      height: 450px; } }
+  @media screen and (max-width: 700px) and (orientation: landscape) {
+    .bottom-closer {
+      height: 200px; } }
+  @media screen and (min-width: 700px) and (orientation: landscape) {
+    .bottom-closer {
+      height: 450px; } }
   .bottom-closer .background-closer-image {
     position: absolute;
     top: 0;
@@ -690,6 +751,9 @@ body {
     padding: 120px 0 90px;
     text-align: center;
     margin: 0 auto; }
+    @media screen and (max-width: 420px) and (orientation: portrait) {
+      .bottom-closer .inner {
+        padding-top: 60px; } }
     .bottom-closer .inner .blog-title {
       margin: 0;
       padding: 0 0 10px;
@@ -702,6 +766,12 @@ body {
       word-break: break-word;
       color: #fff;
       text-shadow: 0px 1px 16px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5); }
+      @media screen and (max-width: 420px) and (orientation: portrait) {
+        .bottom-closer .inner .blog-title {
+          display: none; } }
+      @media screen and (max-width: 700px) and (orientation: landscape) {
+        .bottom-closer .inner .blog-title {
+          display: none; } }
     .bottom-closer .inner .blog-description {
       margin: 0 0 50px;
       padding: 0 32px;
@@ -711,6 +781,12 @@ body {
       text-align: center;
       font-weight: 400;
       text-shadow: 0px 1px 16px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5); }
+      @media screen and (max-width: 420px) and (orientation: portrait) {
+        .bottom-closer .inner .blog-description {
+          display: none; } }
+      @media screen and (max-width: 700px) and (orientation: landscape) {
+        .bottom-closer .inner .blog-description {
+          display: none; } }
     .bottom-closer .inner .custom-links {
       margin: 0 0 50px; }
     .bottom-closer .inner .btn {
