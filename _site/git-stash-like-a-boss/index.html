@@ -7,7 +7,7 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Debug mobile apps like a pro (part 1)</title>
+  <title>Git stash like a boss</title>
   <meta name="description" content="" />
 
   <meta name="HandheldFriendly" content="True" />
@@ -15,7 +15,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="canonical" href="http://yanivefraim.github.io//2015/01/19/debug-mobile-apps-like-a-pro-part-1.html">
+  <link rel="canonical" href="http://yanivefraim.github.io//git-stash-like-a-boss/">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
 <!--  <link rel="stylesheet" href=""> -->
@@ -41,12 +41,12 @@
             Article Image
           </div>
           <div class="post-meta">
-            <h1 class="post-title">Debug mobile apps like a pro (part 1)</h1>
+            <h1 class="post-title">Git stash like a boss</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Yaniv Efraim</h4>
               on
-              <time datetime="2015-01-19 16:34">19 Jan 2015</time>
+              <time datetime="2015-01-15 16:34">15 Jan 2015</time>
               <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
             </div>
             <div style="text-align:center">
@@ -60,81 +60,45 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>Debugging mobile apps can be tricky. Especially when debugging production apps. One of our team&#39;s most powerful tools is Charles Proxy. It is used by QA, Developers and even by other non R&amp;D teams.</p>
+          <p>Git stash is awesome. You work on a feature/bug and suddenly having a context switch  (a new urgent hotfix / a team member asking for help in another brunch). Now, you want to save your work aside without committing it.
+Git stash FTW!</p>
 
-<p>Here I will demonstrate some super easy and super powerful techniques used to debug/monitor our mobile app. (By the way - most of the stuff here are true for regular desktop/mobile web apps as well)</p>
+<p>A basic stash will be:</p>
 
-<h3>Connect your mobile device to your Mac/PC</h3>
-
-<p>So - lets get started. First you will have to connect your device to your PC/Mac. This is SUPER easy when using Charles (both mobile device and computer should be on the same network):</p>
-
-<ol>
-<li>Check your network&#39;s local IP address. The simplest way is using Charles&#39; help menu:</li>
-</ol>
-
-<p style="text-align:center;">
-    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/4f0fe-screenshot2bat2bjan2b192b19-48-00.png" alt="">
-</p>
- 
-
-<ol>
-<li><p>Connect your mobile device to this address:</p>
-
-<p>2.1. Android (OS 4.X and above. For Android 2.X look here)
-Go to settings-&gt;network-&gt;wifi and long press your selected network. Then choose the following settings (the IP is the IP you located in previous section)</p>
-
-<p style="text-align:center;">
-    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/f60b6-screenshot_2015-01-19-20-19-19.png" alt="">
-</p>
-
-<p>2.2. iOS
-Go to wifi settings and choose your internal network</p>
-
-<p style="text-align:center;">
-    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/3880f-http-proxy.png" alt="">
-</p></li>
-<li><p>Charles will ask for your approval (only first time you connect your device):</p></li>
-</ol>
-
-<p style="text-align:center;">
-    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/9a795-screenshot2bat2bjan2b192b21-09-13.png" alt="">
-</p>
-
-<p>And... That&#39;s it. You are connected and are ready to get started!</p>
-
-<h3>Monitor mobile traffic</h3>
-
-<p>The first thing to do is monitor your mobile app&#39;s traffic. Lets choose IMDB as a &quot;victim&quot; app and monitor its traffic. I&#39;ll choose &quot;record&quot; button and open IMDB. This is what we&#39;ll see:</p>
-
-<p><p style="text-align:center;">
-    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/5580d-screenshot2bat2bjan2b192b21-33-19.png" alt="">
-</p></p>
-
-<p>What we sees here is filter I created with imdbws.com as a domain. You can set focussed domains on &quot;view-&gt;FocussedHosts&quot;. From here we can monitor all request/response data, including timing charts!</p>
-
-<p>Request data</p>
-
-<p style="text-align:center;">
-    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/b68d8-screenshot2bat2bjan2b192b21-29-55.png" alt="">
-</p>
-
-<p style="text-align:center;">
-    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/a37ce-screenshot2bat2bjan2b192b21-30-23.png" alt="">
-</p>
-
-<p>Response Data</p>
-
-<p style="text-align:center;">
-    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/1554c-screenshot2bat2bjan2b192b21-30-31.png" alt="">
-</p>
-
-<p>Time Charts</p>
-
-<p style="text-align:center;">
-    <img src="/assets/article_images/2015-01-19-debug-mobile-apps-like-a-pro-part-1/591b0-screenshot2bat2bjan2b192b21-29-38.png" alt="">
-</p>
-
-<p>In the next part of this post I will show some advanced, super powerful use cases, like setting Rewrite rules (for changing request response on the fly), Throttling (for testing different network speeds), Using VPN, routing the traffic to staging servers and more...</p>
+<p class='post-p'>Saving a stash</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span>
+</code></pre></div>
+<p class='post-p'>Save a stash with a save name:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">save</span> <span class="s2">&quot;my temp work&quot;</span>
+</code></pre></div>
+<p class='post-p'>Fetching back last stash, popping it from stash stack</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">pop</span>
+</code></pre></div>
+<p class='post-p'>Fetching back last stash, leaving it on stash stack</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">apply</span>
+</code></pre></div>
+<p class='post-p'>As you can see, stash is a stack of changes. What if you want to fetch an old stash?
+Retrieving list of stashes</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">list</span>
+</code></pre></div>
+<p class='post-p'>This will produce a list of stashes:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="mi">0</span><span class="p">}</span><span class="o">:</span> <span class="nx">On</span> <span class="nx">feature</span><span class="o">/</span><span class="nx">AD</span><span class="o">-</span><span class="mi">292</span><span class="o">:</span> <span class="nx">controller</span> <span class="nx">api</span> <span class="nx">mock</span>
+<span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="o">:</span> <span class="nx">On</span> <span class="nx">feature</span><span class="o">/</span><span class="nx">AD</span><span class="o">-</span><span class="mi">350</span><span class="o">:</span> <span class="nx">vast</span> <span class="nx">fake</span> <span class="nx">json</span>
+<span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">:</span> <span class="nx">On</span> <span class="nx">feature</span><span class="o">/</span><span class="nx">AD</span><span class="o">-</span><span class="mi">315</span><span class="o">:</span> <span class="nx">vast</span> <span class="nx">another</span> <span class="nx">fake</span> <span class="nx">json</span>
+<span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span><span class="o">:</span> <span class="nx">On</span> <span class="nx">feature</span><span class="o">/</span><span class="nx">AD</span><span class="o">-</span><span class="mi">350</span><span class="o">:</span> <span class="nx">vast</span> <span class="nx">validator</span>
+<span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="mi">4</span><span class="p">}</span><span class="o">:</span> <span class="nx">On</span> <span class="nx">feature</span><span class="o">/</span><span class="nx">AD</span><span class="o">-</span><span class="mi">292</span><span class="o">:</span> <span class="nx">controller</span> <span class="mf">11.1</span><span class="p">.</span><span class="mi">15</span>
+<span class="p">...</span>
+</code></pre></div>
+<p class='post-p'>In order to fetch a specific stash:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">pop</span> <span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="nx">n</span><span class="p">}</span>
+</code></pre></div>
+<p class='post-p'>Or</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">apply</span> <span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="nx">n</span><span class="p">}</span> 
+</code></pre></div>
+<p class='post-p'>And a last tip: you can see stash's changes by:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">show</span> <span class="o">-</span><span class="nx">p</span> <span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="nx">n</span><span class="p">}</span>
+</code></pre></div>
+<p>Good luck!</p>
 
           <div id="disqus_thread"></div>
         </section>
@@ -142,14 +106,14 @@ Go to wifi settings and choose your internal network</p>
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=Debug+mobile+apps+like+a+pro+%28part+1%29&amp;url=http://yanivefraim.github.io//2015/01/19/debug-mobile-apps-like-a-pro-part-1"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Git+stash+like+a+boss&amp;url=http://yanivefraim.github.io//git-stash-like-a-boss"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
               
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Debug+mobile+apps+like+a+pro+%28part+1%29&amp;u=http://yanivefraim.github.io//2015/01/19/debug-mobile-apps-like-a-pro-part-1"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Git+stash+like+a+boss&amp;u=http://yanivefraim.github.io//git-stash-like-a-boss"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
@@ -167,7 +131,7 @@ Go to wifi settings and choose your internal network</p>
               <h4>Yaniv Efraim</h4>
               <p class="bio"></p>
               <hr>
-              <p class="published">Published <time datetime="2015-01-19 16:34">19 Jan 2015</time></p>
+              <p class="published">Published <time datetime="2015-01-15 16:34">15 Jan 2015</time></p>
             </section>
           </div>
           

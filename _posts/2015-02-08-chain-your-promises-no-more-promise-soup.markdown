@@ -4,6 +4,7 @@ title:  "Chain your Promises: no more Promise soup!"
 date:   2015-02-08 14:34:25
 tags: Angularjs Javascript
 image: /assets/images/soup.jpg
+permalink: /chain-your-promises/
 ---
 I love Promises. We use it in all our projects. It can be used with AngularJS, jQuery or even Vanilla Javascript. I will not explain about Promises basics here, if you are not familiar with Promises, take a look here, here and here.
 

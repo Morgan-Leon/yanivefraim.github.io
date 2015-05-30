@@ -4,6 +4,7 @@ title:  "Splitting large Grunt files using node.js export capabilities"
 date:   2015-01-01 14:34:25
 tags: Angularjs Javascript
 image: /assets/images/coffee.jpg
+permalink: /splitting-large-grunt-files-using-node-js-export-capabilities/
 ---
 Grunt is an awesome tool. I use it everyday and I cannot think of working without it. As time passed by, our Gruntfile.js file became really big, and managing this file has become a real bummer. Since Grunt's best practices recommend using one and only one Gruntfile.js per repository, the solution should be using smaller project's files and import it to the main Gruntfile.js using node.js export/require capabilities.
 

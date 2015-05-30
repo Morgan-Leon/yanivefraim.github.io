@@ -4,6 +4,7 @@ title:  "Debug mobile apps like a pro (part 1)"
 date:   2015-01-19 14:34:25
 tags: Angularjs Javascript
 image: /assets/images/desktop.JPG
+permalink: /debug-mobile-apps-like-a-pro/
 ---
 Debugging mobile apps can be tricky. Especially when debugging production apps. One of our team's most powerful tools is Charles Proxy. It is used by QA, Developers and even by other non R&D teams.
 

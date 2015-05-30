@@ -4,6 +4,7 @@ title:  "Git stash like a boss"
 date:   2015-01-15 14:34:25
 tags: Angularjs Javascript
 image: /assets/images/desktop.JPG
+permalink: /git-stash-like-a-boss/
 ---
 
 Git stash is awesome. You work on a feature/bug and suddenly having a context switch  (a new urgent hotfix / a team member asking for help in another brunch). Now, you want to save your work aside without committing it.

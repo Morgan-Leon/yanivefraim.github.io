@@ -4,6 +4,7 @@ title:  "Handling static files versioning using grunt-hashres"
 date:   2015-01-06 14:34:25
 tags: Angularjs Javascript
 image: /assets/images/desktop.JPG
+permalink: /handling-static-files-versioning-using-grunt-hashres/
 ---
 
 While looking for a simple but yet effective way to handle my static file versions, I found the awesome grunt-hashres Grunt plugin. Its job is to give each static file a unique version and also update references to the file with current version. awesome.
