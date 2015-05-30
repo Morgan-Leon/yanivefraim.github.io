@@ -5,8 +5,8 @@
     <description></description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 30 May 2015 23:39:06 +0300</pubDate>
-    <lastBuildDate>Sat, 30 May 2015 23:39:06 +0300</lastBuildDate>
+    <pubDate>Sat, 30 May 2015 23:47:37 +0300</pubDate>
+    <lastBuildDate>Sat, 30 May 2015 23:47:37 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -292,8 +292,8 @@ TL;DR: you can replace this with regular isolated scope, if you want to use olde
 &lt;p&gt;That&amp;#39;s it. Keep on chaining! &lt;/p&gt;
 </description>
         <pubDate>Sun, 08 Feb 2015 16:34:25 +0200</pubDate>
-        <link>http://yanivefraim.github.io//chain-your-promises/</link>
-        <guid isPermaLink="true">http://yanivefraim.github.io//chain-your-promises/</guid>
+        <link>http://yanivefraim.github.io//2015/02/08/chain-your-promises-no-more-promise-soup.html</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//2015/02/08/chain-your-promises-no-more-promise-soup.html</guid>
         
         <category>Angularjs</category>
         
@@ -381,8 +381,8 @@ Go to wifi settings and choose your internal network&lt;/p&gt;
 &lt;p&gt;In the next part of this post I will show some advanced, super powerful use cases, like setting Rewrite rules (for changing request response on the fly), Throttling (for testing different network speeds), Using VPN, routing the traffic to staging servers and more...&lt;/p&gt;
 </description>
         <pubDate>Mon, 19 Jan 2015 16:34:25 +0200</pubDate>
-        <link>http://yanivefraim.github.io//debug-mobile-apps-like-a-pro/</link>
-        <guid isPermaLink="true">http://yanivefraim.github.io//debug-mobile-apps-like-a-pro/</guid>
+        <link>http://yanivefraim.github.io//2015/01/19/debug-mobile-apps-like-a-pro-part-1.html</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//2015/01/19/debug-mobile-apps-like-a-pro-part-1.html</guid>
         
         <category>Angularjs</category>
         
@@ -405,8 +405,8 @@ Go to wifi settings and choose your internal network&lt;/p&gt;
 &lt;iframe src=&quot;//slides.com/yanivefraim-1/real-world-angularjs/embed&quot; width=&quot;576&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 16 Jan 2015 16:34:25 +0200</pubDate>
-        <link>http://yanivefraim.github.io//real-World-angularjs/</link>
-        <guid isPermaLink="true">http://yanivefraim.github.io//real-World-angularjs/</guid>
+        <link>http://yanivefraim.github.io//2015/01/16/real-world-angularjs-video.html</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//2015/01/16/real-world-angularjs-video.html</guid>
         
         <category>Angularjs</category>
         
@@ -458,8 +458,8 @@ Retrieving list of stashes&lt;/p&gt;
 &lt;p&gt;Good luck!&lt;/p&gt;
 </description>
         <pubDate>Thu, 15 Jan 2015 16:34:25 +0200</pubDate>
-        <link>http://yanivefraim.github.io//git-stash-like-a-boss/</link>
-        <guid isPermaLink="true">http://yanivefraim.github.io//git-stash-like-a-boss/</guid>
+        <link>http://yanivefraim.github.io//2015/01/15/git-stash-like-a-boss.html</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//2015/01/15/git-stash-like-a-boss.html</guid>
         
         <category>Angularjs</category>
         
@@ -494,8 +494,8 @@ Retrieving list of stashes&lt;/p&gt;
 &lt;p&gt;That&amp;#39;s it. Quick and simple. For a complete flow example, you can refer to my &lt;a href=&quot;https://github.com/yanivefraim/angularjs-realworld&quot;&gt;Angular-realworld demo&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 06 Jan 2015 16:34:25 +0200</pubDate>
-        <link>http://yanivefraim.github.io//handling-static-files-versioning-using-grunt-hashres/</link>
-        <guid isPermaLink="true">http://yanivefraim.github.io//handling-static-files-versioning-using-grunt-hashres/</guid>
+        <link>http://yanivefraim.github.io//2015/01/06/handling-static-files-versioning-using-grunt-hashres.html</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//2015/01/06/handling-static-files-versioning-using-grunt-hashres.html</guid>
         
         <category>Angularjs</category>
         
@@ -527,8 +527,8 @@ Retrieving list of stashes&lt;/p&gt;
 &lt;p&gt;That&amp;#39;s it! Your projects are now handled in different Grunt configuration files, which makes it much simpler to handle.&lt;/p&gt;
 </description>
         <pubDate>Thu, 01 Jan 2015 16:34:25 +0200</pubDate>
-        <link>http://yanivefraim.github.io//splitting-large-grunt-files-using-node-js-export-capabilities/</link>
-        <guid isPermaLink="true">http://yanivefraim.github.io//splitting-large-grunt-files-using-node-js-export-capabilities/</guid>
+        <link>http://yanivefraim.github.io//2015/01/01/splitting-large-grunt-files-using-node-js-export-capabilities.html</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//2015/01/01/splitting-large-grunt-files-using-node-js-export-capabilities.html</guid>
         
         <category>Angularjs</category>
         
@@ -568,8 +568,8 @@ Retrieving list of stashes&lt;/p&gt;
 &lt;p&gt;For a complete demo using html2js you can refer to my &lt;a href=&quot;https://github.com/yanivefraim/angularjs-realworld&quot;&gt;angularjs-realworld&lt;/a&gt; demo in Github.&lt;/p&gt;
 </description>
         <pubDate>Sat, 15 Nov 2014 16:34:25 +0200</pubDate>
-        <link>http://yanivefraim.github.io//pre-caching-angularjs-templates-using-html2js/</link>
-        <guid isPermaLink="true">http://yanivefraim.github.io//pre-caching-angularjs-templates-using-html2js/</guid>
+        <link>http://yanivefraim.github.io//2014/11/15/pre-caching-angularjs-templates-using-html2js.html</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//2014/11/15/pre-caching-angularjs-templates-using-html2js.html</guid>
         
         <category>Angularjs</category>
         

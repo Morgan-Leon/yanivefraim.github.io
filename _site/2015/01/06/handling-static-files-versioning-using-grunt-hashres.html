@@ -7,7 +7,7 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Real World Angularjs (video)</title>
+  <title>Handling static files versioning using grunt-hashres</title>
   <meta name="description" content="" />
 
   <meta name="HandheldFriendly" content="True" />
@@ -15,7 +15,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="canonical" href="http://yanivefraim.github.io//real-World-angularjs/">
+  <link rel="canonical" href="http://yanivefraim.github.io//2015/01/06/handling-static-files-versioning-using-grunt-hashres.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
 <!--  <link rel="stylesheet" href=""> -->
@@ -41,12 +41,12 @@
             Article Image
           </div>
           <div class="post-meta">
-            <h1 class="post-title">Real World Angularjs (video)</h1>
+            <h1 class="post-title">Handling static files versioning using grunt-hashres</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Yaniv Efraim</h4>
               on
-              <time datetime="2015-01-16 16:34">16 Jan 2015</time>
+              <time datetime="2015-01-06 16:34">06 Jan 2015</time>
               <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
             </div>
             <div style="text-align:center">
@@ -60,16 +60,28 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>This is my video from AngularJS-IL, talking about Real World AngularJS tip (Hebrew...)</p>
+          <p>While looking for a simple but yet effective way to handle my static file versions, I found the awesome grunt-hashres Grunt plugin. Its job is to give each static file a unique version and also update references to the file with current version. awesome.</p>
 
-<p>Enjoy!</p>
+<p>Installing the plugin:
+<script src="https://gist.github.com/02c0a06b7968b19141c8.js"> </script></p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3Wnjx0nKlqE" frameborder="0" allowfullscreen></iframe>
+<p>Configurations are easy. Just add the files you want to update and the files containing the references to them:</p>
+
+<script src="https://gist.github.com/d55a2d2aa3959d3bba8f.js"> </script>
 
 <p></p>
 
-<p>The slides:
-<iframe src="//slides.com/yanivefraim-1/real-world-angularjs/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
+<p>This is how my &quot;stage&quot; folder looks like:</p>
+
+<p style="text-align:center;">
+    <img src="/assets/article_images/2015-01-06-handling-static-files-versioning-using-grunt-hashres/image1.png" alt="">
+</p>
+
+<p>While the references to those static files automatically updated to be:</p>
+
+<script src="https://gist.github.com/02e6a7a6e831c3724b43.js"> </script>
+
+<p>That&#39;s it. Quick and simple. For a complete flow example, you can refer to my <a href="https://github.com/yanivefraim/angularjs-realworld">Angular-realworld demo</a>.</p>
 
           <div id="disqus_thread"></div>
         </section>
@@ -77,14 +89,14 @@
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=Real+World+Angularjs+%28video%29&amp;url=http://yanivefraim.github.io//real-world-angularjs-video"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Handling+static+files+versioning+using+grunt-hashres&amp;url=http://yanivefraim.github.io//2015/01/06/handling-static-files-versioning-using-grunt-hashres"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
               
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Real+World+Angularjs+%28video%29&amp;u=http://yanivefraim.github.io//real-world-angularjs-video"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Handling+static+files+versioning+using+grunt-hashres&amp;u=http://yanivefraim.github.io//2015/01/06/handling-static-files-versioning-using-grunt-hashres"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
@@ -102,7 +114,7 @@
               <h4>Yaniv Efraim</h4>
               <p class="bio"></p>
               <hr>
-              <p class="published">Published <time datetime="2015-01-16 16:34">16 Jan 2015</time></p>
+              <p class="published">Published <time datetime="2015-01-06 16:34">06 Jan 2015</time></p>
             </section>
           </div>
           

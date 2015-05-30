@@ -7,7 +7,7 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Splitting large Grunt files using node.js export capabilities</title>
+  <title>Real World Angularjs (video)</title>
   <meta name="description" content="" />
 
   <meta name="HandheldFriendly" content="True" />
@@ -15,7 +15,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="canonical" href="http://yanivefraim.github.io//splitting-large-grunt-files-using-node-js-export-capabilities/">
+  <link rel="canonical" href="http://yanivefraim.github.io//2015/01/16/real-world-angularjs-video.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
 <!--  <link rel="stylesheet" href=""> -->
@@ -37,16 +37,16 @@
       <article class="post">
         
         <div class="article-image">
-          <div class="post-image-image" style="background-image: url(/assets/images/coffee.jpg)">
+          <div class="post-image-image" style="background-image: url(/assets/images/desktop.JPG)">
             Article Image
           </div>
           <div class="post-meta">
-            <h1 class="post-title">Splitting large Grunt files using node.js export capabilities</h1>
+            <h1 class="post-title">Real World Angularjs (video)</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Yaniv Efraim</h4>
               on
-              <time datetime="2015-01-01 16:34">01 Jan 2015</time>
+              <time datetime="2015-01-16 16:34">16 Jan 2015</time>
               <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
             </div>
             <div style="text-align:center">
@@ -60,25 +60,16 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>Grunt is an awesome tool. I use it everyday and I cannot think of working without it. As time passed by, our Gruntfile.js file became really big, and managing this file has become a real bummer. Since Grunt&#39;s best practices recommend using one and only one Gruntfile.js per repository, the solution should be using smaller project&#39;s files and import it to the main Gruntfile.js using node.js export/require capabilities.</p>
+          <p>This is my video from AngularJS-IL, talking about Real World AngularJS tip (Hebrew...)</p>
 
-<p>Let&#39;s get straight to the point. Assume we have two (very simple) projects, on the same repository, with the following Gruntfile.js:</p>
+<p>Enjoy!</p>
 
-<script src="https://gist.github.com/08351ce4bd270f0b27a0.js"> </script>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3Wnjx0nKlqE" frameborder="0" allowfullscreen></iframe>
 
-<p>While this is a super simple example, it demonstrates how a Gruntfile.js can become a very large file, very fast. Just imagine that you have 4-5 projects using ~10 Grunt plugins each. A real nightmare...</p>
+<p></p>
 
-<p>Node.js export / require to the rescue!</p>
-
-<p>We will now create two files, project1.js and project2.js (I will demonstrate project1.js here. For this simple example project2.js is pretty much the same)</p>
-
-<script src="https://gist.github.com/9e11fbb49110dd34e39f.js"> </script>
-
-<p>And now your Gruntfile.js will look something similar to this:</p>
-
-<script src="https://gist.github.com/cada77737b1d0a71ddec.js"> </script>
-
-<p>That&#39;s it! Your projects are now handled in different Grunt configuration files, which makes it much simpler to handle.</p>
+<p>The slides:
+<iframe src="//slides.com/yanivefraim-1/real-world-angularjs/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
 
           <div id="disqus_thread"></div>
         </section>
@@ -86,14 +77,14 @@
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=Splitting+large+Grunt+files+using+node.js+export+capabilities&amp;url=http://yanivefraim.github.io//splitting-large-grunt-files-using-node-js-export-capabilities"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Real+World+Angularjs+%28video%29&amp;url=http://yanivefraim.github.io//2015/01/16/real-world-angularjs-video"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
               
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Splitting+large+Grunt+files+using+node.js+export+capabilities&amp;u=http://yanivefraim.github.io//splitting-large-grunt-files-using-node-js-export-capabilities"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Real+World+Angularjs+%28video%29&amp;u=http://yanivefraim.github.io//2015/01/16/real-world-angularjs-video"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
@@ -111,7 +102,7 @@
               <h4>Yaniv Efraim</h4>
               <p class="bio"></p>
               <hr>
-              <p class="published">Published <time datetime="2015-01-01 16:34">01 Jan 2015</time></p>
+              <p class="published">Published <time datetime="2015-01-16 16:34">16 Jan 2015</time></p>
             </section>
           </div>
           

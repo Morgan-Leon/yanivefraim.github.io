@@ -7,7 +7,7 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Chain your Promises: no more Promise soup!</title>
+  <title>Pre caching AngularJS templates using html2js</title>
   <meta name="description" content="" />
 
   <meta name="HandheldFriendly" content="True" />
@@ -15,7 +15,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="canonical" href="http://yanivefraim.github.io//chain-your-promises/">
+  <link rel="canonical" href="http://yanivefraim.github.io//2014/11/15/pre-caching-angularjs-templates-using-html2js.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
 <!--  <link rel="stylesheet" href=""> -->
@@ -37,16 +37,16 @@
       <article class="post">
         
         <div class="article-image">
-          <div class="post-image-image" style="background-image: url(/assets/images/soup.jpg)">
+          <div class="post-image-image" style="background-image: url(/assets/images/desktop.JPG)">
             Article Image
           </div>
           <div class="post-meta">
-            <h1 class="post-title">Chain your Promises: no more Promise soup!</h1>
+            <h1 class="post-title">Pre caching AngularJS templates using html2js</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Yaniv Efraim</h4>
               on
-              <time datetime="2015-02-08 16:34">08 Feb 2015</time>
+              <time datetime="2014-11-15 16:34">15 Nov 2014</time>
               <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
             </div>
             <div style="text-align:center">
@@ -60,45 +60,33 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>I love Promises. We use it in all our projects. It can be used with AngularJS, jQuery or even Vanilla Javascript. I will not explain about Promises basics here, if you are not familiar with Promises, take a look here, here and here.</p>
+          <p>Using AngularJS templates / partials is awesome. It gives you the ability to be modular. The problem with that is that it creates an extra http request for each template (assuming you have a different template file for each template, which you should!). </p>
 
-<p>The interesting stuff starts when there are several serial actions (sometimes with different operations between them).</p>
+<p>A cool trick is using Grunt/Gulp plugin called html2js (if you&#39;re not using Grunt.js/Gulp.js, this could be a great time to start to). This plugin will pre compile all of your html templates to javascript, wrapping it as an Angular.js module and putting it into $templateCache. The output javascript could be concatenated into the main js file, minified and gZipped. Cool... </p>
 
-<p>Without chaining, you will quickly find yourself writing a &quot;Promise Soup&quot; (all examples are in jQuery. It is pretty much the same for all other options, with slight syntax differences):</p>
+<p>Installing the plugin: </p>
 
-<script src="https://gist.github.com/6299f93a14ec72676294.js"> </script>
+<blockquote>
+<p>Grunt
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">grunt</span><span class="o">-</span><span class="nx">html2js</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span></code></pre></div></p>
 
-<p>Wow. This is exactly what Promises intended to prevent in the first place!</p>
+<p>Gulp
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span> <span class="nx">gulp</span><span class="o">-</span><span class="nx">html2js</span></code></pre></div></p>
+</blockquote>
 
-<h3>chaining promises</h3>
+<p>Configuration file should look something like this (Grunt)</p>
 
-<p>For this simple example, chaining should be pretty straightforward:</p>
+<script src="https://gist.github.com/6fa1eab9230fad51ea7a.js"> </script>
 
-<script src="https://gist.github.com/275da91ed13edb214068.js"> </script>
+<p>This will create a module named &quot;app.templates&quot;, which you will be able to add as a dependency to your main app. You will also have to pre-compile the cached templates: </p>
 
-<p>Cool. This is much cleaner and easier to read.</p>
+<script src="https://gist.github.com/3d023cc1388e3fa22ced.js"> </script>
 
-<p>Now, for a complete example (<a href="&#x27;http://jsbin.com/bupice/4/edit?js,console&#x27;">jsBin</a>):</p>
+<p>An example for a simple auto-generated javascript file: </p>
 
-<script src="https://gist.github.com/e890f080feec2161dafc.js"> </script>
+<script src="https://gist.github.com/5ffdfcd19a29c4de1a0c.js"> </script>
 
-<p></p>
-
-<p>The really cool things here are:</p>
-
-<ul>
-<li>You can listen to fail/error events in one place. An error will stop the chaining and get to the closest fail statement. (<a href="&#x27;http://jsbin.com/bupice/5/edit?js,console&#x27;">jsBin</a>)</li>
-<li>Resolved data will be passed to chained function.</li>
-</ul>
-
-<p>Disadvantages:</p>
-
-<ul>
-<li>Passing data between &quot;getA&quot; to &quot;getC&quot; must go via &quot;getB&quot; (or a global object)</li>
-<li>Harder to implement when there are conditional calls to serial methods (&quot;getB&quot; is called only if some condition applies in &quot;aData&quot;, for example)</li>
-</ul>
-
-<p>That&#39;s it. Keep on chaining! </p>
+<p>For a complete demo using html2js you can refer to my <a href="https://github.com/yanivefraim/angularjs-realworld">angularjs-realworld</a> demo in Github.</p>
 
           <div id="disqus_thread"></div>
         </section>
@@ -106,14 +94,14 @@
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=Chain+your+Promises%3A+no+more+Promise+soup%21&amp;url=http://yanivefraim.github.io//chain-your-promises-no-more-promise-soup"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Pre+caching+AngularJS+templates+using+html2js&amp;url=http://yanivefraim.github.io//2014/11/15/pre-caching-angularjs-templates-using-html2js"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
               
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Chain+your+Promises%3A+no+more+Promise+soup%21&amp;u=http://yanivefraim.github.io//chain-your-promises-no-more-promise-soup"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Pre+caching+AngularJS+templates+using+html2js&amp;u=http://yanivefraim.github.io//2014/11/15/pre-caching-angularjs-templates-using-html2js"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
@@ -131,7 +119,7 @@
               <h4>Yaniv Efraim</h4>
               <p class="bio"></p>
               <hr>
-              <p class="published">Published <time datetime="2015-02-08 16:34">08 Feb 2015</time></p>
+              <p class="published">Published <time datetime="2014-11-15 16:34">15 Nov 2014</time></p>
             </section>
           </div>
           

@@ -7,7 +7,7 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Git stash like a boss</title>
+  <title>Splitting large Grunt files using node.js export capabilities</title>
   <meta name="description" content="" />
 
   <meta name="HandheldFriendly" content="True" />
@@ -15,7 +15,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="canonical" href="http://yanivefraim.github.io//git-stash-like-a-boss/">
+  <link rel="canonical" href="http://yanivefraim.github.io//2015/01/01/splitting-large-grunt-files-using-node-js-export-capabilities.html">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
 <!--  <link rel="stylesheet" href=""> -->
@@ -37,16 +37,16 @@
       <article class="post">
         
         <div class="article-image">
-          <div class="post-image-image" style="background-image: url(/assets/images/desktop.JPG)">
+          <div class="post-image-image" style="background-image: url(/assets/images/coffee.jpg)">
             Article Image
           </div>
           <div class="post-meta">
-            <h1 class="post-title">Git stash like a boss</h1>
+            <h1 class="post-title">Splitting large Grunt files using node.js export capabilities</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Yaniv Efraim</h4>
               on
-              <time datetime="2015-01-15 16:34">15 Jan 2015</time>
+              <time datetime="2015-01-01 16:34">01 Jan 2015</time>
               <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
             </div>
             <div style="text-align:center">
@@ -60,45 +60,25 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <p>Git stash is awesome. You work on a feature/bug and suddenly having a context switch  (a new urgent hotfix / a team member asking for help in another brunch). Now, you want to save your work aside without committing it.
-Git stash FTW!</p>
+          <p>Grunt is an awesome tool. I use it everyday and I cannot think of working without it. As time passed by, our Gruntfile.js file became really big, and managing this file has become a real bummer. Since Grunt&#39;s best practices recommend using one and only one Gruntfile.js per repository, the solution should be using smaller project&#39;s files and import it to the main Gruntfile.js using node.js export/require capabilities.</p>
 
-<p>A basic stash will be:</p>
+<p>Let&#39;s get straight to the point. Assume we have two (very simple) projects, on the same repository, with the following Gruntfile.js:</p>
 
-<p class='post-p'>Saving a stash</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span>
-</code></pre></div>
-<p class='post-p'>Save a stash with a save name:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">save</span> <span class="s2">&quot;my temp work&quot;</span>
-</code></pre></div>
-<p class='post-p'>Fetching back last stash, popping it from stash stack</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">pop</span>
-</code></pre></div>
-<p class='post-p'>Fetching back last stash, leaving it on stash stack</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">apply</span>
-</code></pre></div>
-<p class='post-p'>As you can see, stash is a stack of changes. What if you want to fetch an old stash?
-Retrieving list of stashes</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">list</span>
-</code></pre></div>
-<p class='post-p'>This will produce a list of stashes:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="mi">0</span><span class="p">}</span><span class="o">:</span> <span class="nx">On</span> <span class="nx">feature</span><span class="o">/</span><span class="nx">AD</span><span class="o">-</span><span class="mi">292</span><span class="o">:</span> <span class="nx">controller</span> <span class="nx">api</span> <span class="nx">mock</span>
-<span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="o">:</span> <span class="nx">On</span> <span class="nx">feature</span><span class="o">/</span><span class="nx">AD</span><span class="o">-</span><span class="mi">350</span><span class="o">:</span> <span class="nx">vast</span> <span class="nx">fake</span> <span class="nx">json</span>
-<span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">:</span> <span class="nx">On</span> <span class="nx">feature</span><span class="o">/</span><span class="nx">AD</span><span class="o">-</span><span class="mi">315</span><span class="o">:</span> <span class="nx">vast</span> <span class="nx">another</span> <span class="nx">fake</span> <span class="nx">json</span>
-<span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span><span class="o">:</span> <span class="nx">On</span> <span class="nx">feature</span><span class="o">/</span><span class="nx">AD</span><span class="o">-</span><span class="mi">350</span><span class="o">:</span> <span class="nx">vast</span> <span class="nx">validator</span>
-<span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="mi">4</span><span class="p">}</span><span class="o">:</span> <span class="nx">On</span> <span class="nx">feature</span><span class="o">/</span><span class="nx">AD</span><span class="o">-</span><span class="mi">292</span><span class="o">:</span> <span class="nx">controller</span> <span class="mf">11.1</span><span class="p">.</span><span class="mi">15</span>
-<span class="p">...</span>
-</code></pre></div>
-<p class='post-p'>In order to fetch a specific stash:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">pop</span> <span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="nx">n</span><span class="p">}</span>
-</code></pre></div>
-<p class='post-p'>Or</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">apply</span> <span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="nx">n</span><span class="p">}</span> 
-</code></pre></div>
-<p class='post-p'>And a last tip: you can see stash's changes by:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">show</span> <span class="o">-</span><span class="nx">p</span> <span class="nx">stash</span><span class="err">@</span><span class="p">{</span><span class="nx">n</span><span class="p">}</span>
-</code></pre></div>
-<p>Good luck!</p>
+<script src="https://gist.github.com/08351ce4bd270f0b27a0.js"> </script>
+
+<p>While this is a super simple example, it demonstrates how a Gruntfile.js can become a very large file, very fast. Just imagine that you have 4-5 projects using ~10 Grunt plugins each. A real nightmare...</p>
+
+<p>Node.js export / require to the rescue!</p>
+
+<p>We will now create two files, project1.js and project2.js (I will demonstrate project1.js here. For this simple example project2.js is pretty much the same)</p>
+
+<script src="https://gist.github.com/9e11fbb49110dd34e39f.js"> </script>
+
+<p>And now your Gruntfile.js will look something similar to this:</p>
+
+<script src="https://gist.github.com/cada77737b1d0a71ddec.js"> </script>
+
+<p>That&#39;s it! Your projects are now handled in different Grunt configuration files, which makes it much simpler to handle.</p>
 
           <div id="disqus_thread"></div>
         </section>
@@ -106,14 +86,14 @@ Retrieving list of stashes</p>
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=Git+stash+like+a+boss&amp;url=http://yanivefraim.github.io//git-stash-like-a-boss"
+                <a class="icon-twitter" href="http://twitter.com/share?text=Splitting+large+Grunt+files+using+node.js+export+capabilities&amp;url=http://yanivefraim.github.io//2015/01/01/splitting-large-grunt-files-using-node-js-export-capabilities"
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
               
             
               
-                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Git+stash+like+a+boss&amp;u=http://yanivefraim.github.io//git-stash-like-a-boss"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer.php?t=Splitting+large+Grunt+files+using+node.js+export+capabilities&amp;u=http://yanivefraim.github.io//2015/01/01/splitting-large-grunt-files-using-node-js-export-capabilities"
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
@@ -131,7 +111,7 @@ Retrieving list of stashes</p>
               <h4>Yaniv Efraim</h4>
               <p class="bio"></p>
               <hr>
-              <p class="published">Published <time datetime="2015-01-15 16:34">15 Jan 2015</time></p>
+              <p class="published">Published <time datetime="2015-01-01 16:34">01 Jan 2015</time></p>
             </section>
           </div>
           
