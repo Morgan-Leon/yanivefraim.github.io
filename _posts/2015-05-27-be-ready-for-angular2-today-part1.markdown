@@ -106,7 +106,7 @@ It should look somehting like this (The complete example can be found in the fol
       <phonecat-search search="vm.search(searchData)"></phonecat-search>
     </div>
     <div class="col-md-10">
-      '<phonecat-list phones="vm.phones" filter-data="vm.filterData"></phonecat-list>',    
+      <phonecat-list phones="vm.phones" filter-data="vm.filterData"></phonecat-list>
     </div>
   </div>
 </div>

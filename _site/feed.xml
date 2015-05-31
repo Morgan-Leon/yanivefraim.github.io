@@ -5,8 +5,8 @@
     <description></description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 31 May 2015 11:10:59 +0300</pubDate>
-    <lastBuildDate>Sun, 31 May 2015 11:10:59 +0300</lastBuildDate>
+    <pubDate>Sun, 31 May 2015 11:26:06 +0300</pubDate>
+    <lastBuildDate>Sun, 31 May 2015 11:26:06 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -118,7 +118,7 @@ It should look somehting like this (The complete example can be found in the fol
       &lt;span class=&quot;nt&quot;&gt;&amp;lt;phonecat-search&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;search=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;vm.search(searchData)&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/phonecat-search&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-md-10&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-      &amp;#39;&lt;span class=&quot;nt&quot;&gt;&amp;lt;phonecat-list&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;phones=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;vm.phones&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;filter-data=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;vm.filterData&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/phonecat-list&amp;gt;&lt;/span&gt;&amp;#39;,    
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;phonecat-list&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;phones=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;vm.phones&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;filter-data=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;vm.filterData&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/phonecat-list&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
