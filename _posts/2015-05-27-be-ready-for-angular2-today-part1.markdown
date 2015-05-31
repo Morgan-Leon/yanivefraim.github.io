@@ -16,7 +16,7 @@ So, what do we need to do today in order to make the migration to Angular 2 easi
 I summed it up to three steps, from the most important and complicated to the easiest:
 
 1. Use Component based Architecture
-2. Write Angular 1.x in ES6/Typescript
+2. Write Angular 1.x using ES6/Typescript
 3. Use the "new router"
 
 In this post (part 1) I will be focusing on the first bullet, "Use Component based Architecture".

@@ -5,8 +5,8 @@
     <description></description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 31 May 2015 09:37:18 +0300</pubDate>
-    <lastBuildDate>Sun, 31 May 2015 09:37:18 +0300</lastBuildDate>
+    <pubDate>Sun, 31 May 2015 11:10:59 +0300</pubDate>
+    <lastBuildDate>Sun, 31 May 2015 11:10:59 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -24,7 +24,7 @@ I summed it up to three steps, from the most important and complicated to the ea
 
 &lt;ol&gt;
 &lt;li&gt;Use Component based Architecture&lt;/li&gt;
-&lt;li&gt;Write Angular 1.x in ES6/Typescript&lt;/li&gt;
+&lt;li&gt;Write Angular 1.x using ES6/Typescript&lt;/li&gt;
 &lt;li&gt;Use the &amp;quot;new router&amp;quot;&lt;/li&gt;
 &lt;/ol&gt;
 
