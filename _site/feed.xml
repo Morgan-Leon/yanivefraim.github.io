@@ -5,8 +5,8 @@
     <description></description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 30 May 2015 23:47:37 +0300</pubDate>
-    <lastBuildDate>Sat, 30 May 2015 23:47:37 +0300</lastBuildDate>
+    <pubDate>Sun, 31 May 2015 09:37:18 +0300</pubDate>
+    <lastBuildDate>Sun, 31 May 2015 09:37:18 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -93,7 +93,7 @@ Angular 2.x, similar to React, is based on components. It uses &lt;a href=&quot;
 I will try to do it using a simpler approach, similar to what is done in Facebook&#39;s [React](https://facebook.github.io/react/).
 --&gt;
 
-&lt;p&gt;Angular 2.0 uses an approach similar to Facebook&amp;#39;s &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React&amp;#39;s&lt;/a&gt; approach, and this is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). &lt;/p&gt;
+&lt;p&gt;Angular 2.0 uses an approach similar to Facebook &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React&amp;#39;s&lt;/a&gt; approach, and this is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). &lt;/p&gt;
 
 &lt;p&gt;Let&amp;#39;s call it &amp;#39;The React way&amp;#39;...&lt;/p&gt;
 

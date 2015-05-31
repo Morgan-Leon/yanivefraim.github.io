@@ -79,7 +79,7 @@ I will omit the last two components from my example, just in order to keep thing
 I will try to do it using a simpler approach, similar to what is done in Facebook's [React](https://facebook.github.io/react/).
 -->
 
-Angular 2.0 uses an approach similar to Facebook's [React's](https://facebook.github.io/react/) approach, and this is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). 
+Angular 2.0 uses an approach similar to Facebook [React's](https://facebook.github.io/react/) approach, and this is the tricky part. The main issue here is to correctly pass data/state between components, with minimum usage of scope or controllers (as you probably heard, Angular 2.x does not have scope or controllers...). 
 
 Let's call it 'The React way'...
 
