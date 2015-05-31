@@ -174,7 +174,7 @@ It should look somehting like this (The complete example can be found in the fol
 </code></pre></div>
 <p></p>
 
-<p>As you can see, our body contains only one main component &#39;phonecat-component&#39;. Its directive is:</p>
+<p>As you can see, our body contains only one main component <code>phonecat-component</code>. Its directive is:</p>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
 
 <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;phonecatApp&#39;</span><span class="p">)</span>
@@ -207,9 +207,9 @@ It should look somehting like this (The complete example can be found in the fol
 <p>There are several points to stop and discuss here:</p>
 
 <ul>
-<li>&#39;phonecat-list&#39; child componenet receives its data using &#39;phones&#39; and &#39;filter-data&#39; attributes.<br></li>
+<li><code>phonecat-list</code> child componenet receives its data using &#39;phones&#39; and &#39;filter-data&#39; attributes.<br></li>
 <li>&#39;Search&#39; method is used to receive events from child &#39;phonecat-search&#39; component.</li>
-<li>We use &#39;bindToController&#39; to pass &#39;phones&#39;, via attribute, to the &#39;phonecat-component&#39;. This feature was introduced in Angular 1.4, but no worry, you can acheive the same results with older Angular versions as well (see snippet below for more details). I will use this technique with other components, as well. </li>
+<li>We use &#39;bindToController&#39; to pass &#39;phones&#39;, via attribute, to the <code>phonecat-component</code>. This feature was introduced in Angular 1.4, but no worry, you can acheive the same results with older Angular versions as well (see snippet below for more details). I will use this technique with other components, as well. </li>
 </ul>
 
 <blockquote>

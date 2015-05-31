@@ -112,7 +112,7 @@ It should look somehting like this (The complete example can be found in the fol
 </div>
 ```
 <p></p>
-As you can see, our body contains only one main component 'phonecat-component'. Its directive is:
+As you can see, our body contains only one main component ```phonecat-component```. Its directive is:
 
 ```javascript
 'use strict';
@@ -145,9 +145,9 @@ function phonecatComponent() {
 <p></p>
 There are several points to stop and discuss here:
 
-- 'phonecat-list' child componenet receives its data using 'phones' and 'filter-data' attributes.  
+- ```phonecat-list``` child componenet receives its data using 'phones' and 'filter-data' attributes.  
 - 'Search' method is used to receive events from child 'phonecat-search' component.
-- We use 'bindToController' to pass 'phones', via attribute, to the 'phonecat-component'. This feature was introduced in Angular 1.4, but no worry, you can acheive the same results with older Angular versions as well (see snippet below for more details). I will use this technique with other components, as well. 
+- We use 'bindToController' to pass 'phones', via attribute, to the ```phonecat-component```. This feature was introduced in Angular 1.4, but no worry, you can acheive the same results with older Angular versions as well (see snippet below for more details). I will use this technique with other components, as well. 
 
 >For more information about ```bindToController``` you can read this great [post](http://blog.thoughtram.io/angularjs/2015/01/02/exploring-angular-1.3-bindToController.html). 
 TL;DR: you can replace this with regular isolated scope, if you want to use older Angular versions.

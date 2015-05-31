@@ -5,9 +5,40 @@
     <description></description>
     <link>http://yanivefraim.github.io//</link>
     <atom:link href="http://yanivefraim.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 31 May 2015 11:26:06 +0300</pubDate>
-    <lastBuildDate>Sun, 31 May 2015 11:26:06 +0300</lastBuildDate>
+    <pubDate>Sun, 31 May 2015 11:27:27 +0300</pubDate>
+    <lastBuildDate>Sun, 31 May 2015 11:27:27 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Be ready for Angular 2 Today - part 2</title>
+        <description>&lt;p&gt;This is the second post in the &amp;quot;Be ready for Angular 2 Today&amp;quot; series. If you did not read the first part, it is highly recommended to start from it (you can find it &lt;a href=&quot;http://yanivefraim.github.io/2015/05/27/be-ready-for-angular2-today-part1.html&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;As a quick reminder, our checklist to being ready for Angular 2.0 included:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Use Component based Architecture (discussed in the &lt;a href=&quot;http://yanivefraim.github.io/2015/05/27/be-ready-for-angular2-today-part1.html&quot;&gt;first post&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Write Angular 1.x using ES6/Typescript&lt;/li&gt;
+&lt;li&gt;Use the &amp;quot;new router&amp;quot;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In this post, I will discuss the second bullet: &amp;quot;Write Angular 1.x in ES6/Typescript&amp;quot;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ES6/Typescript is not supported by modern browser, yet. You can easily write ES6&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let&amp;#39;s start with first component,  &lt;/p&gt;
+</description>
+        <pubDate>Sat, 30 May 2015 17:34:25 +0300</pubDate>
+        <link>http://yanivefraim.github.io//2015/05/30/2015-05-31-be-ready-for-angular2-today-part2.html</link>
+        <guid isPermaLink="true">http://yanivefraim.github.io//2015/05/30/2015-05-31-be-ready-for-angular2-today-part2.html</guid>
+        
+        <category>Angularjs</category>
+        
+        <category>Javascript</category>
+        
+        
+      </item>
     
       <item>
         <title>Be ready for Angular 2 Today - part 1</title>
@@ -125,7 +156,7 @@ It should look somehting like this (The complete example can be found in the fol
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;/p&gt;
 
-&lt;p&gt;As you can see, our body contains only one main component &amp;#39;phonecat-component&amp;#39;. Its directive is:&lt;/p&gt;
+&lt;p&gt;As you can see, our body contains only one main component &lt;code&gt;phonecat-component&lt;/code&gt;. Its directive is:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;use strict&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;phonecatApp&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -158,9 +189,9 @@ It should look somehting like this (The complete example can be found in the fol
 &lt;p&gt;There are several points to stop and discuss here:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&amp;#39;phonecat-list&amp;#39; child componenet receives its data using &amp;#39;phones&amp;#39; and &amp;#39;filter-data&amp;#39; attributes.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;phonecat-list&lt;/code&gt; child componenet receives its data using &amp;#39;phones&amp;#39; and &amp;#39;filter-data&amp;#39; attributes.&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;&amp;#39;Search&amp;#39; method is used to receive events from child &amp;#39;phonecat-search&amp;#39; component.&lt;/li&gt;
-&lt;li&gt;We use &amp;#39;bindToController&amp;#39; to pass &amp;#39;phones&amp;#39;, via attribute, to the &amp;#39;phonecat-component&amp;#39;. This feature was introduced in Angular 1.4, but no worry, you can acheive the same results with older Angular versions as well (see snippet below for more details). I will use this technique with other components, as well. &lt;/li&gt;
+&lt;li&gt;We use &amp;#39;bindToController&amp;#39; to pass &amp;#39;phones&amp;#39;, via attribute, to the &lt;code&gt;phonecat-component&lt;/code&gt;. This feature was introduced in Angular 1.4, but no worry, you can acheive the same results with older Angular versions as well (see snippet below for more details). I will use this technique with other components, as well. &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
