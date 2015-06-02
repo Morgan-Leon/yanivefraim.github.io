@@ -16,7 +16,7 @@ As a quick reminder, our checklist to being ready for Angular 2.0 included:
 
 In this post, I will discuss the second bullet: "Write Angular 1.x in ES6/Typescript".
 
->ES6/Typescript is not supported by modern browser, yet. You can easily write ES6
+>ES6/Typescript is not supported by modern browser, yet. You can easily write ES6 today, using one of [these](https://github.com/addyosmani/es6-tools) tools.
 
 Let's start with first component,  
 
