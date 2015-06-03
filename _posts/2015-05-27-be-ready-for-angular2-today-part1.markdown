@@ -6,7 +6,7 @@ tags: Angularjs Javascript
 image: /assets/images/board_2.jpg
 ---
 
-Angular 2 is not here. It will take pretty long time until we'll start using it. But, as you probably heard, the changes are [HUGE](http://shmck.com/comparing-angular-1-x-2-0/).
+Angular 2 is not here. It will take a pretty long time until we can start using it. But, as you've probably heard, the changes will be [HUGE](http://shmck.com/comparing-angular-1-x-2-0/).
 
 This is a good enough reason to start preparing for Angular 2 today (otherwise the migration path will be paintfull). 
 
