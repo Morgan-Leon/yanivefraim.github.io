@@ -10,7 +10,7 @@ Angular 2 is not here. It will take a pretty long time until we can start using 
 
 This is a good enough reason to start preparing for Angular 2 today (otherwise the migration path will be paintfull). 
 
->Another important point: a lot of new projects do not use Angular because of the fear of the new Angular 2 (or, "why should I start a new project using Angular 1.x when soon I'll have to go through a paintfull migration path?")
+>Another important point: a lot of new projects do not use Angular because of the fear of the new Angular 2 (or, "why should I start a new project using Angular 1.x when soon I'll have to go through a painful migration path?")
 
 So, what do we need to do today in order to make the migration to Angular 2 easier? 
 I summed it up to three steps, from the most important and complicated to the easiest:
