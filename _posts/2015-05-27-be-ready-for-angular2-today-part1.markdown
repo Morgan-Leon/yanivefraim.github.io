@@ -19,7 +19,7 @@ I will sum it up in three steps, from the most important and complicated to the 
 2. Write Angular 1.x using ES6/Typescript
 3. Use the "New Router"
 
-In this post (part 1) I will be focusing on the first bullet, "Use Component based Architecture".
+In this post (part 1), I will be focusing on the first step, "Use Component Based Architecture".
 ## Using Component based Architecture
 This is the most important part, and the hardest one. 
 Angular 2.x, similar to React, is based on components. It uses [component structure hierarchy](http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2). Angular 1.x does not work that way. The easiest way to understand this is through an example. I will use the [phonecat demo](https://docs.angularjs.org/tutorial) as an example. Take a look at this code:
@@ -61,7 +61,7 @@ In order to make this code Angular 2.x ready (and more reusable), we will have t
 </p>
 
 <p></p>
-###Step 1 - breaking the code into components
+###Step 1 - Break the Code into Components
 We will want to build several components:
 
 - Application main component (this will be used for the parent component in the hierarchy)
@@ -72,7 +72,7 @@ We will want to build several components:
 
 I will omit the last two components from my example, just in order to keep things simple.
 
-###Step 2 - Creating a hierarchy tree
+###Step 2 - Creating a Hierarchy Tree
 
 <!--- >There are several great posts showing how to do it using directive's transclude property (see [here](https://www.airpair.com/angularjs/posts/creating-container-components-part-2-angular-1-directives) and [here](https://www.airpair.com/angularjs/posts/component-based-angularjs-directives)). While this is possible, it has several disadvantages: It uses scope and controllers and I think that it is too complicated.  
 
