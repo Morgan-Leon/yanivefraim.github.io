@@ -86,7 +86,7 @@ Let's call it 'The React way'...
 #####The 'React way'
 
 React.js uses state and props to manage its data. Props are immutable and are passed from parent to child. They are owned by the parent and they cannot be changed by the component. State, on the other hand, is private and mutable (it can be changed by the component). For child-parent communication it uses simple events, in order to invoke methods on the parent.
->For more reference see those two awesome tutorials: [thinking in react](https://facebook.github.io/react/docs/thinking-in-react.html) and [React's official tuturial](https://facebook.github.io/react/docs/tutorial.html)
+>For more reference see those two awesome tutorials: [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html) and [React's Official Tuturial](https://facebook.github.io/react/docs/tutorial.html)
 
 We will now have a main ```phonecat-component``` which will hold a ```phonecat-search``` and a ```phonecat-list``` child components. Those two child components will get all the data they need from their parent, via attributes.
 It should look somehting like this (The complete example can be found in the following [plunker](http://plnkr.co/edit/wL1yMlMTgxiuwyDIA3a5?p=preview)):
