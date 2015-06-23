@@ -6,7 +6,7 @@ tags: Angularjs Javascript
 image: /assets/images/soup.jpg
 ---
 
-I love Promises. We use it in all our projects. It can be used with AngularJS, jQuery or even Vanilla Javascript. I will not explain about Promises basics here, if you are not familiar with Promises, take a look[here](http://dailyjs.com/2014/02/20/promises-in-detail/) and [here](https://promisesaplus.com/).
+I love Promises. We use it in all our projects. It can be used with AngularJS, jQuery or even Vanilla Javascript. I will not explain about Promises basics here, if you are not familiar with Promises, take a look [here](http://dailyjs.com/2014/02/20/promises-in-detail/) and [here](https://promisesaplus.com/).
 
 The interesting stuff starts when there are several serial actions (sometimes with different operations between them).
 
