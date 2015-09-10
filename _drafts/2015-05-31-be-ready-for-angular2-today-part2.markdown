@@ -18,7 +18,31 @@ In this post, I will discuss the second bullet: "Write Angular 1.x in ES6/Typesc
 
 >ES6/Typescript is not supported by modern browser, yet. You can easily write ES6 today, using one of [these](https://github.com/addyosmani/es6-tools) tools, or write TypeScript, using [Grunt](https://github.com/k-maru/grunt-typescript)/[Gulp](https://github.com/ivogabe/gulp-typescript) transpilers.
 
-Let's start with first component,  
+Lets see how can we convert Angular 1.x components into ES6 and TypeScript.
+
+I will use for this example components from my [talk](yanivefraim.github.io/be-ready-for-angular2-today):
+
+Angular 1.X ES5 "font-size" directive:
+```Javascript
+angular.module()
+.directive('fontSizeComponent', function() {
+ return {
+  template: '<input ng-model="ctrl.fontSize" ng-change="ctrl.modelChanged()">',
+  scope: {},
+  bindToController: {
+   fontSize: "@",
+   fontSizeChanged: "&"
+  },
+  controllerAs: 'ctrl',
+  controller: function() {
+   var that = this;
+   this.modelChanged = function() {
+    that.fontSizeChanged({fontSize: that.fontSize});
+   };
+  }
+ };
+});
+```
 
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
