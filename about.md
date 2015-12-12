@@ -15,7 +15,7 @@ When I'm not coding, I love running, cycling and traveling.
 
 Mail: yaniv.efraim@gmail.com
 
-[Github](http://github.com/yanivefraim)  [Linkedin](https://www.linkedin.com/in/efraimyaniv)  [Tweeter](https://twitter.com/yanivef)
+[Github](http://github.com/yanivefraim)  [Linkedin](https://www.linkedin.com/in/efraimyaniv)  [Twitter](https://twitter.com/yanivef)
 
 
 
